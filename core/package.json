@@ -1,6 +1,0 @@
-{
-    "scripts": {
-      "start": "node data_processor/server.js",
-      "finder": "node utils/server_finder.js"
-    }
-}
