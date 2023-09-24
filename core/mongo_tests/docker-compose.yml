@@ -7,7 +7,7 @@ services:
       MONGO_INITDB_ROOT_USERNAME: samuel
       MONGO_INITDB_ROOT_PASSWORD: samuel11
     ports:
-      - '27017:27017'
+      - '50017:50017'
     volumes:
       - dbdata6:/data/db
       - ./config:/etc/mongo/
