@@ -6,4 +6,4 @@ services:
       dockerfile: Dockerfile
     env_file: .env
     ports:
-      - 50023:50023
+      - 50023:50023/udp
