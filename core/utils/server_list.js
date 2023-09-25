@@ -1,5 +1,4 @@
 module.exports.server_list = [
-    "localhost",
     "a.tcc.mogni.com.br",
     "b.tcc.mogni.com.br",
     "c.tcc.mogni.com.br",
