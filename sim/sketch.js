@@ -2,6 +2,7 @@ var screenX;
 var screenY;
 var centerX;
 var centerY;
+var menu;
 
 let x = 0;
 var cars = [];
@@ -12,19 +13,10 @@ const _LESTE = 0;
 const _SUL   = Math.PI/2;
 const _OESTE = Math.PI;
 const _NORTE = 3*Math.PI/2;
-let baseLen = 250;
 
-const STREET_WIDTH = 20;
-const CAR_WIDTH    = 12;
-const CAR_LENGTH   = 20;
-
-function windowResized() {
-  centerX += (windowWidth - screenX) / 2;
-  centerY += (windowHeight - screenY) / 2;
-  screenX = windowWidth;
-  screenY = windowHeight;
-  resizeCanvas(screenX, screenY); 
-} 
+const STREET_WIDTH = 30;
+const CAR_WIDTH    = 19;
+const CAR_LENGTH   = 35;
 
 mouseHolding = null;
 
@@ -45,143 +37,18 @@ function setup() {
   screenY = windowHeight;
   centerX = screenX/2;
   centerY = screenY/2;
+
   createCanvas(screenX, screenY);
 
-  button = createButton('road');
-  button.position(0, 0);
-  button.mousePressed(addRoad);
-  button.addClass("buttone");
+  menu = new Menu();
+  menu.setup();
 
-  button2 = createButton('connect');
-  button2.position(100, 0);
-  button2.mousePressed(addConnect);
-  button2.addClass("buttone");
-
-  let mcenter = new AllignedPosition(0,0,0);
-
-  let streetA = new Street(
-    'streetA',
-    mcenter.copy(), 
-    baseLen, STREET_WIDTH
-  );
-
-  let streetB = new Street(
-    'streetB',
-    streetA.end.left(STREET_WIDTH*1.5)
-    .rotate(Math.PI), 
-    baseLen, STREET_WIDTH
-  );
-
-  let streetC = new Street(
-    'streetC',
-    streetB.end.forward(STREET_WIDTH*1.5)
-    .rotate(Math.PI/2)
-    .forward(STREET_WIDTH*1.5), 
-    baseLen, STREET_WIDTH
-  );
-
-  let streetD = new Street(
-    'streetD',
-    streetC.end.left(STREET_WIDTH*1.5)
-    .rotate(Math.PI), 
-    baseLen, STREET_WIDTH
-  );
-
-  let streetE = new Street(
-    'streetE',
-    streetD.end.forward(STREET_WIDTH*1.5)
-    .rotate(Math.PI/2)
-    .forward(STREET_WIDTH*1.5), 
-    baseLen, STREET_WIDTH
-  );
-
-  let streetF = new Street(
-    'streetF',
-    streetE.end.left(STREET_WIDTH*1.5)
-    .rotate(Math.PI), 
-    baseLen, STREET_WIDTH
-  );
-
-  let streetG = new Street(
-    'streetG',
-    streetF.end.forward(STREET_WIDTH*1.5)
-    .rotate(Math.PI/2)
-    .forward(STREET_WIDTH*1.5), 
-    baseLen, STREET_WIDTH
-  );
-
-  let streetH = new Street(
-    'streetH',
-    streetG.end.left(STREET_WIDTH*1.5)
-    .rotate(Math.PI), 
-    baseLen, STREET_WIDTH
-  );
-
-  let turnAB = new Turn('turnAB', streetA.end, streetB.start, STREET_WIDTH);
-  let turnCD = new Turn('turnCD', streetC.end, streetD.start, STREET_WIDTH);
-  let turnEF = new Turn('turnEF', streetE.end, streetF.start, STREET_WIDTH);
-  let turnGH = new Turn('turnGH', streetG.end, streetH.start, STREET_WIDTH);
-
-  streets = [ 
-    streetA,
-    turnAB,
-    streetB,
-    streetC,
-    turnCD,
-    streetD,
-    streetE,
-    turnEF,
-    streetF,
-    streetG,
-    turnGH,
-    streetH,
-  ];
-
-  streetA.next = turnAB; turnAB.next = streetB;
-  streetC.next = turnCD; turnCD.next = streetD;
-  streetE.next = turnEF; turnEF.next = streetF;
-  streetG.next = turnGH; turnGH.next = streetH;
-
-  cross = [
-   new CrossRoad(
-      [
-        streetB,
-        streetD,
-        streetF,
-        streetH,
-      ], [
-        streetA,
-        streetC,
-        streetE,
-        streetG,
-      ],
-      STREET_WIDTH
-    ),
-  ]
-
-  cars = [ 
-    new Car(streets[0], CAR_WIDTH, CAR_LENGTH),
-    new Car(streets[1], CAR_WIDTH, CAR_LENGTH),
-    new Car(streets[3], CAR_WIDTH, CAR_LENGTH),
-    new Car(streets[7], CAR_WIDTH, CAR_LENGTH),
-  ];
-
+  loadDefaultEntities();
 }
 
 let isMousePressed = 0;
 let mousePressedLocation = [0, 0];
 let myscale = 0.8;
-
-function drawPanel() {
-  push();
-
-    stroke(0);
-    fill(0);
-
-    rect(0,0,screenX,50);
-
-  pop();
-}
 
 function draw() {
   background(204);
@@ -198,6 +65,7 @@ function draw() {
 
   cross.forEach((cross) => {
     cross.display();
+    cross.manage();
   });
 
   streets.forEach((street) => {
@@ -209,7 +77,7 @@ function draw() {
     car.display();
   });
 
-  let mmcoords = getMouseCoords();
+  /*let mmcoords = getMouseCoords();
   let mouse_real_coords = new AllignedPosition(mmcoords[0] / myscale, mmcoords[1] / myscale, -Math.PI/5);
 
   if (mouseHolding == 'road_start') {
@@ -220,7 +88,7 @@ function draw() {
     ).display();
   } else if (mouseHolding?.type == 'street') {
     mouseHolding.end    = mouse_real_coords;
-    mouseHolding.lenght = mouse_real_coords.distance(mouseHolding.start);
+    mouseHolding.length = mouse_real_coords.distance(mouseHolding.start);
     mouseHolding.start.dir = createVector(1,0).angleBetween(createVector(mouse_real_coords.x - mouseHolding.start.x, mouse_real_coords.y - mouseHolding.start.y));
     mouseHolding.end.dir = mouseHolding.start.dir;
     mouseHolding.display();
@@ -254,17 +122,23 @@ function draw() {
         ellipse(street.start.x, street.start.y, 10, 10); 
       pop();
     });
-  }
+  }*/
 
   pop();
-  drawPanel();
+  menu.draw();
+}
 
+function windowResized() {
+  centerX += (windowWidth - screenX) / 2;
+  centerY += (windowHeight - screenY) / 2;
+  screenX = windowWidth;
+  screenY = windowHeight;
+  resizeCanvas(screenX, screenY); 
 }
 
 function mousePressed() {
   isMousePressed = 1;
   mousePressedLocation = getMouseCoords();
-
 
   let mmcoords = getMouseCoords();
   let mouse_real_coords = new AllignedPosition(mmcoords[0] / myscale, mmcoords[1] / myscale, -Math.PI/5);
@@ -334,37 +208,4 @@ function mouseWheel(event) {
     centerY += (mouseY - centerY) * (1-1/(1+zoomAmount));
     mousePressedLocation = getMouseCoords();
   }
-}
-
-function keyReleased() {
-  let car = cars[1];
-  //cars.forEach((car) => {
-    if (keyCode === DOWN_ARROW) {
-      car.endBrake();
-    }
-    if (keyCode === UP_ARROW) {
-      car.endGas();
-    }
-  //});
-}
-
-function keyPressed() {
-  let car = cars[1];
-  //cars.forEach((car) => {
-    if (keyCode === LEFT_ARROW) {
-      car.rotateLeft();
-    }
-    
-    if (keyCode === RIGHT_ARROW) {
-      car.rotateRight();
-    }
-  
-    if (keyCode === UP_ARROW) {
-      car.startGas();
-    }
-  
-    if (keyCode === DOWN_ARROW) {
-      car.startBrake();
-    }
-  //});
 }

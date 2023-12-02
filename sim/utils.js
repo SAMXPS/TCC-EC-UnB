@@ -57,3 +57,14 @@ function getMillis() {
     return Date.now();
 }
 
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
+function kmh_dms(kmh) {
+    return kmh / 0.36;
+}
+
+function dms_kmh(dms) {
+    return dms * 0.36;
+}
