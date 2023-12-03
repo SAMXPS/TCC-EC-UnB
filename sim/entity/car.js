@@ -1,14 +1,14 @@
 
-function Car(roadStart, width, length, route) {
+function Car(roadStart, width, length, route, startDiff = 0) {
     const brakeTime = 100;
     const blinkTime = 750;
     const blinkInterval = 250;
     this.maxSpeed   = kmh_dms(60);
     this.accel      = 25; // 2.5 m/s^2
     this.brakeAccel = 70; // 7.0 m/s^2
-    this.turnSpeed  = kmh_dms(30);
+    this.turnSpeed  = kmh_dms(40);
 
-    this.position = roadStart.getStart().copy();
+    this.position = roadStart.getStart().copy().forward(startDiff);
     this.road = roadStart;
     this.route = route;
 
@@ -54,6 +54,9 @@ function Car(roadStart, width, length, route) {
         fill(color(255,255,255));
         rotate(-this.position.dir);
         text(dms_kmh(this.speed).toFixed(0) + "km/h", 0, 0);
+        if (this.crossControl) {
+            text("pos=" + this.crossControl.index, 0, 10);
+        }
         pop();
     }
 
@@ -118,11 +121,35 @@ function Car(roadStart, width, length, route) {
                 console.log("crashed!!!");
             }
 
+            if (other.road != this.road) {
+                return;
+            }
+
+            let pos = this.position.copy();
+            for (let i = 0; i < 20; i++) {
+                pos = pos.forward(5);
+                if (other.position.distance(pos) < 15){
+                    this.brakeTime = getMillis() + 100;
+                }
+            }
             // TODO freiar para evitar acidentes
         });
 
         let roadT = this.getRoadT();
         let roadP = roadT[0];
+        
+        if (this.road.next?.type == 'turn' && !this.controlledBy) {
+            let opa = 0.75;
+            if (roadT[2] > opa) {
+                if (this.speed > this.turnSpeed) {
+                    let p = (roadT[2] - opa) / (1-opa);
+                    let desiredSpeed = this.turnSpeed * (p) + this.speed * (1-p);
+                    if (this.speed > desiredSpeed) {
+                       this.brakeTime = getMillis() + 1;
+                    }
+                }
+            }
+        }
 
         this.position.dir = roadP.dir;
 
@@ -139,7 +166,7 @@ function Car(roadStart, width, length, route) {
                     }
                 }
                 if (!success) {
-                    this.road = this.road.crossPaths[1];
+                    this.road = this.road.crossPaths[0];
                 }
             } else {
                 this.road = this.road.next;

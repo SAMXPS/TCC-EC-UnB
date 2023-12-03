@@ -10,6 +10,10 @@ class CrossRoad {
         this.paths = [];
         this.width = width;
 
+        this.center = new AllignedPosition(0,0,0);
+        
+        let count = 0;
+
         this.entrances.forEach( entrance => {
             entrance.next  = this;
             entrance.crossPaths = [];
@@ -17,7 +21,7 @@ class CrossRoad {
             this.exits.forEach( exit => {
                 exit.before = this;
 
-                if (Math.abs(atan2(sin(entrance.getEnd().dir-exit.getStart().dir), cos(entrance.getEnd().dir-exit.getStart().dir))) <= (Math.PI/2 + 0.01)) {
+                if (Math.abs(atan2(sin(entrance.getEnd().dir-exit.getStart().dir), cos(entrance.getEnd().dir-exit.getStart().dir))) <= 0.01 /*(Math.PI/2 + 0.01)*/) {
                     let turn = new Turn(entrance, exit, this.width, '', false);
                     turn.cross = this;
                     turn.enabled = false;
@@ -25,53 +29,93 @@ class CrossRoad {
                     entrance.crossPaths.push(turn);
                 }
             });
+
+            this.center.x += entrance.getEnd().x;
+            this.center.y += entrance.getEnd().y;
+            count += 1;
         });
 
+        this.center.x /= count;
+        this.center.y /= count;
+
+        console.log(this.center);
+
         //this.paths[0].enabled = 1;
-        this.carPassOrder = [];
+        this.controlledCars = [];
+        this.controlledCarsLastSort = 0;
+    }
+
+    getMinTimeTillCross(car, maxSpeed) {
+        let distance = car.position.distance(car.crossControl.choice.getEnd());
+        
+        let timeTillMaxSpeed = 0;
+        let distanceTillMaxSpeed = 0;
+
+        if (car.speed < maxSpeed) {
+            let speedDiff = maxSpeed - car.speed;
+            // Tempo em segundos para atingir velocidade maxima
+            timeTillMaxSpeed = (speedDiff / car.accel);
+
+            let t = timeTillMaxSpeed;
+            let v0 = car.speed;
+            let a = car.accel;
+
+            distanceTillMaxSpeed = v0 * t + a * t * t / 2;
+        }
+
+        if (distance < distanceTillMaxSpeed) {
+            let s = distance;
+            let a = car.accel;
+            let v0 = car.speed;
+
+            // s = v0 t + a t^2 / 2 -> 
+            // (a/2) * t^2 + v0 * t - s = 0;
+            let A = (a/2);
+            let B = v0;
+            let C = -s;
+            // D = B^2 - 4 * a * c
+            let D = B*B - 4 * A * C;
+
+            let t1 = (-B - Math.sqrt(D)) / ( 2 * A )
+            let t2 = (-B + Math.sqrt(D)) / ( 2 * A )
+
+            if (t1 > 0 && t1 <= t2) {
+                return t1;
+            }
+
+            if (t2 > 0 && t2 <= t1) {
+                return t2;
+            }
+
+            // ????
+        }
+
+        let distanceLeft = distance - distanceTillMaxSpeed;
+
+        return timeTillMaxSpeed + (distanceLeft / maxSpeed);
     }
 
     controlCar(car) {
-        const index = this.carPassOrder.indexOf(car);
-        
-        if (index == -1) {
-            console.log("UAI");
-            return;
-        }
-
-        if (index == 0) {
-            car.color = color(128,255,128);
-        }
-
-        let min_speed  = kmh_dms(10);
-        let speed_diff = kmh_dms(10);
-
-        car.desiredSpeed = car.maxSpeed - index * speed_diff;
-
-        if (car.desiredSpeed < min_speed) {
-            car.desiredSpeed = min_speed;
-        }
-
-        /*if (car.speed > speed) {
-            car.brakeTime = getMillis() + 0.1;
-        } else {
-            car.gas = 1;
-        }*/
+       // car.desiredSpeed = kmh_dms(10);
     }
 
     onEnterControl(car) {
         car.controlledBy = this;
         car.color = color(128,128,255);
-        this.carPassOrder.push(car);
+        car.crossControl = {
+            
+        }
+        this.controlledCars.push(car);
     }
 
     onExitControl(car) {
-        const index = this.carPassOrder.indexOf(car);
+        const index = this.controlledCars.indexOf(car);
         if (index > -1) {
-            this.carPassOrder.splice(index, 1);
+            this.controlledCars.splice(index, 1);
         }
         car.controlledBy = null;
         car.color = null;
+        delete car.crossControl;
         delete car.desiredSpeed;
     }
 
@@ -87,6 +131,113 @@ class CrossRoad {
             });
             entrance.semaphore = 'red';
         });
+        
+        let myCars = this.controlledCars;
+
+        myCars.forEach((car) => {
+            car.crossControl.minTimeTillCross = this.getMinTimeTillCross(car, car.maxSpeed);
+        })
+        
+        //function compareCars(a, b) {
+        //    return a.crossControl.minTimeTillCross - b.crossControl.minTimeTillCross;
+        //}
+
+        //myCars.sort(compareCars);
+
+        let lastTime = null;
+        let maxSpeed = null;
+        let minInterval = 0; // um segundo
+        let index = 0;
+
+        const minDistance = this.width * 6;
+
+        let lastCar = null;
+
+        myCars.forEach((car) => {
+            car.crossControl.index = index;
+
+            if (!lastTime) {
+                car.desiredSpeed = car.maxSpeed;
+                lastTime = car.crossControl.minTimeTillCross;
+                car.crossControl.timeTillCross = lastTime;
+                maxSpeed = car.maxSpeed;
+                //console.log("first speed = " + car.desiredSpeed + " time = " + car.crossControl.minTimeTillCross);
+                
+                if (car.road.cross) {
+                    car.crossControl.choice.before.semaphore = 'red';
+                } else {
+                    car.crossControl.choice.before.semaphore = 'blue';
+                    index++;
+                }
+                lastCar = car;
+                return;
+            }
+
+            if (index == 0) {
+                car.crossControl.choice.before.semaphore = 'blue';
+            }
+            
+            if (index == 1) {
+                car.crossControl.choice.before.semaphore = 'yellow';
+            }
+
+            if (car.maxSpeed < maxSpeed) {
+                maxSpeed = car.maxSpeed;
+            }
+            
+            let currentTime = this.getMinTimeTillCross(car, maxSpeed);
+
+            if (lastCar.road != car.road) {
+                //maxSpeed -= kmh_dms(5);
+
+                if (maxSpeed < kmh_dms(5)) {
+                    maxSpeed = kmh_dms(5);
+                }
+
+                //maxSpeed = car.maxSpeed;
+    
+                minInterval = minDistance / maxSpeed;
+    
+                while (currentTime - lastTime < minInterval && maxSpeed > kmh_dms(5)) {
+                    maxSpeed -= 1;
+                    currentTime = this.getMinTimeTillCross(car, maxSpeed);
+                    minInterval = minDistance / maxSpeed;
+                }
+            }
+
+            //console.log("min = " + minInterval);
+            car.desiredSpeed = maxSpeed;
+            lastTime = currentTime;
+            car.crossControl.timeTillCross = lastTime;
+            index++;
+            lastCar = car;
+            //console.log("speed = " + car.desiredSpeed + " time = " + currentTime);
+        });
+
+        if ( getMillis() - this.controlledCarsLastSort > 100 && false ) {
+
+            myCars.forEach((car)=>{
+                myCars.forEach((other)=> {
+                    if (other == car) {
+                        return;
+                    }
+                    if (car.road == other.road) {
+                        let compTime = this.getMinTimeTillCross(car, other.desiredSpeed);
+                        if (compTime < car.crossControl.timeTillCross) {
+                            car.crossControl.timeTillCross = compTime;
+                        }
+                    }
+                })
+            });
+
+            function compareCars(a, b) {
+                return a.crossControl.timeTillCross - b.crossControl.timeTillCross;
+            }
+
+            this.myCars = myCars.sort(compareCars);
+            
+            this.controlledCarsLastSort = getMillis();
+        }
 
         cars.forEach((car) => {
             if (car.isNearCross(this)) {
@@ -94,24 +245,11 @@ class CrossRoad {
                 if (choice) {
                     if (car.controlledBy != this) {
                         this.onEnterControl(car);
-                    }
-                    const index = this.carPassOrder.indexOf(car);
-                    if (index == 0) {
-                        choice.before.semaphore = 'blue';
-                        choice.enabled = 1;
-                    }
-                    if (index == 1) {
-                        choice.before.semaphore = 'yellow';
-                        choice.enabled = 1;
+                        car.crossControl.choice = choice;
                     }
                 }
             } else if (car.road.cross == this) {
-                let distance = car.getRoadDistanceLeft();
-                if (distance < 20) {
-                    this.onExitControl(car);
-                } else if (this.carPassOrder[1]?.getRoadDistanceLeft() > distance + 20) {
-                    this.onExitControl(car);
-                }
+
             } else if (car.controlledBy == this) {
                 this.onExitControl(car);
             }
@@ -189,6 +327,13 @@ class CrossRoad {
             pop();
         });
 
+        pop();
+
+        push();
+
+        fill(color(128,128,255));
+        
+        ellipse(this.center.x, this.center.y, 10, 10);
         pop();
     }
 

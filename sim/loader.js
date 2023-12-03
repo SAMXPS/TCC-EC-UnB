@@ -102,12 +102,29 @@ function loadDefaultEntities() {
         new Car(streets[0], CAR_WIDTH, CAR_LENGTH, [
             'EAST_1','EAST_2','WEST_1','WEST_2'
         ]),
+       /* new Car(streets[0], CAR_WIDTH, CAR_LENGTH, [
+            'EAST_1','EAST_2','WEST_1','WEST_2'
+        ], CAR_LENGTH * 2),
+        new Car(streets[0], CAR_WIDTH, CAR_LENGTH, [
+            'EAST_1','EAST_2','WEST_1','WEST_2'
+        ], CAR_LENGTH * 4),*/
+
+
         new Car(streets[1], CAR_WIDTH, CAR_LENGTH,[
             'EAST_1','EAST_2','WEST_1','WEST_2'
         ]),
+
         new Car(streets[2], CAR_WIDTH, CAR_LENGTH,[
             'NORTH_1','NORTH_2','SOUTH_1','SOUTH_2'
         ]),
+
+       /* new Car(streets[2], CAR_WIDTH, CAR_LENGTH,[
+            'NORTH_1','NORTH_2','SOUTH_1','SOUTH_2'
+        ], CAR_LENGTH * 2),
+        new Car(streets[2], CAR_WIDTH, CAR_LENGTH,[
+            'NORTH_1','NORTH_2','SOUTH_1','SOUTH_2'
+        ], CAR_LENGTH * 4),*/
+
         new Car(streets[3], CAR_WIDTH, CAR_LENGTH,[
             'NORTH_1','NORTH_2','SOUTH_1','SOUTH_2'
         ]),
