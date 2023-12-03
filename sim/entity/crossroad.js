@@ -149,7 +149,7 @@ class CrossRoad {
         let minInterval = 0; // um segundo
         let index = 0;
 
-        const minDistance = this.width * 6;
+        const minDistance = this.width * 4;
 
         let lastCar = null;
 
