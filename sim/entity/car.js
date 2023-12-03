@@ -158,19 +158,7 @@ function Car(roadStart, width, length, route, startDiff = 0) {
 
         if (roadT[2] > 0.99) {
             if (this.road.next.type == 'crossroad') {
-                options = this.road.crossPaths;
-                let success = false;
-                for (let i = 0; i < options.length; i++) {
-                    option = options[i];
-                    if (this.route.indexOf(option.next.name) != -1) {
-                        this.road = option;
-                        success = true;
-                        break;
-                    }
-                }
-                if (!success) {
-                    this.road = this.road.crossPaths[0];
-                }
+                this.road = this.road.crossPath;
             } else {
                 this.road = this.road.next;
             }
@@ -261,16 +249,5 @@ function Car(roadStart, width, length, route, startDiff = 0) {
 
     this.isNearCross = function(cross) {
         return this.road.next == cross;
-    }
-
-    this.getCrossChoice = function(crossPaths) {
-        let options = crossPaths;
-
-        for (let i = 0; i < options.length; i++) {
-            option = options[i];
-            if (this.route.indexOf(option.next.name) != -1) {
-                return option;
-            }
-        }
     }
 }

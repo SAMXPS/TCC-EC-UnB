@@ -14,18 +14,20 @@ class CrossRoad {
         let count = 0;
 
         this.entrances.forEach( entrance => {
-            entrance.next  = this;
-            entrance.crossPaths = [];
+            entrance.next = this;
 
             this.exits.forEach( exit => {
-                exit.before = this;
+                if (entrance.crossPath) {
+                    return; 
+                }
 
                 if (Math.abs(atan2(sin(entrance.getEnd().dir-exit.getStart().dir), cos(entrance.getEnd().dir-exit.getStart().dir))) <= 0.01 /*(Math.PI/2 + 0.01)*/) {
+                    exit.before = this;
                     let turn = new Turn(entrance, exit, this.width, '', false);
                     turn.cross = this;
                     turn.enabled = false;
                     this.paths.push(turn);
-                    entrance.crossPaths.push(turn);
+                    entrance.crossPath = turn;
                 }
             });
 
@@ -61,7 +63,7 @@ class CrossRoad {
     }
 
     getMinTimeTillCross(car, maxSpeed) {
-        let distance = car.position.distance(car.crossControl.choice.getEnd());
+        let distance = car.position.distance(car.crossControl.path.getEnd());
         
         let timeTillMaxSpeed = 0;
         let distanceTillMaxSpeed = 0;
@@ -114,7 +116,7 @@ class CrossRoad {
         car.controlledBy = this;
         car.color = color(128,128,255);
         car.crossControl = {
-            
+            path: car.road.crossPath,
         }
         this.controlledCars.push(car);
     }
@@ -136,19 +138,18 @@ class CrossRoad {
         // Definir velocidade de aproximacao
         // Definir qual semaforo abrir...
 
+        this.paths.forEach( (path) => {
+            path.enabled = 0;
+        });
+
         this.entrances.forEach( (entrance) => {
-            entrance.crossPaths.forEach((path) => {
-                path.enabled = 0;
-            });
             entrance.semaphore = 'red';
         });
 
         if (this.serverConnected) {
 
             this.entrances.forEach( (entrance) => {
-                entrance.crossPaths.forEach((path) => {
-                    path.enabled = 0;
-                });
+                entrance.crossPath.enabled = 0;
                 entrance.semaphore = 'blue';
             });
 
@@ -177,10 +178,10 @@ class CrossRoad {
                     //console.log("first speed = " + car.desiredSpeed + " time = " + car.crossControl.minTimeTillCross);
                     
                     if (car.road.cross) {
-                        car.crossControl.choice.before.semaphore = 'red';
+                        car.crossControl.path.before.semaphore = 'red';
                     } else {
-                        car.crossControl.choice.enabled = 1;
-                        car.crossControl.choice.before.semaphore = 'green';
+                        car.crossControl.path.enabled = 1;
+                        car.crossControl.path.before.semaphore = 'green';
                         index++;
                     }
                     car.crossControl.index = index;
@@ -194,7 +195,7 @@ class CrossRoad {
                 
                 let currentTime = this.getMinTimeTillCross(car, maxSpeed);
 
-                if (!car.road.cross && car.road.pair != lastCar.crossControl.choice.before) {
+                if (!car.road.cross && car.road.pair != lastCar.crossControl.path.before) {
                     //maxSpeed -= kmh_dms(5);
 
                     if (maxSpeed < kmh_dms(5)) {
@@ -215,12 +216,12 @@ class CrossRoad {
                 }
 
                 if (index == 0) {
-                    car.crossControl.choice.before.semaphore = 'green';
-                    car.crossControl.choice.enabled = 1;
+                    car.crossControl.path.before.semaphore = 'green';
+                    car.crossControl.path.enabled = 1;
                 }
                 
                 if (index == 1) {
-                    car.crossControl.choice.before.semaphore = 'yellow';
+                    car.crossControl.path.before.semaphore = 'yellow';
                 }
 
                 //console.log("min = " + minInterval);
@@ -235,12 +236,8 @@ class CrossRoad {
 
             cars.forEach((car) => {
                 if (car.isNearCross(this)) {
-                    let choice = car.getCrossChoice(car.road.crossPaths);
-                    if (choice) {
-                        if (car.controlledBy != this) {
-                            this.onEnterControl(car);
-                            car.crossControl.choice = choice;
-                        }
+                    if (car.controlledBy != this) {
+                        this.onEnterControl(car);
                     }
                 } else if (car.road.cross == this) {
 
@@ -271,14 +268,10 @@ class CrossRoad {
                         let innerCycle = cycle % loops;
 
                         if (innerCycle < greens) {
-                            entrance.crossPaths.forEach((path)=>{
-                                path.enabled = 1;
-                            });
+                            entrance.crossPath.enabled = 1;
                             entrance.semaphore = 'green';
                         } else if (innerCycle < greens + yellows) {
-                            entrance.crossPaths.forEach((path)=>{
-                                path.enabled = 1;
-                            });
+                            entrance.crossPath.enabled = 1;
                             entrance.semaphore = 'yellow';
                         }
                     }
@@ -301,15 +294,15 @@ class CrossRoad {
 
         this.entrances.forEach( (entrance) => {
 
-            entrance.crossPaths.forEach((path) => {
-                if (entrance.semaphore == 'green') {
-                    path.displayCenterLine(color(0,255,0,128));
-                } else if (path.enabled && entrance.semaphore == 'blue') {
-                    path.displayCenterLine(color(0,0,255,128));
-                } else {
-                    path.displayCenterLine(color(255,0,0,128));
-                }
-            });
+            let path = entrance.crossPath;
+
+            if (entrance.semaphore == 'green') {
+                path.displayCenterLine(color(0,255,0,128));
+            } else if (path.enabled && entrance.semaphore == 'blue') {
+                path.displayCenterLine(color(0,0,255,128));
+            } else {
+                path.displayCenterLine(color(255,0,0,128));
+            }
 
             var cor;
 
