@@ -126,11 +126,11 @@ function Car(roadStart, width, length, route, startDiff = 0) {
                 return;
             }
 
-            if (!this.controlledBy) {
+            if (!this.controlledBy || true) {
                 let pos = this.position.copy();
                 for (let i = 0; i < 10 * (1 + (dms_kmh(this.speed)/10)); i++) {
                     pos = pos.forward(5);
-                    if (other.position.distance(pos) < 15){
+                    if (other.position.distance(pos) < 15 && this.speed > other.speed){
                         this.brakeTime = getMillis() + 100;
                     }
                 }
