@@ -39,25 +39,28 @@ class CrossRoad {
         this.center.x /= count;
         this.center.y /= count;
 
-        this.entrancePairs = [];
+        this.entranceGroups = [];
+
         this.entrances.forEach( entrance => {
-            if (entrance.paired) return;
+            if (entrance.group) return;
             this.entrances.forEach( other => {
-                if (other.paired) return;
+                if (other.group) return;
                 let angle = Math.abs(atan2(sin(entrance.getEnd().dir-other.getEnd().dir), cos(entrance.getEnd().dir-other.getEnd().dir)));
                 if (angle + 0.01 > Math.PI && angle - 0.01 < Math.PI) {
-                    other.paired = 1;
-                    other.pair = entrance;
-                    entrance.paired = 1;
-                    entrance.pair = other;
-                    this.entrancePairs.push([entrance,other]);
+                    let group = {
+                        entrances: [entrance,other],
+                        queue: []
+                    };
+
+                    other.group = group;
+                    entrance.group = group;
+                    this.entranceGroups.push(group);
                 }
             });
         });
 
         //this.paths[0].enabled = 1;
         this.controlledCars = [];
-        this.controlledCarsLastSort = 0;
 
         this.serverConnected = 1;
     }
@@ -117,14 +120,21 @@ class CrossRoad {
         car.color = color(128,128,255);
         car.crossControl = {
             path: car.road.crossPath,
+            group: car.road.group
         }
+        car.crossControl.group.queue.push(car);
         this.controlledCars.push(car);
     }
 
     onExitControl(car) {
-        const index = this.controlledCars.indexOf(car);
+        let index = this.controlledCars.indexOf(car);
         if (index > -1) {
             this.controlledCars.splice(index, 1);
+        }
+
+        index = car.crossControl.group.queue.indexOf(car);
+        if (index > -1) {
+            car.crossControl.group.queue.splice(index, 1);
         }
         car.controlledBy = null;
         car.color = null;
@@ -166,7 +176,25 @@ class CrossRoad {
 
             myCars.forEach((car) => {
                 car.crossControl.minTimeTillCross = this.getMinTimeTillCross(car, car.maxSpeed);
+                car.crossControl.distanceTillCross = car.crossControl.path.getEnd().distance(car.position);
             })
+
+            function compareByDistance(a, b) {
+                return a.crossControl.distanceTillCross - b.crossControl.distanceTillCross;
+            }
+
+            function compareByTime(a, b) {
+                if (a.crossControl.group == b.crossControl.group) {
+                    return compareByDistance(a, b);
+                }
+                return a.crossControl.minTimeTillCross - b.crossControl.minTimeTillCross;
+            }
+
+            this.entranceGroups.forEach((group)=>{
+                group.queue = group.queue.sort(compareByDistance)
+            });
+
+            myCars.sort(compareByTime);
 
             myCars.forEach((car) => {
 
@@ -175,15 +203,7 @@ class CrossRoad {
                     lastTime = car.crossControl.minTimeTillCross;
                     car.crossControl.timeTillCross = lastTime;
                     maxSpeed = car.maxSpeed;
-                    //console.log("first speed = " + car.desiredSpeed + " time = " + car.crossControl.minTimeTillCross);
-                    
-                    if (car.road.cross) {
-                        car.crossControl.path.before.semaphore = 'red';
-                    } else {
-                        car.crossControl.path.enabled = 1;
-                        car.crossControl.path.before.semaphore = 'green';
-                        index++;
-                    }
+
                     car.crossControl.index = index;
                     lastCar = car;
                     return;
@@ -195,7 +215,8 @@ class CrossRoad {
                 
                 let currentTime = this.getMinTimeTillCross(car, maxSpeed);
 
-                if (!car.road.cross && car.road.pair != lastCar.crossControl.path.before) {
+                if (!car.road.cross && car.crossControl.group != lastCar.crossControl.group) {
+                    index++;
                     //maxSpeed -= kmh_dms(5);
 
                     if (maxSpeed < kmh_dms(5)) {
@@ -211,17 +232,6 @@ class CrossRoad {
                         currentTime = this.getMinTimeTillCross(car, maxSpeed);
                         minInterval = minDistance / maxSpeed;
                     }
-                } else {
-                    index--;
-                }
-
-                if (index == 0) {
-                    car.crossControl.path.before.semaphore = 'green';
-                    car.crossControl.path.enabled = 1;
-                }
-                
-                if (index == 1) {
-                    car.crossControl.path.before.semaphore = 'yellow';
                 }
 
                 //console.log("min = " + minInterval);
@@ -234,6 +244,7 @@ class CrossRoad {
                 //console.log("speed = " + car.desiredSpeed + " time = " + currentTime);
             });
 
+            // Detect cars entering the crossRoad
             cars.forEach((car) => {
                 if (car.isNearCross(this)) {
                     if (car.controlledBy != this) {
@@ -259,11 +270,11 @@ class CrossRoad {
             let reds    = 3;
             let loops   = greens + yellows + reds;
 
-            let cycle = parseInt((getMillis() / 1000)) % ((this.entrancePairs.length) * (loops));
+            let cycle = parseInt((getMillis() / 1000)) % ((this.entranceGroups.length) * (loops));
             let i = 0;
 
-            this.entrancePairs.forEach( (entrancePair) => {
-                entrancePair.forEach((entrance)=>{
+            this.entranceGroups.forEach( (group) => {
+                group.entrances.forEach((entrance)=>{
                     if (parseInt(cycle/loops) == i) {
                         let innerCycle = cycle % loops;
 
