@@ -18,6 +18,7 @@ function Car(roadStart, width, length, route, startDiff = 0) {
 
     this.brakeTime = 0;
     this.brakeLight = 0;
+    this.crossDesicion = 0;
 
     this.gas = 0;
 
@@ -125,11 +126,13 @@ function Car(roadStart, width, length, route, startDiff = 0) {
                 return;
             }
 
-            let pos = this.position.copy();
-            for (let i = 0; i < 20; i++) {
-                pos = pos.forward(5);
-                if (other.position.distance(pos) < 15){
-                    this.brakeTime = getMillis() + 100;
+            if (!this.controlledBy) {
+                let pos = this.position.copy();
+                for (let i = 0; i < 10 * (1 + (dms_kmh(this.speed)/10)); i++) {
+                    pos = pos.forward(5);
+                    if (other.position.distance(pos) < 15){
+                        this.brakeTime = getMillis() + 100;
+                    }
                 }
             }
             // TODO freiar para evitar acidentes
@@ -173,14 +176,45 @@ function Car(roadStart, width, length, route, startDiff = 0) {
             }
         }
 
-        this.controlledBy?.controlCar(this);
-
         if (this.desiredSpeed) {
             if (this.speed < this.desiredSpeed) {
                 this.gas = 1;
             } else {
                this.brakeTime = getMillis() + 10;
             }
+        }
+
+        if (!this.controlledBy && this.road.semaphore) {
+            if (!this.crossDesicion) {
+                let red = this.road.semaphore == 'red';
+
+                if (this.road.semaphore == 'yellow') {
+                    if (roadT[2] > 0.6) {
+                        if(roadT[2] > 0.7 && this.speed >= 0.7*this.maxSpeed) {
+                            this.crossDesicion = 1;
+                        } else {
+                            red = 1;
+                        }
+                    }
+                }
+
+                if (red) {
+                    let opa = 0.5;
+                    if (roadT[2] > 0.95) {
+                        this.brakeTime = getMillis() + 100;
+                    } else if (roadT[2] > opa) {
+                        let p = (roadT[2] - opa) / (1-opa);
+                        let desiredSpeed = 0 * (p) + Math.max(this.speed, this.maxSpeed/3) * (1-p);
+                        if (this.speed > desiredSpeed) {
+                            this.brakeTime = getMillis() + 1;
+                        }
+                    }
+                }
+            } else {
+                this.gas = 1;
+            }
+        } else {
+            this.crossDesicion = 0;
         }
         
         if (this.brakeTime > getMillis()) {
