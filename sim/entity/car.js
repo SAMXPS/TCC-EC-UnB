@@ -14,7 +14,7 @@ function Car(roadStart, width, length, route, startDiff = 0) {
 
     this.brakeTime = 0;
     this.brakeLight = 0;
-    this.crossDesicion = 0;
+    this.passCurrentSemaphore = 0;
 
     this.gas = 0;
 
@@ -157,13 +157,13 @@ function Car(roadStart, width, length, route, startDiff = 0) {
         }
 
         if (!this.controlledBy && this.road.semaphore) {
-            if (!this.crossDesicion) {
+            if (!this.passCurrentSemaphore) {
                 let red = this.road.semaphore == 'red';
 
                 if (this.road.semaphore == 'yellow') {
                     if (roadPosition.pathI > 0.6) {
                         if(roadPosition.pathI > 0.7 && this.speed >= 0.7*this.maxSpeed) {
-                            this.crossDesicion = 1;
+                            this.passCurrentSemaphore = 1;
                         } else {
                             red = 1;
                         }
@@ -184,7 +184,7 @@ function Car(roadStart, width, length, route, startDiff = 0) {
                 }
             }
         } else {
-            this.crossDesicion = 0;
+            this.passCurrentSemaphore = 0;
         }
         
         if (this.brakeTime > this.time) {
@@ -237,9 +237,5 @@ function Car(roadStart, width, length, route, startDiff = 0) {
         indexCurrent = this.route.indexOf(this.road.before.name);
         if (indexCurrent >= 0) return indexCurrent;
         return -1;
-    }
-
-    this.isNearCross = function(cross) {
-        return this.road.next == cross;
     }
 }

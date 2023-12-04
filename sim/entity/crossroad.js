@@ -25,7 +25,6 @@ class CrossRoad {
                     exit.before = this;
                     let turn = new Turn(entrance, exit, this.width, '', false);
                     turn.cross = this;
-                    turn.enabled = false;
                     this.paths.push(turn);
                     entrance.crossPath = turn;
                 }
@@ -59,11 +58,11 @@ class CrossRoad {
             });
         });
 
-        //this.paths[0].enabled = 1;
         this.controlledCars = [];
         this.nextSort = 0;
         this.thread = null;
         this.time   = 0;
+        this.autonomousMode = false;
     }
 
     startThread() {
@@ -75,13 +74,22 @@ class CrossRoad {
             }
         });
     }
-
+    
     connectToServer() {
         this.server = serverConnect();
     }
 
+    manage() {
+        if (0) {
+            this.autonomousOperation();
+        } else {
+            this.legacyOperation();
+        }
+    }
+
+
     getDistanceTimeTillMaxSpeed(car, maxSpeed) {
-        if (car.speed < maxSpeed) {
+        /*if (car.speed < maxSpeed) {
             let speedDiff = maxSpeed - car.speed;
             // Tempo em segundos para atingir velocidade maxima
             let timeTillMaxSpeed = (speedDiff / car.accel);
@@ -95,10 +103,11 @@ class CrossRoad {
             return [timeTillMaxSpeed, distanceTillMaxSpeed];
         }
 
-        return [0, 0];
+        return [0, 0];*/
     }
 
     getMinTimeTillCross(car, maxSpeed) {
+        /*
         let distance = car.position.distance(car.crossControl.path.getEnd());
         
         let [timeTillMaxSpeed, distanceTillMaxSpeed] = this.getDistanceTimeTillMaxSpeed(car, maxSpeed);
@@ -132,22 +141,22 @@ class CrossRoad {
 
         let distanceLeft = distance - distanceTillMaxSpeed;
 
-        return timeTillMaxSpeed + (distanceLeft / maxSpeed);
+        return timeTillMaxSpeed + (distanceLeft / maxSpeed);*/
     }
 
     onEnterControl(car) {
-        car.controlledBy = this;
+        /*car.controlledBy = this;
         car.color = color(128,128,255);
         car.crossControl = {
             path: car.road.crossPath,
             group: car.road.group
         }
         car.crossControl.group.queue.push(car);
-        this.controlledCars.push(car);
+        this.controlledCars.push(car);*/
     }
 
     onExitControl(car) {
-        let index = this.controlledCars.indexOf(car);
+        /*let index = this.controlledCars.indexOf(car);
         if (index > -1) {
             this.controlledCars.splice(index, 1);
         }
@@ -159,13 +168,11 @@ class CrossRoad {
         car.controlledBy = null;
         car.color = null;
         delete car.crossControl;
-        delete car.desiredSpeed;
+        delete car.desiredSpeed;*/
     }
 
     legacyOperation() {
-        this.paths.forEach( (path) => {
-            path.enabled = 0;
-        });
+        this.autonomousMode = false;
 
         this.entrances.forEach( (entrance) => {
             entrance.semaphore = 'red';
@@ -188,14 +195,12 @@ class CrossRoad {
                     innerCycle -= reds;
 
                     if (innerCycle < greens) {
-                        entrance.crossPath.enabled = 1;
                         entrance.semaphore = 'green';
                         return;
                     } 
                     innerCycle -= greens;
 
                     if (innerCycle < yellows) {
-                        entrance.crossPath.enabled = 1;
                         entrance.semaphore = 'yellow';
                     }
                 }
@@ -206,11 +211,13 @@ class CrossRoad {
     }
 
     autonomousOperation() {
+        this.autonomousMode = true;
 
         this.entrances.forEach( (entrance) => {
-            entrance.crossPath.enabled = 0;
             entrance.semaphore = 'blue';
         });
+
+        /*
 
         let lastTime = null;
         let minInterval = 0; // um segundo
@@ -303,68 +310,66 @@ class CrossRoad {
                 this.onExitControl(car);
             }
         });
-
-    }
-
-    manage() {
-        if (this.serverConnected) {
-            this.autonomousOperation();
-        } else {
-            this.legacyOperation();
-        }
+        */
     }
 
     display() {
-
         push();
-        
-        noFill();
+            noFill();
 
-        this.paths.forEach((path) => {
-            path.display();
-        });
+            this.paths.forEach((path) => {
+                path.display();
+            });
 
-        this.entrances.forEach( (entrance) => {
+            this.entrances.forEach( (entrance) => {
 
-            let path = entrance.crossPath;
+                let path = entrance.crossPath;
 
-            if (entrance.semaphore == 'green') {
-                path.displayCenterLine(color(0,255,0,128));
-            } else if (path.enabled && entrance.semaphore == 'blue') {
-                path.displayCenterLine(color(0,0,255,128));
-            } else {
-                path.displayCenterLine(color(255,0,0,128));
-            }
+                if (entrance.semaphore == 'green') {
+                    path.displayCenterLine(color(0,255,0,128));
+                } else if (entrance.semaphore == 'blue') {
+                    path.displayCenterLine(color(0,0,255,128));
+                } else {
+                    path.displayCenterLine(color(255,0,0,128));
+                }
 
-            var cor;
+                var cor;
 
-            if (entrance.semaphore == 'green') {
-                cor = color(0,255,0);
-            } else if (entrance.semaphore == 'yellow') {
-                cor = color(255,255,0);
-            } else if (entrance.semaphore == 'blue') {
-                cor = color(0,0,255);
-            } else {
-                cor = color(255,0,0);
-            }
+                if (entrance.semaphore == 'green') {
+                    cor = color(0,255,0);
+                } else if (entrance.semaphore == 'yellow') {
+                    cor = color(255,255,0);
+                } else if (entrance.semaphore == 'blue') {
+                    cor = color(0,0,255);
+                } else {
+                    cor = color(255,0,0);
+                }
 
-            push();
-                strokeWeight(1);
-                translate(entrance.getEnd().getVector());
-                rotate(entrance.getEnd().dir);
-                stroke(cor);
-                fill(cor);
-                rect(1, -this.width/2, 5, this.width);
-            pop();
-        });
-
+                push();
+                    strokeWeight(1);
+                    translate(entrance.getEnd().getVector());
+                    rotate(entrance.getEnd().dir);
+                    stroke(cor);
+                    fill(cor);
+                    rect(1, -this.width/2, 5, this.width);
+                pop();
+            });
         pop();
 
         push();
+            // Desenha o centro redondo do cruzamento
+            fill(0);
+            ellipse(this.center.x, this.center.y, 20, 20);
 
-        fill(color(128,128,255));
-        
-        ellipse(this.center.x, this.center.y, 10, 10);
+            if (parseInt(getMillis() / 500) % 2 == 0) {
+                fill(0);
+            } else if (this.autonomousMode) {
+                fill(color(0,0,255));
+            } else {
+                fill(color(255,255,0));
+            }
+
+            ellipse(this.center.x, this.center.y, 10, 10);
         pop();
     }
 
