@@ -12,9 +12,13 @@ const _SUL = Math.PI / 2;
 const _OESTE = Math.PI;
 const _NORTE = 3 * Math.PI / 2;
 
-const STREET_WIDTH = 30;
-const CAR_WIDTH = 19;
-const CAR_LENGTH = 35;
+const STREET_WIDTH   = 30;
+const CAR_WIDTH      = 19;
+const CAR_LENGTH     = 35;
+const CAR_MAX_SPEED  = kmh_dms(60);
+const CAR_TURN_SPEED = kmh_dms(40);
+const CAR_ACCEL      = 25; // 2.5 m/s^2
+const CAR_BRAKE      = 70; // 7.0 m/s^2
 
 var SIMULATION_TICK_PERIOD = 25;
 

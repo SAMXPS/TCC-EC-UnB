@@ -1,11 +1,8 @@
 function Car(roadStart, width, length, route, startDiff = 0) {
-    const brakeTime = 100;
-    const blinkTime = 750;
-    const blinkInterval = 250;
-    this.maxSpeed   = kmh_dms(60);
-    this.accel      = 25; // 2.5 m/s^2
-    this.brakeAccel = 70; // 7.0 m/s^2
-    this.turnSpeed  = kmh_dms(40);
+    this.maxSpeed   = CAR_MAX_SPEED;
+    this.turnSpeed  = CAR_TURN_SPEED;
+    this.accel      = CAR_ACCEL;
+    this.brakeAccel = CAR_BRAKE;
 
     this.position = roadStart.getStart().copy().forward(startDiff);
     this.road = roadStart;
@@ -24,6 +21,7 @@ function Car(roadStart, width, length, route, startDiff = 0) {
     this.lastMove = getMillis();
     this.lastManage = 0;
     this.time = 0;
+    this.color = color(255,255,255);
 
     this.startThread = function() {
         this.thread = setTimeout(async ()=>{
@@ -41,15 +39,10 @@ function Car(roadStart, width, length, route, startDiff = 0) {
         translate(this.position.x, this.position.y);
         rotate(this.position.dir);
 
-        noStroke();
-        fill(color(255,255,255,100));
-        //ellipse(this.length/6, 0, this.length * 2, this.width * 2);
-
         stroke(0);
-        fill(255);
-        if (this.controlledBy) {
-            fill(this.color);
-        }
+        fill(this.color);
+
+        // Corpo do carro
         rect(-(this.length/3), -(this.width/2), this.length, this.width);
 
         // Luz de freio
@@ -68,29 +61,29 @@ function Car(roadStart, width, length, route, startDiff = 0) {
         fill(color(255,255,255));
         rotate(-this.position.dir);
         text(dms_kmh(this.speed).toFixed(0) + "km/h", 0, 0);
-        if (this.crossControl) {
-            text("pos=" + this.crossControl.index, 0, 10);
-        }
         pop();
     }
 
-    this.getRoadT = function() {
-        let smallest = [null, null, null];
+    this.getRoadPosition = function() {
+        let roadPosition = {
+            position: null,
+            distance: null,
+            pathI: null,
+        };
         
         for(i = 0; i <= 1; i += 0.01) {
             posI = this.road.path(i, true);
             disI = posI.distance(this.position);
-            if (smallest[0] == null || disI <= smallest[1]) {
-                smallest = [posI, disI, i];
+            if (roadPosition.position == null || disI <= roadPosition.distance) {
+                roadPosition.position = posI;
+                roadPosition.distance = disI;
+                roadPosition.pathI = i;
             }
         }
 
-        return smallest;
+        return roadPosition;
     }
 
-    this.getRoadDistanceLeft = function() {
-        return this.road.getEnd().distance(this.position);
-    }
     this.manage = function() {
 
         let timePassed = this.time - this.lastManage;
@@ -101,6 +94,7 @@ function Car(roadStart, width, length, route, startDiff = 0) {
 
         this.lastManage = this.time;
 
+        // Controle de velocidade por curva
         if (this.road.type == 'turn' && !this.road.cross) {
             if (this.speed > this.turnSpeed) {
                 this.brakeTime = this.time + 100;
@@ -129,17 +123,15 @@ function Car(roadStart, width, length, route, startDiff = 0) {
                     }
                 }
             }
-            // TODO freiar para evitar acidentes
         });
 
-        let roadT = this.getRoadT();
-        let roadP = roadT[0];
+        let roadPosition = this.getRoadPosition();
         
         if (this.road.next?.type == 'turn' && !this.controlledBy) {
             let opa = 0.75;
-            if (roadT[2] > opa) {
+            if (roadPosition.pathI > opa) {
                 if (this.speed > this.turnSpeed) {
-                    let p = (roadT[2] - opa) / (1-opa);
+                    let p = (roadPosition.pathI - opa) / (1-opa);
                     let desiredSpeed = this.turnSpeed * (p) + this.speed * (1-p);
                     if (this.speed > desiredSpeed) {
                        this.brakeTime = this.time + 1;
@@ -148,9 +140,7 @@ function Car(roadStart, width, length, route, startDiff = 0) {
             }
         }
 
-        this.position.dir = roadP.dir;
-
-        if (roadT[2] > 0.99) {
+        if (roadPosition.pathI > 0.99) {
             if (this.road.next.type == 'crossroad') {
                 this.road = this.road.crossPath;
             } else {
@@ -171,8 +161,8 @@ function Car(roadStart, width, length, route, startDiff = 0) {
                 let red = this.road.semaphore == 'red';
 
                 if (this.road.semaphore == 'yellow') {
-                    if (roadT[2] > 0.6) {
-                        if(roadT[2] > 0.7 && this.speed >= 0.7*this.maxSpeed) {
+                    if (roadPosition.pathI > 0.6) {
+                        if(roadPosition.pathI > 0.7 && this.speed >= 0.7*this.maxSpeed) {
                             this.crossDesicion = 1;
                         } else {
                             red = 1;
@@ -182,51 +172,27 @@ function Car(roadStart, width, length, route, startDiff = 0) {
 
                 if (red) {
                     let opa = 0.5;
-                    if (roadT[2] > 0.95) {
+                    if (roadPosition.pathI > 0.95) {
                         this.brakeTime = this.time + 100;
-                    } else if (roadT[2] > opa) {
-                        let p = (roadT[2] - opa) / (1-opa);
+                    } else if (roadPosition.pathI > opa) {
+                        let p = (roadPosition.pathI - opa) / (1-opa);
                         let desiredSpeed = 0 * (p) + Math.max(this.speed, this.maxSpeed/3) * (1-p);
                         if (this.speed > desiredSpeed) {
                             this.brakeTime = this.time + 1;
                         }
                     }
                 }
-            } else {
-                this.gas = 1;
             }
         } else {
             this.crossDesicion = 0;
         }
         
         if (this.brakeTime > this.time) {
-            //this.speed -= 0.1;
-            this.speed -= this.brakeAccel * (timePassed/1000);
-
-            if (this.speed <= 0) {
-                this.speed = 0;
-            }
-
-            this.brakeLight = getMillis() + 200;
-        } else if (this.gas) {
-            this.speed += this.accel * (timePassed/1000);
-
-            if (this.speed > this.maxSpeed) {
-                this.speed = this.maxSpeed;
-            }
-        }
-
-
-        // Correct to the center of the road
-        if (roadT[2] > 0.1 && roadT[1] > 1) {
-            let roadD = this.road.path(roadT[2] + 0.2);
-            let expectedDir = createVector(1, 0).angleBetween(createVector(roadD.x - this.position.x, roadD.y - this.position.y));
-            let diff = atan2(sin(expectedDir-this.position.dir), cos(expectedDir-this.position.dir));
-
-            if (diff > Math.PI/8) diff = Math.PI/8;
-            if (diff < -Math.PI/8) diff = -Math.PI/8;
-
-            this.position.dir += diff;
+            this.brake = 1;
+            this.gas   = 0;
+        } else {
+            this.brake = 0;
+            this.gas   = 1;
         }
     }
 
@@ -237,7 +203,30 @@ function Car(roadStart, width, length, route, startDiff = 0) {
         if (timePassed > 100) {
             timePassed = 100;
         }
+
+        if (this.brake) {
+            this.brakeLight = getMillis() + 200;
+            this.speed = Math.max(0, this.speed - this.brakeAccel * (timePassed/1000));
+        } else if (this.gas) {
+            this.speed = Math.min(this.maxSpeed, this.speed + this.accel * (timePassed/1000));
+        }
         
+        let roadPosition = this.getRoadPosition();
+
+        this.position.dir = roadPosition.position.dir;
+        
+        // Correct to the center of the road
+        if (roadPosition.pathI > 0.1 && roadPosition.distance > 1) {
+            let roadD = this.road.path(roadPosition.pathI + 0.2);
+            let expectedDir = createVector(1, 0).angleBetween(createVector(roadD.x - this.position.x, roadD.y - this.position.y));
+            let diff = atan2(sin(expectedDir-this.position.dir), cos(expectedDir-this.position.dir));
+
+            if (diff > Math.PI/8) diff = Math.PI/8;
+            if (diff < -Math.PI/8) diff = -Math.PI/8;
+
+            this.position.dir += diff;
+        }
+
         this.position.x += this.speed * Math.cos(this.position.dir) * (timePassed/1000);
         this.position.y += this.speed * Math.sin(this.position.dir) * (timePassed/1000);
     }
