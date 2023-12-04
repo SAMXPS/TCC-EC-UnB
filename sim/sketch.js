@@ -4,7 +4,6 @@ var centerX;
 var centerY;
 var menu;
 
-let x = 0;
 var simulation;
 
 const _LESTE = 0;

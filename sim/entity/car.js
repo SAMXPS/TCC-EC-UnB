@@ -1,10 +1,11 @@
 function Car(roadStart, width, length, route, _name, startDiff = 0) {
+    this.type       = 'car';
+    this.name       = _name;
+    
     this.maxSpeed   = CAR_MAX_SPEED;
     this.turnSpeed  = CAR_TURN_SPEED;
     this.accel      = CAR_ACCEL;
     this.brakeAccel = CAR_BRAKE;
-
-    this.name = _name;
     this.position = roadStart.getStart().copy().forward(startDiff);
 
     this.road  = roadStart;

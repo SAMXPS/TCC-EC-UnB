@@ -2,6 +2,7 @@ class CrossRoad {
 
     constructor(entrances, exits, width, name) {
         this.type = 'crossroad';
+        this.name = name;
 
         this.entrances = entrances;
         this.exits = exits;
@@ -17,7 +18,6 @@ class CrossRoad {
         this.thread = null;
         this.time   = 0;
         this.autonomousMode = false;
-        this.name = name;
     }
 
     async loadPaths() {

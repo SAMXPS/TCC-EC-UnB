@@ -7,6 +7,7 @@ class Turn {
 
         this.type   = 'turn';
         this.name   = name;
+        
         this.before = before;
         this.next   = next;
         this.width  = width;
