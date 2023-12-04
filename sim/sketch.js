@@ -34,14 +34,6 @@ async function setup() {
 	menu.setup();
 
 	simulation = await loadSimulation();
-
-	simulation.cross.forEach((cross)=>{
-		cross.startThread();
-	});
-
-	simulation.cars.forEach((car)=>{
-		car.startThread();
-	});
 }
 
 let isMousePressed = 0;
@@ -49,7 +41,7 @@ let mousePressedLocation = [0, 0];
 let myscale = 0.8;
 
 function draw() {
-    frameRate(30);
+    frameRate(60);
 	background(204);
 
 	push();
@@ -62,18 +54,10 @@ function draw() {
 		centerY = -mousePressedLocation[1] + mouseY;
 	}
 
-	simulation.cross.forEach((cross) => {
-		cross.display();
+	simulation.getElements().forEach((element) => {
+		element.display();
 	});
 
-	simulation.streets.forEach((street) => {
-		street.display();
-	});
-
-	simulation.cars.forEach((car) => {
-		car.move();
-		car.display();
-	});
 
 	pop();
 	menu.draw();

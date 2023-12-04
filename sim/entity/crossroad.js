@@ -1,6 +1,6 @@
 class CrossRoad {
 
-    constructor(entrances, exits, width) {
+    constructor(entrances, exits, width, name) {
         this.type = 'crossroad';
 
         this.entrances = entrances;
@@ -10,20 +10,30 @@ class CrossRoad {
         this.width = width;
 
         this.center = new AllignedPosition(0,0,0);
-        
+
+        this.controlledCars = [];
+        this.entranceGroups = [];
+        this.nextSort = 0;
+        this.thread = null;
+        this.time   = 0;
+        this.autonomousMode = false;
+        this.name = name;
+    }
+
+    async loadPaths() {
         let count = 0;
 
-        this.entrances.forEach( entrance => {
+        this.entrances.forEach( async (entrance) => {
             entrance.next = this;
 
-            this.exits.forEach( exit => {
+            this.exits.forEach( async (exit) => {
                 if (entrance.crossPath) {
                     return; 
                 }
 
                 if (Math.abs(atan2(sin(entrance.getEnd().dir-exit.getStart().dir), cos(entrance.getEnd().dir-exit.getStart().dir))) <= 0.01 /*(Math.PI/2 + 0.01)*/) {
                     exit.before = this;
-                    let turn = new Turn(entrance, exit, this.width, '', false);
+                    let turn = new Turn(entrance, exit, this.width, await generateRandomId(), false);
                     turn.cross = this;
                     this.paths.push(turn);
                     entrance.crossPath = turn;
@@ -37,8 +47,6 @@ class CrossRoad {
 
         this.center.x /= count;
         this.center.y /= count;
-
-        this.entranceGroups = [];
 
         this.entrances.forEach( entrance => {
             if (entrance.group) return;
@@ -57,12 +65,6 @@ class CrossRoad {
                 }
             });
         });
-
-        this.controlledCars = [];
-        this.nextSort = 0;
-        this.thread = null;
-        this.time   = 0;
-        this.autonomousMode = false;
     }
 
     startThread() {

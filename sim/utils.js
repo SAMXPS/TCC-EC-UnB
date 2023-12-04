@@ -80,6 +80,10 @@ async function sha1_hash(message) {
     return hashHex;
 }
 
+async function generateRandomId() {
+    return await sha1_hash(Date.now() + "." + Math.random());
+}
+
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }

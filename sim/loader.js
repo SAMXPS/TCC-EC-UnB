@@ -1,116 +1,141 @@
+class Simulation {
+    constructor(id, cars, streets, cross) {
+        this.id = id;
+        this.cars = cars;
+        this.streets = streets;
+        this.cross = cross;
+        this.elements = [].concat(this.cross).concat(this.streets).concat(this.cars);
+    }
+
+    getElements() {
+        return this.elements;
+    }
+}
+
 async function loadSimulation() {
 
-    let simulation_id = await sha1_hash(Date.now() + "." + Math.random());
+    let simulation_id = await generateRandomId();
 
     let baseLen = 500;
     let mcenter = new AllignedPosition(0, 0, 0);
 
-    let streetA = new Street(
+    let streetEast1 = new Street(
         mcenter.copy(),
         baseLen, STREET_WIDTH,
-        'EAST_1',
+        await generateRandomId(),
     );
 
-    let streetB = new Street(
-        streetA.getEnd().left(STREET_WIDTH * 1.5)
+    let streetEast2 = new Street(
+        streetEast1.getEnd().left(STREET_WIDTH * 1.5)
             .rotate(Math.PI),
         baseLen, STREET_WIDTH,
-        'EAST_2',
+        await generateRandomId(),
     );
 
-    let streetC = new Street(
-        streetB.getEnd().forward(STREET_WIDTH * 1.5)
+    let streetNorth1 = new Street(
+        streetEast2.getEnd().forward(STREET_WIDTH * 1.5)
             .rotate(Math.PI / 2)
             .forward(STREET_WIDTH * 1.5),
         baseLen, STREET_WIDTH,
-        'NORTH_1',
+        await generateRandomId(),
     );
 
-    let streetD = new Street(
-        streetC.getEnd().left(STREET_WIDTH * 1.5)
+    let streetNorth2 = new Street(
+        streetNorth1.getEnd().left(STREET_WIDTH * 1.5)
             .rotate(Math.PI),
         baseLen, STREET_WIDTH,
-        'NORTH_2',
+        await generateRandomId(),
     );
 
-    let streetE = new Street(
-        streetD.getEnd().forward(STREET_WIDTH * 1.5)
+    let streetWest1 = new Street(
+        streetNorth2.getEnd().forward(STREET_WIDTH * 1.5)
             .rotate(Math.PI / 2)
             .forward(STREET_WIDTH * 1.5),
         baseLen, STREET_WIDTH,
-        'WEST_1',
+        await generateRandomId(),
     );
 
-    let streetF = new Street(
-        streetE.getEnd().left(STREET_WIDTH * 1.5)
+    let streetWest2 = new Street(
+        streetWest1.getEnd().left(STREET_WIDTH * 1.5)
             .rotate(Math.PI),
         baseLen, STREET_WIDTH,
-        'WEST_2',
+        await generateRandomId(),
     );
 
-    let streetG = new Street(
-        streetF.getEnd().forward(STREET_WIDTH * 1.5)
+    let streetSouth1 = new Street(
+        streetWest2.getEnd().forward(STREET_WIDTH * 1.5)
             .rotate(Math.PI / 2)
             .forward(STREET_WIDTH * 1.5),
         baseLen, STREET_WIDTH,
-        'SOUTH_1',
+        await generateRandomId(),
     );
 
-    let streetH = new Street(
-        streetG.getEnd().left(STREET_WIDTH * 1.5)
+    let streetSouth2 = new Street(
+        streetSouth1.getEnd().left(STREET_WIDTH * 1.5)
             .rotate(Math.PI),
         baseLen, STREET_WIDTH,
-        'SOUTH_2',
+        await generateRandomId(),
     );
 
-    let turnAB = new Turn(streetA, streetB, STREET_WIDTH);
-    let turnCD = new Turn(streetC, streetD, STREET_WIDTH);
-    let turnEF = new Turn(streetE, streetF, STREET_WIDTH);
-    let turnGH = new Turn(streetG, streetH, STREET_WIDTH);
+    let turnEast  = new Turn(streetEast1 , streetEast2 , STREET_WIDTH, await generateRandomId());
+    let turnNorth = new Turn(streetNorth1, streetNorth2, STREET_WIDTH, await generateRandomId());
+    let turnWest  = new Turn(streetWest1 , streetWest2 , STREET_WIDTH, await generateRandomId());
+    let turnSouth = new Turn(streetSouth1, streetSouth2, STREET_WIDTH, await generateRandomId());
+
+    let mainCross = new CrossRoad(
+        [
+            streetEast2,
+            streetNorth2,
+            streetWest2,
+            streetSouth2,
+        ], 
+        [
+            streetEast1,
+            streetNorth1,
+            streetWest1,
+            streetSouth1,
+        ],
+        STREET_WIDTH,
+        await generateRandomId()
+    );
+
+    await mainCross.loadPaths();
 
     let streets = [
-        streetA,
-        streetB,
-        streetC,
-        streetD,
-        streetE,
-        streetF,
-        streetG,
-        streetH,
-        turnCD,
-        turnEF,
-        turnGH,
-        turnAB,
+        streetEast1,
+        streetEast2,
+        streetNorth1,
+        streetNorth2,
+        streetWest1,
+        streetWest2,
+        streetSouth1,
+        streetSouth2,
+        turnNorth,
+        turnWest,
+        turnSouth,
+        turnEast,
     ];
 
     let cross = [
-        new CrossRoad(
-            [
-                streetB,
-                streetD,
-                streetF,
-                streetH,
-            ], 
-            [
-                streetA,
-                streetC,
-                streetE,
-                streetG,
-            ],
-            STREET_WIDTH
-        ),
+        mainCross
     ]
 
     let cars = [
-        new Car(streetA, CAR_WIDTH, CAR_LENGTH, [
-            'EAST_1','EAST_2','WEST_1','WEST_2'
-        ]),
+        new Car(streetEast1, CAR_WIDTH, CAR_LENGTH, [
+            streetEast1.name,
+            streetEast2.name,
+            streetWest1.name,
+            streetWest2.name
+        ], await generateRandomId()),
     ];
 
-    return {
-        cars: cars,
-        streets: streets,
-        cross: cross,
-        id: simulation_id
-    }
+	cross.forEach((cross)=>{
+		cross.startThread();
+	});
+
+	cars.forEach((car)=>{
+		car.startThread();
+	});
+
+    return new Simulation(simulation_id, cars, streets, cross);
 }

@@ -1,11 +1,13 @@
-function Car(roadStart, width, length, route, startDiff = 0) {
+function Car(roadStart, width, length, route, _name, startDiff = 0) {
     this.maxSpeed   = CAR_MAX_SPEED;
     this.turnSpeed  = CAR_TURN_SPEED;
     this.accel      = CAR_ACCEL;
     this.brakeAccel = CAR_BRAKE;
 
+    this.name = _name;
     this.position = roadStart.getStart().copy().forward(startDiff);
-    this.road = roadStart;
+
+    this.road  = roadStart;
     this.route = route;
 
     this.speed = 0;
@@ -34,6 +36,8 @@ function Car(roadStart, width, length, route, startDiff = 0) {
     }
 
     this.display = function() {
+        this.move();
+
         push();
 
         translate(this.position.x, this.position.y);
