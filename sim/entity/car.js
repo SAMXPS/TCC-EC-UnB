@@ -30,7 +30,7 @@ function Car(roadStart, width, length, route, startDiff = 0) {
 
         noStroke();
         fill(color(255,255,255,100));
-        ellipse(this.length/6, 0, this.length * 2, this.width * 2);
+        //ellipse(this.length/6, 0, this.length * 2, this.width * 2);
 
         stroke(0);
         fill(255);
