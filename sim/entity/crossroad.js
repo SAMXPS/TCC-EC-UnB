@@ -249,7 +249,7 @@ class CrossRoad {
             });
 
             // Detect cars entering the crossRoad
-            cars.forEach((car) => {
+            simulation.cars.forEach((car) => {
                 if (car.isNearCross(this)) {
                     if (car.controlledBy != this) {
                         this.onEnterControl(car);
@@ -263,7 +263,7 @@ class CrossRoad {
 
         } else {
 
-            cars.forEach((car) => {
+            simulation.cars.forEach((car) => {
                 if (car.controlledBy == this) {
                     this.onExitControl(car);
                 }

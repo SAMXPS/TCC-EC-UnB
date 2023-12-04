@@ -1,9 +1,0 @@
-version: '3.8'
-services:
-  data_processor:
-    build:
-      context: ./
-      dockerfile: Dockerfile
-    env_file: .env
-    ports:
-      - 50023:50023/udp

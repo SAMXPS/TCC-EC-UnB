@@ -1,4 +1,3 @@
-
 function Car(roadStart, width, length, route, startDiff = 0) {
     const brakeTime = 100;
     const blinkTime = 750;
@@ -102,6 +101,11 @@ function Car(roadStart, width, length, route, startDiff = 0) {
     this.move = function() {
 
         let timePassed = getMillis() - this.lastMove;
+
+        if (timePassed > 100) {
+            timePassed = 100;
+        }
+
         this.lastMove = getMillis();
 
 
@@ -115,7 +119,7 @@ function Car(roadStart, width, length, route, startDiff = 0) {
             }
         }
 
-        cars.forEach( (other) => {
+        simulation.cars.forEach( (other) => {
             if (other == this) return;
             
             if (other.position.distance(this.position) < Math.max(this.length, this.width)) {

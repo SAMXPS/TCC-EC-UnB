@@ -2,12 +2,12 @@ function Menu() {
     this.setup = function() {
         button = createButton('road');
         button.position(0, 0);
-        button.mousePressed(addRoad);
+        //button.mousePressed(addRoad);
         button.addClass("buttone");
 
         button2 = createButton('connect');
         button2.position(100, 0);
-        button2.mousePressed(addConnect);
+        //button2.mousePressed(addConnect);
         button2.addClass("buttone");
     }
 

@@ -28,7 +28,7 @@ function run() {
 
     server.on('listening', () => {
         const address = server.address();
-        echo_server_log(`server listening ${address.address}:${address.port}`);
+        echo_server_log(`echo server listening ${address.address}:${address.port}`);
     });
 
     server.bind(50023);

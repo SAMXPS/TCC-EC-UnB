@@ -1,4 +1,6 @@
-function loadDefaultEntities() {
+async function loadSimulation() {
+
+    let simulation_id = await sha1_hash(Date.now() + "." + Math.random());
 
     let baseLen = 500;
     let mcenter = new AllignedPosition(0, 0, 0);
@@ -66,7 +68,7 @@ function loadDefaultEntities() {
     let turnEF = new Turn(streetE, streetF, STREET_WIDTH);
     let turnGH = new Turn(streetG, streetH, STREET_WIDTH);
 
-    streets = [
+    let streets = [
         streetA,
         streetB,
         streetC,
@@ -81,7 +83,7 @@ function loadDefaultEntities() {
         turnAB,
     ];
 
-    cross = [
+    let cross = [
         new CrossRoad(
             [
                 streetB,
@@ -98,7 +100,7 @@ function loadDefaultEntities() {
         ),
     ]
 
-    cars = [
+    let cars = [
         new Car(streets[0], CAR_WIDTH, CAR_LENGTH, [
             'EAST_1','EAST_2','WEST_1','WEST_2'
         ]),
@@ -148,4 +150,11 @@ function loadDefaultEntities() {
             'NORTH_1','NORTH_2','SOUTH_1','SOUTH_2'
         ]),
     ];
+
+    return {
+        cars: cars,
+        streets: streets,
+        cross: cross,
+        id: simulation_id
+    }
 }

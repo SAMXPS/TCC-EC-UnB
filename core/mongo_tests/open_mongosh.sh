@@ -1,1 +1,0 @@
-docker-compose exec mongodb mongosh --username samuel --authenticationDatabase admin

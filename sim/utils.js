@@ -68,3 +68,14 @@ function kmh_dms(kmh) {
 function dms_kmh(dms) {
     return dms * 0.36;
 }
+
+async function sha1_hash(message) {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(message);
+    const hashBuffer = await crypto.subtle.digest("SHA-1", data);
+    const hashArray = Array.from(new Uint8Array(hashBuffer)); // convert buffer to byte array
+    const hashHex = hashArray
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join(""); // convert bytes to hex string
+    return hashHex;
+}
