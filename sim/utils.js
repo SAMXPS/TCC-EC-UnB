@@ -79,3 +79,7 @@ async function sha1_hash(message) {
     .join(""); // convert bytes to hex string
     return hashHex;
 }
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}

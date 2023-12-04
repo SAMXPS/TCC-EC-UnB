@@ -1,15 +1,15 @@
 function serverConnect() {
-    const ws = new WebSocket('ws://localhost:50024');
+    return new Promise((resolve, reject) => {
+        const timeout = 200; //ms
 
-    ws.onopen = function() {
-        ws.send("opa sou um cliente ws");
-    };
+        const ws = new WebSocket('ws://localhost:50024');
 
-    ws.onmessage = async function(msg) {
-        console.log("received: " + (await msg.data.text()));
-    };
+        ws.onopen = function() {
+            resolve(ws);
+        };
 
-    return ws;
+        const interval = setTimeout(() => {
+            reject(new Error("Server connection timed out."));
+        }, timeout);
+    });
 }
-
-serverConnect();

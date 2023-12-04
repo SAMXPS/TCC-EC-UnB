@@ -64,6 +64,26 @@ class CrossRoad {
 
         this.serverConnected = 1;
         this.nextSort = 0;
+        this.thread = null;
+        this.time   = 0;
+    }
+
+    startThread() {
+        this.thread = setTimeout(async ()=>{
+            while (1) {
+                this.manage();
+                await sleep(100);
+                this.time += 100;
+            }
+        });
+    }
+
+    async connectToServer() {
+        let server = await serverConnect();
+
+        if (server) {
+
+        }
     }
 
     getDistanceTimeTillMaxSpeed(car, maxSpeed) {
@@ -183,13 +203,13 @@ class CrossRoad {
                 car.crossControl.distanceTillCrossEnd = car.crossControl.path.getEnd().distance(car.position);
             })
     
-            if (getMillis() > this.nextSort) {
+            if (this.time > this.nextSort) {
 
                 // TODO: later if we have time
                 // colocar junto carros que estao em pistas opostas pra cruzar juntos sempre que possivel
                 // maximizar fluxo de veículos no cruzamento
 
-                this.nextSort = getMillis() + 100;
+                this.nextSort = this.time + 100;
             }
 
             this.entranceGroups.forEach((group)=>{
@@ -274,13 +294,13 @@ class CrossRoad {
             let reds    = 3;
             let loops   = greens + yellows + reds;
 
-            let cycle = parseInt((getMillis() / 1000)) % ((this.entranceGroups.length) * (loops));
+            let cycle = parseInt((this.time / 1000)) % ((this.entranceGroups.length) * (loops));
             let i = 0;
 
             this.entranceGroups.forEach( (group) => {
                 group.entrances.forEach((entrance)=>{
                     if (parseInt(cycle/loops) == i) {
-                        let innerCycle = cycle % loops;
+                        let innerCycle = (cycle - reds) % loops;
 
                         if (innerCycle < greens) {
                             entrance.crossPath.enabled = 1;

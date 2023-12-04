@@ -28,6 +28,10 @@ async function setup() {
 	menu.setup();
 
 	simulation = await loadSimulation();
+
+	simulation.cross.forEach((cross)=>{
+		cross.startThread();
+	});
 }
 
 let isMousePressed = 0;
@@ -35,6 +39,7 @@ let mousePressedLocation = [0, 0];
 let myscale = 0.8;
 
 function draw() {
+    frameRate(30);
 	background(204);
 
 	push();
@@ -49,7 +54,6 @@ function draw() {
 
 	simulation.cross.forEach((cross) => {
 		cross.display();
-		cross.manage();
 	});
 
 	simulation.streets.forEach((street) => {
