@@ -1,12 +1,12 @@
 class Turn {
 
-    constructor(before, next, width, name='', auto_connect = true) {
+    constructor(before, next, width, id='', auto_connect = true) {
         if (before?.type != 'street' || next?.type != 'street') {
             throw new Error("Turn can only be used to connect Streets.");
         }
 
         this.type   = 'turn';
-        this.name   = name;
+        this.id   = id;
         
         this.before = before;
         this.next   = next;

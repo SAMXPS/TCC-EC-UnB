@@ -1,6 +1,6 @@
-function Car(roadStart, width, length, route, _name, startDiff = 0) {
+function Car(roadStart, width, length, route, _id, startDiff = 0) {
     this.type       = 'car';
-    this.name       = _name;
+    this.id       = _id;
     
     this.maxSpeed   = CAR_MAX_SPEED;
     this.turnSpeed  = CAR_TURN_SPEED;
@@ -26,15 +26,11 @@ function Car(roadStart, width, length, route, _name, startDiff = 0) {
     this.time = 0;
     this.color = color(255,255,255);
 
-    this.startThread = function() {
-        this.thread = setTimeout(async ()=>{
-            while (1) {
-                this.manage();
-                await sleep(SIMULATION_TICK_PERIOD);
-                this.time += SIMULATION_TICK_PERIOD;
-            }
-        });
-    }
+    this.autonomousMode = false;
+    this.server = null;
+    this.nextConnectTry = 0;
+    
+    this.serverHook = new ServerHook(this);
 
     this.display = function() {
         this.move();
@@ -68,7 +64,7 @@ function Car(roadStart, width, length, route, _name, startDiff = 0) {
         text(dms_kmh(this.speed).toFixed(0) + "km/h", 0, 0);
         pop();
     }
-
+    
     this.getRoadPosition = function() {
         let roadPosition = {
             position: null,
@@ -89,7 +85,57 @@ function Car(roadStart, width, length, route, _name, startDiff = 0) {
         return roadPosition;
     }
 
-    this.manage = function() {
+    this.startThread = function() {
+        this.thread = setTimeout(async ()=>{
+            while (1) {
+                await this.manage();
+                await sleep(SIMULATION_TICK_PERIOD);
+                this.time += SIMULATION_TICK_PERIOD;
+            }
+        });
+    }
+
+    this.manage = async function() {
+        if (await this.serverHook.manage()) {
+            this.autonomousOperation();
+        } else {
+            this.legacyOperation();
+        }
+    }
+
+    this.legacyOperation = function() {
+        delete this.desiredSpeed;
+        this.autonomousMode = false;
+
+        this.color = color(255,255,255);
+        this.run();
+    }
+
+    this.autonomousOperation = function() {
+        if (!this.autonomousMode) {
+            this.autonomousMode = true;
+            console.log("[Car] Iniciando operacao em modo autonomo.");
+        }
+
+        this.color = color(128,128,256);
+        this.run();
+
+        let dataToSend = JSON.stringify(
+            {
+                position: this.position,
+                speed: this.speed,
+                road: this.road.id,
+            }
+        );
+
+        if (parseInt(Math.random()*100) == 0) {
+            console.log(dataToSend);
+        }
+
+        this.serverHook.con.send(dataToSend);
+    }
+
+    this.run = function() {
 
         let timePassed = this.time - this.lastManage;
 
@@ -119,7 +165,7 @@ function Car(roadStart, width, length, route, _name, startDiff = 0) {
                 return;
             }
 
-            if (!this.controlledBy || true) {
+            if (!this.autonomousMode || true) {
                 let pos = this.position.copy();
                 for (let i = 0; i < 10 * (1 + (dms_kmh(this.speed)/10)); i++) {
                     pos = pos.forward(5);
@@ -132,7 +178,7 @@ function Car(roadStart, width, length, route, _name, startDiff = 0) {
 
         let roadPosition = this.getRoadPosition();
         
-        if (this.road.next?.type == 'turn' && !this.controlledBy) {
+        if (this.road.next?.type == 'turn' && !this.autonomousMode) {
             let opa = 0.75;
             if (roadPosition.pathI > opa) {
                 if (this.speed > this.turnSpeed) {
@@ -153,16 +199,10 @@ function Car(roadStart, width, length, route, _name, startDiff = 0) {
             }
         }
 
-        if (this.desiredSpeed) {
-            if (this.speed < this.desiredSpeed) {
-                this.gas = 1;
-            } else {
-               this.brakeTime = this.time + 10;
-            }
-        }
-
-        if (!this.controlledBy && this.road.semaphore) {
+        if (this.road.semaphore) {
             if (!this.passCurrentSemaphore) {
+
+
                 let red = this.road.semaphore == 'red';
 
                 if (this.road.semaphore == 'yellow') {
@@ -171,6 +211,19 @@ function Car(roadStart, width, length, route, _name, startDiff = 0) {
                             this.passCurrentSemaphore = 1;
                         } else {
                             red = 1;
+                        }
+                    }
+                }
+
+                if (this.road.semaphore == 'blue') {
+                    if (!this.autonomousMode) {
+                        red = true;
+                        this.color = color(255,128,128);
+                    } else {
+                        if (this.desiredSpeed) {
+                            if (this.speed > this.desiredSpeed) {
+                               this.brakeTime = this.time + 10;
+                            }
                         }
                     }
                 }
@@ -191,7 +244,7 @@ function Car(roadStart, width, length, route, _name, startDiff = 0) {
         } else {
             this.passCurrentSemaphore = 0;
         }
-        
+
         if (this.brakeTime > this.time) {
             this.brake = 1;
             this.gas   = 0;
@@ -237,9 +290,9 @@ function Car(roadStart, width, length, route, _name, startDiff = 0) {
     }
 
     this.getCurrentRoutePosition = function() {
-        var indexCurrent = this.route.indexOf(this.road.name);
+        var indexCurrent = this.route.indexOf(this.road.id);
         if (indexCurrent >= 0) return indexCurrent;
-        indexCurrent = this.route.indexOf(this.road.before.name);
+        indexCurrent = this.route.indexOf(this.road.before.id);
         if (indexCurrent >= 0) return indexCurrent;
         return -1;
     }

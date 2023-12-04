@@ -1,7 +1,7 @@
 class Street {
-    constructor(_start, _length, _width, _name = '') {
+    constructor(_start, _length, _width, _id = '') {
         this.type     = 'street';
-        this.name     = _name;
+        this.id     = _id;
         
         this.start    = _start.copy();
         this.length   = _length;

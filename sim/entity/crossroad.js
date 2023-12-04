@@ -1,8 +1,8 @@
 class CrossRoad {
 
-    constructor(entrances, exits, width, name) {
+    constructor(entrances, exits, width, id) {
         this.type = 'crossroad';
-        this.name = name;
+        this.id = id;
 
         this.entrances = entrances;
         this.exits = exits;
@@ -19,8 +19,7 @@ class CrossRoad {
         this.time   = 0;
         this.autonomousMode = false;
 
-        this.server = null;
-        this.nextConnectTry = 0;
+        this.serverHook = new ServerHook(this);
     }
 
     async loadPaths() {
@@ -36,7 +35,7 @@ class CrossRoad {
 
                 if (Math.abs(atan2(sin(entrance.getEnd().dir-exit.getStart().dir), cos(entrance.getEnd().dir-exit.getStart().dir))) <= 0.01 /*(Math.PI/2 + 0.01)*/) {
                     exit.before = this;
-                    let turn = new Turn(entrance, exit, this.width, await generateRandomId(), false);
+                    let turn = new Turn(entrance, exit, this.width, generateSequentialId(), false);
                     turn.cross = this;
                     this.paths.push(turn);
                     entrance.crossPath = turn;
@@ -73,78 +72,20 @@ class CrossRoad {
     startThread() {
         this.thread = setTimeout(async ()=>{
             while (1) {
-                try {
-                    await this.manage();
-                } catch (e) {
-                    console.log(e);
-                    this.resetOperation();
-                }
+                await this.manage();
                 await sleep(SIMULATION_TICK_PERIOD);
                 this.time += SIMULATION_TICK_PERIOD;
             }
         });
     }
 
-    resetOperation() {
-
-        let oldServer = this.server;
-
-        setTimeout(()=>{
-            try {
-                oldServer.con.close();
-            } catch (e) {
-
-            }
-        });
-
-        if (this.autonomousMode) {
-            this.time = 0;
-            this.autonomousMode = 0;
-        }
-
-        this.server = null;
-        this.nextConnectTry = getMillis() + 1000;
-
-        this.entrances.forEach( (entrance) => {
-            entrance.semaphore = 'red';
-        });
-    }
-
     async manage() {
-        if (!this.server) {
-            if ( getMillis() > this.nextConnectTry) {
-                console.log("conneting....");
-                this.server = { 
-                    con: await serverConnect(),
-                    load_sent: false,
-                }
-            }
-        } else if (!this.server.load_sent) {
-            this.server.con.onmessage = (data) => {
-                let msg = data.data;
-                console.log(msg);
-
-                if (msg == 'load_ok') {
-                    this.server.loaded = 1;
-                }
-            };
-            this.server.con.send(simulation.id);
-            this.server.con.send(this.type);
-            this.server.load_sent = 1;
-        }
-        
-        if (this.server?.loaded) {
-            if (this.server.con.readyState == WebSocket.CLOSED) {
-                this.resetOperation();
-                return;
-            }
-
+        if (await this.serverHook.manage()) {
             this.autonomousOperation();
         } else {
             this.legacyOperation();
         }
     }
-
 
     getDistanceTimeTillMaxSpeed(car, maxSpeed) {
         /*if (car.speed < maxSpeed) {
@@ -230,7 +171,10 @@ class CrossRoad {
     }
 
     legacyOperation() {
-        this.autonomousMode = false;
+        if (this.autonomousMode) {
+            this.time = 0;
+            this.autonomousMode = 0;
+        }
 
         this.entrances.forEach( (entrance) => {
             entrance.semaphore = 'red';
@@ -269,7 +213,27 @@ class CrossRoad {
     }
 
     autonomousOperation() {
-        this.autonomousMode = true;
+        if (!this.autonomousMode) {
+            this.autonomousMode = true;
+            this.time = 0;
+            console.log("[CrossRoad] Iniciando operacao em modo autonomo.");
+        }
+
+        this.serverHook.con.send("ping");
+
+        let last_update = this.serverHook.last_update;
+        let last_info = this.serverHook.last_info;
+        let latency = getMillis() - last_update;
+
+        //console.log(latency);
+
+        // Semaforo começa vermelho pra aguardar os carros se conectarem.
+        if (this.time < 5000) {
+            this.entrances.forEach( (entrance) => {
+                entrance.semaphore = 'red';
+            });
+            return;
+        }
 
         this.entrances.forEach( (entrance) => {
             entrance.semaphore = 'blue';
