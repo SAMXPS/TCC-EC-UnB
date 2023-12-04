@@ -18,6 +18,9 @@ class CrossRoad {
         this.thread = null;
         this.time   = 0;
         this.autonomousMode = false;
+
+        this.server = null;
+        this.nextConnectTry = 0;
     }
 
     async loadPaths() {
@@ -70,19 +73,72 @@ class CrossRoad {
     startThread() {
         this.thread = setTimeout(async ()=>{
             while (1) {
-                this.manage();
+                try {
+                    await this.manage();
+                } catch (e) {
+                    console.log(e);
+                    this.resetOperation();
+                }
                 await sleep(SIMULATION_TICK_PERIOD);
                 this.time += SIMULATION_TICK_PERIOD;
             }
         });
     }
-    
-    connectToServer() {
-        this.server = serverConnect();
+
+    resetOperation() {
+
+        let oldServer = this.server;
+
+        setTimeout(()=>{
+            try {
+                oldServer.con.close();
+            } catch (e) {
+
+            }
+        });
+
+        if (this.autonomousMode) {
+            this.time = 0;
+            this.autonomousMode = 0;
+        }
+
+        this.server = null;
+        this.nextConnectTry = getMillis() + 1000;
+
+        this.entrances.forEach( (entrance) => {
+            entrance.semaphore = 'red';
+        });
     }
 
-    manage() {
-        if (0) {
+    async manage() {
+        if (!this.server) {
+            if ( getMillis() > this.nextConnectTry) {
+                console.log("conneting....");
+                this.server = { 
+                    con: await serverConnect(),
+                    load_sent: false,
+                }
+            }
+        } else if (!this.server.load_sent) {
+            this.server.con.onmessage = (data) => {
+                let msg = data.data;
+                console.log(msg);
+
+                if (msg == 'load_ok') {
+                    this.server.loaded = 1;
+                }
+            };
+            this.server.con.send(simulation.id);
+            this.server.con.send(this.type);
+            this.server.load_sent = 1;
+        }
+        
+        if (this.server?.loaded) {
+            if (this.server.con.readyState == WebSocket.CLOSED) {
+                this.resetOperation();
+                return;
+            }
+
             this.autonomousOperation();
         } else {
             this.legacyOperation();
