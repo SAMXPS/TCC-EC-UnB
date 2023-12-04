@@ -62,7 +62,7 @@ class CrossRoad {
         //this.paths[0].enabled = 1;
         this.controlledCars = [];
 
-        this.serverConnected = 1;
+        this.serverConnected = 0;
         this.nextSort = 0;
         this.thread = null;
         this.time   = 0;
@@ -282,13 +282,6 @@ class CrossRoad {
             });
 
         } else {
-
-            simulation.cars.forEach((car) => {
-                if (car.controlledBy == this) {
-                    this.onExitControl(car);
-                }
-            });
-
             let greens  = 12;
             let yellows = 3;
             let reds    = 3;
@@ -300,12 +293,19 @@ class CrossRoad {
             this.entranceGroups.forEach( (group) => {
                 group.entrances.forEach((entrance)=>{
                     if (parseInt(cycle/loops) == i) {
-                        let innerCycle = (cycle - reds) % loops;
+                        let innerCycle = (cycle) % loops;
+
+                        if (innerCycle < reds) return;
+                        innerCycle -= reds;
 
                         if (innerCycle < greens) {
                             entrance.crossPath.enabled = 1;
                             entrance.semaphore = 'green';
-                        } else if (innerCycle < greens + yellows) {
+                            return;
+                        } 
+                        innerCycle -= greens;
+
+                        if (innerCycle < yellows) {
                             entrance.crossPath.enabled = 1;
                             entrance.semaphore = 'yellow';
                         }
