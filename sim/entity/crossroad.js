@@ -61,8 +61,6 @@ class CrossRoad {
 
         //this.paths[0].enabled = 1;
         this.controlledCars = [];
-
-        this.serverConnected = 0;
         this.nextSort = 0;
         this.thread = null;
         this.time   = 0;
@@ -72,18 +70,14 @@ class CrossRoad {
         this.thread = setTimeout(async ()=>{
             while (1) {
                 this.manage();
-                await sleep(100);
-                this.time += 100;
+                await sleep(SIMULATION_TICK_PERIOD);
+                this.time += SIMULATION_TICK_PERIOD;
             }
         });
     }
 
-    async connectToServer() {
-        let server = await serverConnect();
-
-        if (server) {
-
-        }
+    connectToServer() {
+        this.server = serverConnect();
     }
 
     getDistanceTimeTillMaxSpeed(car, maxSpeed) {
@@ -168,12 +162,7 @@ class CrossRoad {
         delete car.desiredSpeed;
     }
 
-    manage() {
-        // TODO:
-        // Conectar aos carros que estao se aproximando
-        // Definir velocidade de aproximacao
-        // Definir qual semaforo abrir...
-
+    legacyOperation() {
         this.paths.forEach( (path) => {
             path.enabled = 0;
         });
@@ -182,138 +171,146 @@ class CrossRoad {
             entrance.semaphore = 'red';
         });
 
-        if (this.serverConnected) {
+        let greens  = 12;
+        let yellows = 3;
+        let reds    = 3;
+        let loops   = greens + yellows + reds;
 
-            this.entrances.forEach( (entrance) => {
-                entrance.crossPath.enabled = 0;
-                entrance.semaphore = 'blue';
+        let cycle = parseInt((this.time / 1000)) % ((this.entranceGroups.length) * (loops));
+        let i = 0;
+
+        this.entranceGroups.forEach( (group) => {
+            group.entrances.forEach((entrance)=>{
+                if (parseInt(cycle/loops) == i) {
+                    let innerCycle = (cycle) % loops;
+
+                    if (innerCycle < reds) return;
+                    innerCycle -= reds;
+
+                    if (innerCycle < greens) {
+                        entrance.crossPath.enabled = 1;
+                        entrance.semaphore = 'green';
+                        return;
+                    } 
+                    innerCycle -= greens;
+
+                    if (innerCycle < yellows) {
+                        entrance.crossPath.enabled = 1;
+                        entrance.semaphore = 'yellow';
+                    }
+                }
             });
 
-            let lastTime = null;
-            let minInterval = 0; // um segundo
-            const minDistance = this.width * 4;
+            i++;
+        });
+    }
 
-            let lastCar = null;
+    autonomousOperation() {
 
-            let myCars = this.controlledCars;
+        this.entrances.forEach( (entrance) => {
+            entrance.crossPath.enabled = 0;
+            entrance.semaphore = 'blue';
+        });
 
-            myCars.forEach((car) => {
-                car.crossControl.minTimeTillCross = this.getMinTimeTillCross(car, car.maxSpeed);
-                car.crossControl.distanceTillCrossStart = car.crossControl.path.getStart().distance(car.position);
-                car.crossControl.distanceTillCrossEnd = car.crossControl.path.getEnd().distance(car.position);
-            })
-    
-            if (this.time > this.nextSort) {
+        let lastTime = null;
+        let minInterval = 0; // um segundo
+        const minDistance = this.width * 4;
 
-                // TODO: later if we have time
-                // colocar junto carros que estao em pistas opostas pra cruzar juntos sempre que possivel
-                // maximizar fluxo de veículos no cruzamento
+        let lastCar = null;
 
-                this.nextSort = this.time + 100;
+        let myCars = this.controlledCars;
+
+        myCars.forEach((car) => {
+            car.crossControl.minTimeTillCross = this.getMinTimeTillCross(car, car.maxSpeed);
+            car.crossControl.distanceTillCrossStart = car.crossControl.path.getStart().distance(car.position);
+            car.crossControl.distanceTillCrossEnd = car.crossControl.path.getEnd().distance(car.position);
+        })
+
+        if (this.time > this.nextSort) {
+
+            // TODO: later if we have time
+            // colocar junto carros que estao em pistas opostas pra cruzar juntos sempre que possivel
+            // maximizar fluxo de veículos no cruzamento
+
+            this.nextSort = this.time + 100;
+        }
+
+        this.entranceGroups.forEach((group)=>{
+            group.maxSpeed = kmh_dms(60);
+        });
+
+
+        let index = 0;
+        
+        myCars.forEach((car) => {
+            index++;
+
+            let group = car.crossControl.group;
+
+            car.crossControl.index = index-1;
+
+            if (!lastTime) {
+                car.desiredSpeed = car.maxSpeed;
+                lastTime = car.crossControl.minTimeTillCross;
+                car.crossControl.timeTillCross = lastTime;
+                group.maxSpeed = car.maxSpeed;
+                lastCar = car;
+                return;
             }
 
-            this.entranceGroups.forEach((group)=>{
-                group.maxSpeed = kmh_dms(60);
-            });
-
-
-            let index = 0;
+            if (car.maxSpeed < group.maxSpeed) {
+                group.maxSpeed = car.maxSpeed;
+            }
             
-            myCars.forEach((car) => {
-                index++;
+            let distanceTillCrossStart = car.crossControl.distanceTillCrossStart;
 
-                let group = car.crossControl.group;
+            // equacao de torricelli
+            let maxSpeedAtCross = Math.sqrt( car.speed * car.speed + 2 * car.accel * distanceTillCrossStart );
 
-                car.crossControl.index = index-1;
+            let currentTime = this.getMinTimeTillCross(car, group.maxSpeed);
 
-                if (!lastTime) {
-                    car.desiredSpeed = car.maxSpeed;
-                    lastTime = car.crossControl.minTimeTillCross;
-                    car.crossControl.timeTillCross = lastTime;
-                    group.maxSpeed = car.maxSpeed;
-                    lastCar = car;
-                    return;
-                }
-
-                if (car.maxSpeed < group.maxSpeed) {
-                    group.maxSpeed = car.maxSpeed;
-                }
-                
-                let distanceTillCrossStart = car.crossControl.distanceTillCrossStart;
-
-                // equacao de torricelli
-                let maxSpeedAtCross = Math.sqrt( car.speed * car.speed + 2 * car.accel * distanceTillCrossStart );
-
-                let currentTime = this.getMinTimeTillCross(car, group.maxSpeed);
-
-                if (!car.road.cross) {
-                    if (car.crossControl.group != lastCar.crossControl.group) {
+            if (!car.road.cross) {
+                if (car.crossControl.group != lastCar.crossControl.group) {
+                    minInterval = minDistance / Math.min(group.maxSpeed, maxSpeedAtCross);
+        
+                    while (currentTime - lastTime < minInterval && group.maxSpeed > kmh_dms(5)) {
+                        group.maxSpeed -= 1;
+                        currentTime = this.getMinTimeTillCross(car, group.maxSpeed);
                         minInterval = minDistance / Math.min(group.maxSpeed, maxSpeedAtCross);
-            
-                        while (currentTime - lastTime < minInterval && group.maxSpeed > kmh_dms(5)) {
-                            group.maxSpeed -= 1;
-                            currentTime = this.getMinTimeTillCross(car, group.maxSpeed);
-                            minInterval = minDistance / Math.min(group.maxSpeed, maxSpeedAtCross);
-                        }
                     }
                 }
+            }
 
-                car.desiredSpeed = group.maxSpeed;
+            car.desiredSpeed = group.maxSpeed;
 
-                if (currentTime > lastTime) {
-                    lastTime = currentTime;
+            if (currentTime > lastTime) {
+                lastTime = currentTime;
+            }
+
+            car.crossControl.timeTillCross = lastTime;
+            lastCar = car;
+        });
+
+        // Detect cars entering the crossRoad
+        simulation.cars.forEach((car) => {
+            if (car.isNearCross(this)) {
+                if (car.controlledBy != this) {
+                    this.onEnterControl(car);
                 }
+            } else if (car.road.cross == this) {
 
-                car.crossControl.timeTillCross = lastTime;
-                lastCar = car;
-            });
+            } else if (car.controlledBy == this) {
+                this.onExitControl(car);
+            }
+        });
 
-            // Detect cars entering the crossRoad
-            simulation.cars.forEach((car) => {
-                if (car.isNearCross(this)) {
-                    if (car.controlledBy != this) {
-                        this.onEnterControl(car);
-                    }
-                } else if (car.road.cross == this) {
+    }
 
-                } else if (car.controlledBy == this) {
-                    this.onExitControl(car);
-                }
-            });
-
+    manage() {
+        if (this.serverConnected) {
+            this.autonomousOperation();
         } else {
-            let greens  = 12;
-            let yellows = 3;
-            let reds    = 3;
-            let loops   = greens + yellows + reds;
-
-            let cycle = parseInt((this.time / 1000)) % ((this.entranceGroups.length) * (loops));
-            let i = 0;
-
-            this.entranceGroups.forEach( (group) => {
-                group.entrances.forEach((entrance)=>{
-                    if (parseInt(cycle/loops) == i) {
-                        let innerCycle = (cycle) % loops;
-
-                        if (innerCycle < reds) return;
-                        innerCycle -= reds;
-
-                        if (innerCycle < greens) {
-                            entrance.crossPath.enabled = 1;
-                            entrance.semaphore = 'green';
-                            return;
-                        } 
-                        innerCycle -= greens;
-
-                        if (innerCycle < yellows) {
-                            entrance.crossPath.enabled = 1;
-                            entrance.semaphore = 'yellow';
-                        }
-                    }
-                });
-
-                i++;
-            });
+            this.legacyOperation();
         }
     }
 

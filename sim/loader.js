@@ -90,64 +90,20 @@ async function loadSimulation() {
                 streetD,
                 streetF,
                 streetH,
-            ], [
-            streetA,
-            streetC,
-            streetE,
-            streetG,
-        ],
+            ], 
+            [
+                streetA,
+                streetC,
+                streetE,
+                streetG,
+            ],
             STREET_WIDTH
         ),
     ]
 
     let cars = [
-        new Car(streets[0], CAR_WIDTH, CAR_LENGTH, [
+        new Car(streetA, CAR_WIDTH, CAR_LENGTH, [
             'EAST_1','EAST_2','WEST_1','WEST_2'
-        ]),
-        new Car(streets[0], CAR_WIDTH, CAR_LENGTH, [
-            'EAST_1','EAST_2','WEST_1','WEST_2'
-        ], CAR_LENGTH * 2),
-        new Car(streets[0], CAR_WIDTH, CAR_LENGTH, [
-            'EAST_1','EAST_2','WEST_1','WEST_2'
-        ], CAR_LENGTH * 4),
-
-
-        new Car(streets[1], CAR_WIDTH, CAR_LENGTH,[
-            'EAST_1','EAST_2','WEST_1','WEST_2'
-        ]),
-       /* new Car(streets[1], CAR_WIDTH, CAR_LENGTH,[
-            'EAST_1','EAST_2','WEST_1','WEST_2'
-        ], CAR_LENGTH * 2),
-        new Car(streets[1], CAR_WIDTH, CAR_LENGTH,[
-            'EAST_1','EAST_2','WEST_1','WEST_2'
-        ], CAR_LENGTH * 4),*/
-
-        new Car(streets[2], CAR_WIDTH, CAR_LENGTH,[
-            'NORTH_1','NORTH_2','SOUTH_1','SOUTH_2'
-        ]),
-
-        new Car(streets[2], CAR_WIDTH, CAR_LENGTH,[
-            'NORTH_1','NORTH_2','SOUTH_1','SOUTH_2'
-        ], CAR_LENGTH * 2),
-        new Car(streets[2], CAR_WIDTH, CAR_LENGTH,[
-            'NORTH_1','NORTH_2','SOUTH_1','SOUTH_2'
-        ], CAR_LENGTH * 4),
-
-        /*new Car(streets[3], CAR_WIDTH, CAR_LENGTH,[
-            'NORTH_1','NORTH_2','SOUTH_1','SOUTH_2'
-        ]),*/
-
-        new Car(streets[4], CAR_WIDTH, CAR_LENGTH,[
-            'EAST_1','EAST_2','WEST_1','WEST_2'
-        ]),
-        new Car(streets[5], CAR_WIDTH, CAR_LENGTH,[
-            'EAST_1','EAST_2','WEST_1','WEST_2'
-        ]),
-        new Car(streets[6], CAR_WIDTH, CAR_LENGTH,[
-            'NORTH_1','NORTH_2','SOUTH_1','SOUTH_2'
-        ]),
-        new Car(streets[7], CAR_WIDTH, CAR_LENGTH,[
-            'NORTH_1','NORTH_2','SOUTH_1','SOUTH_2'
         ]),
     ];
 

@@ -16,6 +16,8 @@ const STREET_WIDTH = 30;
 const CAR_WIDTH = 19;
 const CAR_LENGTH = 35;
 
+var SIMULATION_TICK_PERIOD = 25;
+
 async function setup() {
 	screenX = windowWidth;
 	screenY = windowHeight;
@@ -31,6 +33,10 @@ async function setup() {
 
 	simulation.cross.forEach((cross)=>{
 		cross.startThread();
+	});
+
+	simulation.cars.forEach((car)=>{
+		car.startThread();
 	});
 }
 

@@ -21,6 +21,20 @@ function Car(roadStart, width, length, route, startDiff = 0) {
 
     this.gas = 0;
 
+    this.lastMove = getMillis();
+    this.lastManage = 0;
+    this.time = 0;
+
+    this.startThread = function() {
+        this.thread = setTimeout(async ()=>{
+            while (1) {
+                this.manage();
+                await sleep(SIMULATION_TICK_PERIOD);
+                this.time += SIMULATION_TICK_PERIOD;
+            }
+        });
+    }
+
     this.display = function() {
         push();
 
@@ -60,24 +74,6 @@ function Car(roadStart, width, length, route, startDiff = 0) {
         pop();
     }
 
-    this.rotateLeft = function() {
-        this.position.dir -= PI/16;
-        this.blinkLeft = getMillis() + blinkTime;
-    }
-
-    this.rotateRight = function() {
-        this.position.dir += PI/16;
-        this.blinkRight = getMillis() + blinkTime;
-    }
-
-    this.startGas = function() {
-        this.gas = 1;
-    }
-
-    this.endGas = function() {
-        this.gas = 0;
-    }
-
     this.getRoadT = function() {
         let smallest = [null, null, null];
         
@@ -95,30 +91,24 @@ function Car(roadStart, width, length, route, startDiff = 0) {
     this.getRoadDistanceLeft = function() {
         return this.road.getEnd().distance(this.position);
     }
+    this.manage = function() {
 
-    this.lastMove = getMillis();
-
-    this.move = function() {
-
-        let timePassed = getMillis() - this.lastMove;
+        let timePassed = this.time - this.lastManage;
 
         if (timePassed > 100) {
             timePassed = 100;
         }
 
-        this.lastMove = getMillis();
-
-
-        this.gas = 1;
-
-        // TODO: freiar antes da curva
+        this.lastManage = this.time;
 
         if (this.road.type == 'turn' && !this.road.cross) {
             if (this.speed > this.turnSpeed) {
-                this.brakeTime = getMillis() + 100;
+                this.brakeTime = this.time + 100;
             }
         }
 
+        this.gas = 1;
+        
         simulation.cars.forEach( (other) => {
             if (other == this) return;
             
@@ -135,7 +125,7 @@ function Car(roadStart, width, length, route, startDiff = 0) {
                 for (let i = 0; i < 10 * (1 + (dms_kmh(this.speed)/10)); i++) {
                     pos = pos.forward(5);
                     if (other.position.distance(pos) < 15 && this.speed > other.speed){
-                        this.brakeTime = getMillis() + 100;
+                        this.brakeTime = this.time + 100;
                     }
                 }
             }
@@ -152,7 +142,7 @@ function Car(roadStart, width, length, route, startDiff = 0) {
                     let p = (roadT[2] - opa) / (1-opa);
                     let desiredSpeed = this.turnSpeed * (p) + this.speed * (1-p);
                     if (this.speed > desiredSpeed) {
-                       this.brakeTime = getMillis() + 1;
+                       this.brakeTime = this.time + 1;
                     }
                 }
             }
@@ -172,7 +162,7 @@ function Car(roadStart, width, length, route, startDiff = 0) {
             if (this.speed < this.desiredSpeed) {
                 this.gas = 1;
             } else {
-               this.brakeTime = getMillis() + 10;
+               this.brakeTime = this.time + 10;
             }
         }
 
@@ -193,12 +183,12 @@ function Car(roadStart, width, length, route, startDiff = 0) {
                 if (red) {
                     let opa = 0.5;
                     if (roadT[2] > 0.95) {
-                        this.brakeTime = getMillis() + 100;
+                        this.brakeTime = this.time + 100;
                     } else if (roadT[2] > opa) {
                         let p = (roadT[2] - opa) / (1-opa);
                         let desiredSpeed = 0 * (p) + Math.max(this.speed, this.maxSpeed/3) * (1-p);
                         if (this.speed > desiredSpeed) {
-                            this.brakeTime = getMillis() + 1;
+                            this.brakeTime = this.time + 1;
                         }
                     }
                 }
@@ -209,7 +199,7 @@ function Car(roadStart, width, length, route, startDiff = 0) {
             this.crossDesicion = 0;
         }
         
-        if (this.brakeTime > getMillis()) {
+        if (this.brakeTime > this.time) {
             //this.speed -= 0.1;
             this.speed -= this.brakeAccel * (timePassed/1000);
 
@@ -237,6 +227,15 @@ function Car(roadStart, width, length, route, startDiff = 0) {
             if (diff < -Math.PI/8) diff = -Math.PI/8;
 
             this.position.dir += diff;
+        }
+    }
+
+    this.move = function() {
+        let timePassed = getMillis() - this.lastMove;
+        this.lastMove = getMillis();
+
+        if (timePassed > 100) {
+            timePassed = 100;
         }
         
         this.position.x += this.speed * Math.cos(this.position.dir) * (timePassed/1000);
