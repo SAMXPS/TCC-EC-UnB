@@ -268,7 +268,6 @@ class SimulationHandler {
 		path.queue = queue.filter(c => c.id != car.id);
 		car.crossControl = null;
 		this.lastGroupToPass = path.group;
-		console.log("exited from group = " + this.lastGroupToPass.id);
 	}
 
 	controlCars() {
@@ -355,7 +354,7 @@ class SimulationHandler {
 
 		let maxSpeed = CAR_MAX_SPEED;
 		let minTimeToPass = 0;
-		const minDistance = CAR_LENGHT * 3;
+		const minDistance = CAR_LENGHT * 4;
 
 		cars.forEach((car) => {
 			let path = car.crossControl;

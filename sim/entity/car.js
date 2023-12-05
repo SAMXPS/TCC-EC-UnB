@@ -201,7 +201,7 @@ function Car(roadStart, width, length, _id, startDiff = 0) {
             roadPosition = this.getRoadPosition();
         }
 
-        if (this.road.next?.type == 'turn' && !this.autonomousMode) {
+        if (this.road.next?.type == 'turn') {
             let opa = 0.75;
             if (roadPosition.pathI > opa) {
                 if (this.speed > this.turnSpeed) {
