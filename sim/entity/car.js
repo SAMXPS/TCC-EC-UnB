@@ -112,25 +112,36 @@ function Car(roadStart, width, length, route, _id, startDiff = 0) {
     }
 
     this.autonomousOperation = function() {
-        if (!this.autonomousMode) {
-            this.autonomousMode = true;
-            console.log("[Car] Iniciando operacao em modo autonomo.");
+
+        let delay = getMillis() - this.serverHook.last_update;
+        let last_info = this.serverHook.last_info;
+
+        if (parseInt(Math.random()*100)==0){
+            console.log(last_info);
         }
 
-        this.color = color(128,128,256);
+        if (last_info?.status == 'autonomous') {
+            if (!this.autonomousMode) {
+                this.autonomousMode = true;
+                console.log("[Car] Iniciando operacao em modo autonomo.");
+            }
+            this.desiredSpeed = last_info.desiredSpeed;
+            this.color = color(128,128,256);
+        } else {
+            delete this.desiredSpeed;
+            this.color = color(255,128,0);
+        }
+
         this.run();
 
         let dataToSend = JSON.stringify(
             {
+                type: 'position_update',
                 position: this.position,
                 speed: this.speed,
                 road: this.road.id,
             }
         );
-
-        if (parseInt(Math.random()*100) == 0) {
-            console.log(dataToSend);
-        }
 
         this.serverHook.con.send(dataToSend);
     }

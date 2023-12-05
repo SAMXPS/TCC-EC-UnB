@@ -79,7 +79,7 @@ class ServerHook {
                         if (msg == "ping") {
                             hook.con.send("pong");
                         } else {
-                            hook.last_info   = JSON.parse(msg).info;
+                            hook.last_info   = JSON.parse(msg);
                             hook.last_update = getMillis();
                         }
                     } catch (e) {
@@ -91,6 +91,11 @@ class ServerHook {
                 this.con.send(simulation.id);
                 this.con.send(this.entity.type);
                 this.con.send(this.entity.id);
+
+                if (this.entity.type == 'crossroad') {
+                    this.sendMessage(this.entity.getSetupData());
+                }
+
                 this.load_sent = 1;
             }
             
@@ -108,7 +113,7 @@ class ServerHook {
         return false;
     }
 
-    resetOperation(delay = 1000) {
+    resetOperation(delay = 5000) {
         let oldConnection = this.con;
 
         setTimeout(()=>{
@@ -127,6 +132,13 @@ class ServerHook {
         this.loaded = false;
     }
 
-
+    sendMessage(payload_obj) {
+        try {
+            this.con.send(JSON.stringify(payload_obj));
+        } catch (e) {
+            console.log(e);
+            this.resetOperation();
+        }
+    }
 
 }

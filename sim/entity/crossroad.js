@@ -87,87 +87,37 @@ class CrossRoad {
         }
     }
 
-    getDistanceTimeTillMaxSpeed(car, maxSpeed) {
-        /*if (car.speed < maxSpeed) {
-            let speedDiff = maxSpeed - car.speed;
-            // Tempo em segundos para atingir velocidade maxima
-            let timeTillMaxSpeed = (speedDiff / car.accel);
+    getSetupData() {
+        let groups = [];
 
-            let t = timeTillMaxSpeed;
-            let v0 = car.speed;
-            let a = car.accel;
+        this.entranceGroups.forEach((group) => {
+            let groupList = [];
+            let entrances = group.entrances;
+            console.log(entrances);
 
-            let distanceTillMaxSpeed = v0 * t + a * t * t / 2;
+            entrances.forEach((entrance) => {
+                groupList.push({
+                    entrance: { 
+                        id: entrance.id, 
+                        end: entrance.getEnd()
+                    },
+                    path: {
+                        id: entrance.crossPath.id,
+                        end: entrance.crossPath.getEnd()
+                    },
+                    exit: {
+                        id: entrance.crossPath.next?.id
+                    }
+                });
+            });
 
-            return [timeTillMaxSpeed, distanceTillMaxSpeed];
-        }
+            groups.push(groupList);
+        });
 
-        return [0, 0];*/
-    }
-
-    getMinTimeTillCross(car, maxSpeed) {
-        /*
-        let distance = car.position.distance(car.crossControl.path.getEnd());
-        
-        let [timeTillMaxSpeed, distanceTillMaxSpeed] = this.getDistanceTimeTillMaxSpeed(car, maxSpeed);
-
-        if (distance < distanceTillMaxSpeed) {
-            let s = distance;
-            let a = car.accel;
-            let v0 = car.speed;
-
-            // s = v0 t + a t^2 / 2 -> 
-            // (a/2) * t^2 + v0 * t - s = 0;
-            let A = (a/2);
-            let B = v0;
-            let C = -s;
-            // D = B^2 - 4 * a * c
-            let D = B*B - 4 * A * C;
-
-            let t1 = (-B - Math.sqrt(D)) / ( 2 * A )
-            let t2 = (-B + Math.sqrt(D)) / ( 2 * A )
-
-            if (t1 > 0 && t1 <= t2) {
-                return t1;
-            }
-
-            if (t2 > 0 && t2 <= t1) {
-                return t2;
-            }
-
-            // ????
-        }
-
-        let distanceLeft = distance - distanceTillMaxSpeed;
-
-        return timeTillMaxSpeed + (distanceLeft / maxSpeed);*/
-    }
-
-    onEnterControl(car) {
-        /*car.controlledBy = this;
-        car.color = color(128,128,255);
-        car.crossControl = {
-            path: car.road.crossPath,
-            group: car.road.group
-        }
-        car.crossControl.group.queue.push(car);
-        this.controlledCars.push(car);*/
-    }
-
-    onExitControl(car) {
-        /*let index = this.controlledCars.indexOf(car);
-        if (index > -1) {
-            this.controlledCars.splice(index, 1);
-        }
-
-        index = car.crossControl.group.queue.indexOf(car);
-        if (index > -1) {
-            car.crossControl.group.queue.splice(index, 1);
-        }
-        car.controlledBy = null;
-        car.color = null;
-        delete car.crossControl;
-        delete car.desiredSpeed;*/
+        return {
+            type: 'cross_setup',
+            entranceGroups: groups,
+        };
     }
 
     legacyOperation() {
@@ -219,120 +169,34 @@ class CrossRoad {
             console.log("[CrossRoad] Iniciando operacao em modo autonomo.");
         }
 
-        this.serverHook.con.send("ping");
-
-        let last_update = this.serverHook.last_update;
         let last_info = this.serverHook.last_info;
-        let latency = getMillis() - last_update;
+        let last_update = this.serverHook.last_update;
+        let sync_latency = getMillis() - last_update;
 
-        //console.log(latency);
+        var message = {
+            type: 'cross_status',
+        };
 
         // Semaforo começa vermelho pra aguardar os carros se conectarem.
         if (this.time < 5000) {
-            this.entrances.forEach( (entrance) => {
-                entrance.semaphore = 'red';
-            });
-            return;
+            message.status = 'loading';
+        } else if (sync_latency > CROSS_MAX_LATENCY || last_info?.type != 'cross_update') {
+            message.status = 'error';
+
+            // Reset time when error occours.
+            this.time = 0;
+            console.log(last_info);
+            console.log(sync_latency);
+            console.log("cross road autonomous mode error!");
+        } else {
+            message.status = last_info?.status;
         }
 
         this.entrances.forEach( (entrance) => {
-            entrance.semaphore = 'blue';
+            entrance.semaphore = message.status == 'autonomous' ? 'blue' : 'red';
         });
 
-        /*
-
-        let lastTime = null;
-        let minInterval = 0; // um segundo
-        const minDistance = this.width * 4;
-
-        let lastCar = null;
-
-        let myCars = this.controlledCars;
-
-        myCars.forEach((car) => {
-            car.crossControl.minTimeTillCross = this.getMinTimeTillCross(car, car.maxSpeed);
-            car.crossControl.distanceTillCrossStart = car.crossControl.path.getStart().distance(car.position);
-            car.crossControl.distanceTillCrossEnd = car.crossControl.path.getEnd().distance(car.position);
-        })
-
-        if (this.time > this.nextSort) {
-
-            // TODO: later if we have time
-            // colocar junto carros que estao em pistas opostas pra cruzar juntos sempre que possivel
-            // maximizar fluxo de veículos no cruzamento
-
-            this.nextSort = this.time + 100;
-        }
-
-        this.entranceGroups.forEach((group)=>{
-            group.maxSpeed = kmh_dms(60);
-        });
-
-
-        let index = 0;
-        
-        myCars.forEach((car) => {
-            index++;
-
-            let group = car.crossControl.group;
-
-            car.crossControl.index = index-1;
-
-            if (!lastTime) {
-                car.desiredSpeed = car.maxSpeed;
-                lastTime = car.crossControl.minTimeTillCross;
-                car.crossControl.timeTillCross = lastTime;
-                group.maxSpeed = car.maxSpeed;
-                lastCar = car;
-                return;
-            }
-
-            if (car.maxSpeed < group.maxSpeed) {
-                group.maxSpeed = car.maxSpeed;
-            }
-            
-            let distanceTillCrossStart = car.crossControl.distanceTillCrossStart;
-
-            // equacao de torricelli
-            let maxSpeedAtCross = Math.sqrt( car.speed * car.speed + 2 * car.accel * distanceTillCrossStart );
-
-            let currentTime = this.getMinTimeTillCross(car, group.maxSpeed);
-
-            if (!car.road.cross) {
-                if (car.crossControl.group != lastCar.crossControl.group) {
-                    minInterval = minDistance / Math.min(group.maxSpeed, maxSpeedAtCross);
-        
-                    while (currentTime - lastTime < minInterval && group.maxSpeed > kmh_dms(5)) {
-                        group.maxSpeed -= 1;
-                        currentTime = this.getMinTimeTillCross(car, group.maxSpeed);
-                        minInterval = minDistance / Math.min(group.maxSpeed, maxSpeedAtCross);
-                    }
-                }
-            }
-
-            car.desiredSpeed = group.maxSpeed;
-
-            if (currentTime > lastTime) {
-                lastTime = currentTime;
-            }
-
-            car.crossControl.timeTillCross = lastTime;
-            lastCar = car;
-        });
-
-        // Detect cars entering the crossRoad
-        simulation.cars.forEach((car) => {
-            if (car.isNearCross(this)) {
-                if (car.controlledBy != this) {
-                    this.onEnterControl(car);
-                }
-            } else if (car.road.cross == this) {
-
-            } else if (car.controlledBy == this) {
-                this.onExitControl(car);
-            }
-        });
-        */
+        this.serverHook.sendMessage(message);
     }
 
     display() {

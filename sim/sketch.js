@@ -19,7 +19,8 @@ const CAR_TURN_SPEED = kmh_dms(40);
 const CAR_ACCEL      = 25; // 2.5 m/s^2
 const CAR_BRAKE      = 70; // 7.0 m/s^2
 
-var SIMULATION_TICK_PERIOD = 25;
+const SIMULATION_TICK_PERIOD = 25;
+const CROSS_MAX_LATENCY = 4 * SIMULATION_TICK_PERIOD;
 
 async function setup() {
 	screenX = windowWidth;

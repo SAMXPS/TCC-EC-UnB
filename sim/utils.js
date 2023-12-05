@@ -84,7 +84,6 @@ async function generateRandomId() {
     return await sha1_hash(Date.now() + "." + Math.random());
 }
 
-
 var _____seq_id_for_generation = 0;
 function generateSequentialId() {
     return _____seq_id_for_generation++;
