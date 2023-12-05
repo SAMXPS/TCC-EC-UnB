@@ -185,7 +185,7 @@ class SimulationHandler {
 
 								let exit = plain.exit;
 								exit.type = 'exit';
-								exit.path = exit;
+								exit.path = path;
 								roads.set(exit.id, exit);
 
 							path.start = entrance.end.copy();
@@ -215,18 +215,19 @@ class SimulationHandler {
 		}
 	}
 
-	autoControl(car) {		
-		if (getMillis() < car.cooldown) {
-			car.desiredSpeed = CAR_MAX_SPEED;
-			return;
-		}
-
-		if (!(car.road?.path) || car.road.type == 'exit') {
+	autoControl(car) {	
+		if (!car.road || car.road.type == 'exit') {
 			car.desiredSpeed = CAR_MAX_SPEED;
 			car.passCurrentSemaphore = false;
 			if (car.crossControl) {
 				this.exitCross(car);
 			}
+			car.cooldown = 0;
+			return;
+		}	
+
+		if (car.cooldown) {
+			car.desiredSpeed = CAR_MAX_SPEED;
 			return;
 		}
 
@@ -253,10 +254,15 @@ class SimulationHandler {
 		car.distanceToPass = car.position.distance(car.road.path.end);
 		car.distanceToCenter = car.position.distance(car.road.path.center);
 		car.distanceToStart = car.position.distance(car.road.path.start);
+		car.maxSpeedAtCenter = Math.sqrt( car.speed * car.speed + 2 * car.accel * car.distanceToCenter );
+
+		if (car.distanceToPass < car.distanceToStart && car.speed >= CAR_MAX_SPEED / 2) {
+			this.exitCross(car);
+		}
 	}
 
 	exitCross(car) {
-		car.cooldown = getMillis() + 2000;
+		car.cooldown = 1;
 		let path = car.crossControl;
 		let queue = path.queue;
 		path.queue = queue.filter(c => c.id != car.id);
@@ -349,8 +355,7 @@ class SimulationHandler {
 
 		let maxSpeed = CAR_MAX_SPEED;
 		let minTimeToPass = 0;
-		//const minDistance = CAR_LENGHT * 3;
-		let minInterval = 1.5;//minDistance / Math.min(group.maxSpeed, maxSpeedAtCross);
+		const minDistance = CAR_LENGHT * 3;
 
 		cars.forEach((car) => {
 			let path = car.crossControl;
@@ -363,11 +368,12 @@ class SimulationHandler {
 
 			car.minTimeToPass = getMinTimeTillLocation(car, maxSpeed, path.end);
 
+			let minInterval = minDistance / Math.min(maxSpeed, car.maxSpeedAtCenter);
 
 			while (car.minTimeToPass - minTimeToPass < minInterval && maxSpeed > kmh_dms(5)) {
 				maxSpeed -= 1;
 				car.minTimeToPass = getMinTimeTillLocation(car, maxSpeed, path.end);
-				//minInterval = minDistance / Math.min(group.maxSpeed, maxSpeedAtCross);
+				minInterval = minDistance / Math.min(maxSpeed, car.maxSpeedAtCenter);
 			}
 
 			minTimeToPass = Math.max(minTimeToPass, car.minTimeToPass);
@@ -375,6 +381,8 @@ class SimulationHandler {
 		});
 
 		let before = null;
+		let minInterval = null;
+
 		cars.forEach((car) => {
 			let path = car.crossControl;
 			car.minTimeToPass = getMinTimeTillLocation(car, CAR_MAX_SPEED, path.end);
@@ -383,6 +391,7 @@ class SimulationHandler {
 					this.exitCross(before);
 				}
 			}
+			minInterval = minDistance / Math.min(maxSpeed, car.maxSpeedAtCenter);
 			before = car;
 		});
 
