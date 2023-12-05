@@ -11,6 +11,14 @@ class AllignedPosition {
         return Math.sqrt(Math.pow(this.x-other.x, 2)+Math.pow(this.y-other.y, 2));
     }
 
+    average(other) {
+        return new AllignedPosition(
+            (this.x + other.x) / 2,
+            (this.y + other.y) / 2,
+            (this.dir + other.dir) / 2
+        );
+    }
+
     copy() {
         return new AllignedPosition(
             this.x,

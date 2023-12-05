@@ -21,6 +21,7 @@ const CAR_MAX_SPEED  = kmh_dms(60);
 const CAR_TURN_SPEED = kmh_dms(40);
 const CAR_ACCEL      = 25; // 2.5 m/s^2
 const CAR_BRAKE      = 70; // 7.0 m/s^2
+const CAR_LENGHT     = 35;
 
 class SimulationHandler {
 
@@ -187,6 +188,8 @@ class SimulationHandler {
 								exit.path = exit;
 								roads.set(exit.id, exit);
 
+							path.start = entrance.end.copy();
+							path.center = path.end.average(entrance.end);
 							path.exit = exit;
 							path.entrance = entrance;
 							path.queue = [];
@@ -212,13 +215,22 @@ class SimulationHandler {
 		}
 	}
 
-	autoControl(car) {
+	autoControl(car) {		
+		if (getMillis() < car.cooldown) {
+			car.desiredSpeed = CAR_MAX_SPEED;
+			return;
+		}
+
 		if (!(car.road?.path) || car.road.type == 'exit') {
 			car.desiredSpeed = CAR_MAX_SPEED;
 			car.passCurrentSemaphore = false;
 			if (car.crossControl) {
 				this.exitCross(car);
 			}
+			return;
+		}
+
+		if (car.road.type == 'path' && !car.crossControl) {
 			return;
 		}
 
@@ -229,16 +241,22 @@ class SimulationHandler {
 			car.crossControl = path;
 			car.passCurrentSemaphore = false;
 			car.desiredSpeed = CAR_MAX_SPEED / 2;
+			car.queueEnterTime = getMillis();
 
 			queue.push(car);
 		}
 
-		car.innerIndex = car.crossControl.queue.indexOf(car);
+		let path = car.crossControl.path;
+
+		car.innerIndex = path.queue.indexOf(car);
 		car.minTimeToPass = getMinTimeTillLocation(car, CAR_MAX_SPEED, car.road.path.end);
 		car.distanceToPass = car.position.distance(car.road.path.end);
+		car.distanceToCenter = car.position.distance(car.road.path.center);
+		car.distanceToStart = car.position.distance(car.road.path.start);
 	}
 
 	exitCross(car) {
+		car.cooldown = getMillis() + 2000;
 		let path = car.crossControl;
 		let queue = path.queue;
 		path.queue = queue.filter(c => c.id != car.id);
@@ -294,21 +312,24 @@ class SimulationHandler {
 			});
 		});
 
-		let other = null;
-		let toPass = null;
+		const BIAS = 0;
 
-		this.groups.forEach((group) => {
-			let passNow  = this.lastGroupToPass != group;
-			if (group.length > 0) {
-				if (passNow) {
-					toPass = group;
-				} else {
-					other = group;
-				}
-			}
+		cars = cars.sort((carA,carB)=>{
+			return carA.queueEnterTime - carB.queueEnterTime;
 		});
 
-		const BIAS = 100;
+		let toPass = cars[0]?.crossControl.group;
+		let other  = null;
+
+		if (!toPass) {
+			return;
+		}
+
+		this.groups.forEach((group) => {
+			if (group != toPass) {
+				other = group;
+			}
+		});
 
 		if (toPass) {
 			if (!other || !other.authorizedToPass) {
@@ -326,13 +347,10 @@ class SimulationHandler {
 			}
 		}
 
-		cars = cars.sort((carA,carB)=>{
-			return carA.distanceToPass - carB.distanceToPass;
-		})
-		
-
 		let maxSpeed = CAR_MAX_SPEED;
 		let minTimeToPass = 0;
+		//const minDistance = CAR_LENGHT * 3;
+		let minInterval = 1.5;//minDistance / Math.min(group.maxSpeed, maxSpeedAtCross);
 
 		cars.forEach((car) => {
 			let path = car.crossControl;
@@ -345,7 +363,6 @@ class SimulationHandler {
 
 			car.minTimeToPass = getMinTimeTillLocation(car, maxSpeed, path.end);
 
-			let minInterval = 0.900;//minDistance / Math.min(group.maxSpeed, maxSpeedAtCross);
 
 			while (car.minTimeToPass - minTimeToPass < minInterval && maxSpeed > kmh_dms(5)) {
 				maxSpeed -= 1;
@@ -355,6 +372,18 @@ class SimulationHandler {
 
 			minTimeToPass = Math.max(minTimeToPass, car.minTimeToPass);
 			car.desiredSpeed = maxSpeed;
+		});
+
+		let before = null;
+		cars.forEach((car) => {
+			let path = car.crossControl;
+			car.minTimeToPass = getMinTimeTillLocation(car, CAR_MAX_SPEED, path.end);
+			if (before) {
+				if (before.passCurrentSemaphore && (car.minTimeToPass - before.minTimeToPass > minInterval || car.passCurrentSemaphore)) {
+					this.exitCross(before);
+				}
+			}
+			before = car;
 		});
 
 	}
