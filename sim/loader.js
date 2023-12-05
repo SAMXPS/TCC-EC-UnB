@@ -120,21 +120,14 @@ async function loadSimulation() {
         mainCross
     ]
 
-    let cars = [
-        new Car(streetEast1, CAR_WIDTH, CAR_LENGTH, [
-            streetEast1.id,
-            streetEast2.id,
-            streetWest1.id,
-            streetWest2.id
-        ], await generateSequentialId()),
+    let cars = [ ];
 
-        new Car(streetNorth1, CAR_WIDTH, CAR_LENGTH, [
-            streetNorth1.id,
-            streetNorth2.id,
-            streetSouth1.id,
-            streetSouth2.id
-        ], await generateSequentialId()),
-    ];
+    streets.forEach((street)=>{
+        if (street.type == 'street') {
+            cars.push(new Car(street, CAR_WIDTH, CAR_LENGTH, generateSequentialId()));
+        }
+    });
+
 
 	cross.forEach((cross)=>{
 		cross.startThread();

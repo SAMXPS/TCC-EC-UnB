@@ -1,14 +1,17 @@
 
-function AllignedPosition(x, y, dir) {
-    this.x   = x;
-    this.y   = y;
-    this.dir = dir;
+class AllignedPosition {
 
-    this.distance = function(other) {
+    constructor(x, y, dir) {
+        this.x   = x;
+        this.y   = y;
+        this.dir = dir;
+    }
+
+    distance(other) {
         return Math.sqrt(Math.pow(this.x-other.x, 2)+Math.pow(this.y-other.y, 2));
     }
 
-    this.copy = function() {
+    copy() {
         return new AllignedPosition(
             this.x,
             this.y,
@@ -16,7 +19,7 @@ function AllignedPosition(x, y, dir) {
         );
     }
 
-    this.forward = function(amt) {
+    forward(amt) {
         return new AllignedPosition( 
             this.x + (Math.cos(this.dir) * amt),
             this.y + (Math.sin(this.dir) * amt), 
@@ -24,7 +27,7 @@ function AllignedPosition(x, y, dir) {
         );
     }
 
-    this.left = function(amt) {
+    left(amt) {
         return new AllignedPosition( 
             this.x + (Math.cos(this.dir - Math.PI/2) * amt),
             this.y + (Math.sin(this.dir - Math.PI/2) * amt), 
@@ -32,7 +35,7 @@ function AllignedPosition(x, y, dir) {
         );
     };
 
-    this.right = function(amt) {
+    right(amt) {
         return new AllignedPosition( 
             this.x + (Math.cos(this.dir + Math.PI/2) * amt),
             this.y + (Math.sin(this.dir + Math.PI/2) * amt), 
@@ -40,7 +43,7 @@ function AllignedPosition(x, y, dir) {
         );
     };
 
-    this.rotate = function(radians) {
+    rotate(radians) {
         return new AllignedPosition( 
             this.x,
             this.y, 
@@ -48,9 +51,73 @@ function AllignedPosition(x, y, dir) {
         );
     }
 
-    this.getVector = function() {
+    getVector() {
         return createVector(this.x, this.y);
     }
+}
+
+function parseAllignedPosition(obj) {
+    return new AllignedPosition(obj.x, obj.y, obj.dir);
+}
+
+function calculateDistanceToBrake(speed, accel) {
+    // Derivado da equacao de Torricelli
+    return Math.pow(speed, 2) / (2 * accel);
+}
+
+function getDistanceTimeTillMaxSpeed(car, maxSpeed) {
+    if (car.speed < maxSpeed) {
+        let speedDiff = maxSpeed - car.speed;
+        // Tempo em segundos para atingir velocidade maxima
+        let timeTillMaxSpeed = (speedDiff / car.accel);
+
+        let t = timeTillMaxSpeed;
+        let v0 = car.speed;
+        let a = car.accel;
+
+        let distanceTillMaxSpeed = v0 * t + a * t * t / 2;
+
+        return [timeTillMaxSpeed, distanceTillMaxSpeed];
+    }
+
+    return [0, 0];
+}
+
+function getMinTimeTillLocation(car, maxSpeed, location) {
+    let distance = car.position.distance(location);
+    
+    let [timeTillMaxSpeed, distanceTillMaxSpeed] = getDistanceTimeTillMaxSpeed(car, maxSpeed);
+
+    if (distance < distanceTillMaxSpeed) {
+        let s = distance;
+        let a = car.accel;
+        let v0 = car.speed;
+
+        // s = v0 t + a t^2 / 2 -> 
+        // (a/2) * t^2 + v0 * t - s = 0;
+        let A = (a/2);
+        let B = v0;
+        let C = -s;
+        // D = B^2 - 4 * a * c
+        let D = B*B - 4 * A * C;
+
+        let t1 = (-B - Math.sqrt(D)) / ( 2 * A )
+        let t2 = (-B + Math.sqrt(D)) / ( 2 * A )
+
+        if (t1 > 0 && t1 <= t2) {
+            return t1;
+        }
+
+        if (t2 > 0 && t2 <= t1) {
+            return t2;
+        }
+
+        // ????
+    }
+
+    let distanceLeft = distance - distanceTillMaxSpeed;
+
+    return timeTillMaxSpeed + (distanceLeft / maxSpeed);
 }
 
 function getMillis() {

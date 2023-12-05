@@ -113,7 +113,7 @@ class ServerHook {
         return false;
     }
 
-    resetOperation(delay = 5000) {
+    resetOperation(delay = 15000) {
         let oldConnection = this.con;
 
         setTimeout(()=>{

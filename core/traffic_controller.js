@@ -17,6 +17,11 @@ const SIMULATION_TIMEOUT  = 15000;
 const SIMULATION_TICK_PERIOD = 25;
 const CROSS_MAX_LATENCY = 4 * SIMULATION_TICK_PERIOD;
 
+const CAR_MAX_SPEED  = kmh_dms(60);
+const CAR_TURN_SPEED = kmh_dms(40);
+const CAR_ACCEL      = 25; // 2.5 m/s^2
+const CAR_BRAKE      = 70; // 7.0 m/s^2
+
 class SimulationHandler {
 
 	constructor(id) {
@@ -27,56 +32,17 @@ class SimulationHandler {
 		this.enabled = 1;
 		this.status = 'loading';
 
-		console.log("creating simulation with id = " + this.simulation_id);
+		console.log("creating simulation with id = " + this.id);
 
 		this.start();
 	}
 
 	start() {
 		setTimeout(async ()=>{
-			while (this.enabled) {				
-				if (!this.cross || this.cross?.status != 'autonomous') {
-					this.status = 'loading';
-				}
-
-				this.cars.forEach((car)=>{
-					if (this.status != 'autonomous') {
-						car.desiredSpeed = 0;
-					} else {
-						car.desiredSpeed = 10;
-					}
-
-					try {
-						car.sendMessage({
-							type: 'car_update',
-							status: this.status,
-							desiredSpeed: car.desiredSpeed,
-							passCurrentSemaphore: false,
-						});
-					} catch (e) {
-
-					}
-				});
-
-				if (this.cross) {
-					let message = {
-						type: 'cross_update'
-					};
-
-					if (!this.cross.setup) {
-						message.status = 'waiting_setup';
-					} else if (this.cross.status == 'loading') {
-						message.status = 'autonomous';
-					} else if (this.cross.status == 'autonomous') {
-						this.status = 'autonomous';
-						message.status = 'autonomous';
-					} else {
-						message.status = this.status;
-					}
-
-					this.cross.sendMessage(message);
-				}
-
+			while (this.enabled) {
+				this.updateCross();
+				this.controlCars();
+				this.updateCars();
 				this.lastUpdate = getMillis();
 				await sleep(SIMULATION_TICK_PERIOD);
 			}
@@ -186,15 +152,56 @@ class SimulationHandler {
 				let car = from;
 				if (message.type == 'position_update') {
 					car.lastUpdate = getMillis();
-					car.position = message.position;
+					car.position = parseAllignedPosition(message.position);
 					car.speed = message.speed;
-					car.road = message.road;
+					car.road = this.roads?.get(message.road);
 				}
 				break;
 			case 'crossroad':
 				let cross = from;
 				if (message.type == 'cross_setup') {
-					cross.entranceGroups = message.entranceGroups;
+					let plainGroups = message.entranceGroups;
+					let roads = new Map();
+					let groups = [];
+					let gid = 0;
+
+					plainGroups.forEach((plainGroup)=>{
+						let group = {
+							paths: [],
+							id: gid++,
+						};
+
+						plainGroup.forEach((plain) => {
+							let path = plain.path;
+							path.type = 'path';
+							path.end = parseAllignedPosition(path.end);
+
+								let entrance = plain.entrance;
+								entrance.type = 'entrance';
+								entrance.end = parseAllignedPosition(entrance.end);
+								entrance.path = path;
+								roads.set(entrance.id, entrance);
+
+								let exit = plain.exit;
+								exit.type = 'exit';
+								exit.path = exit;
+								roads.set(exit.id, exit);
+
+							path.exit = exit;
+							path.entrance = entrance;
+							path.queue = [];
+							path.path = path;
+							path.group = group;
+							roads.set(path.id, path);
+
+							group.paths.push(path);
+						});
+
+						groups.push(group);
+					});
+
+					this.roads  = roads;
+					this.groups = groups;
 					cross.setup = true;
 				}
 				if (message.type == 'cross_status') {
@@ -205,88 +212,193 @@ class SimulationHandler {
 		}
 	}
 
-    getDistanceTimeTillMaxSpeed(car, maxSpeed) {
-        /*if (car.speed < maxSpeed) {
-            let speedDiff = maxSpeed - car.speed;
-            // Tempo em segundos para atingir velocidade maxima
-            let timeTillMaxSpeed = (speedDiff / car.accel);
+	autoControl(car) {
+		if (!(car.road?.path) || car.road.type == 'exit') {
+			car.desiredSpeed = CAR_MAX_SPEED;
+			car.passCurrentSemaphore = false;
+			if (car.crossControl) {
+				this.exitCross(car);
+			}
+			return;
+		}
 
-            let t = timeTillMaxSpeed;
-            let v0 = car.speed;
-            let a = car.accel;
+		if (!car.crossControl) {
+			let path = car.road.path;
+			let queue = path.queue;
 
-            let distanceTillMaxSpeed = v0 * t + a * t * t / 2;
+			car.crossControl = path;
+			car.passCurrentSemaphore = false;
+			car.desiredSpeed = CAR_MAX_SPEED / 2;
 
-            return [timeTillMaxSpeed, distanceTillMaxSpeed];
-        }
+			queue.push(car);
+		}
 
-        return [0, 0];*/
-    }
+		car.innerIndex = car.crossControl.queue.indexOf(car);
+		car.minTimeToPass = getMinTimeTillLocation(car, CAR_MAX_SPEED, car.road.path.end);
+		car.distanceToPass = car.position.distance(car.road.path.end);
+	}
 
-    getMinTimeTillCross(car, maxSpeed) {
-        /*
-        let distance = car.position.distance(car.crossControl.path.getEnd());
-        
-        let [timeTillMaxSpeed, distanceTillMaxSpeed] = this.getDistanceTimeTillMaxSpeed(car, maxSpeed);
+	exitCross(car) {
+		let path = car.crossControl;
+		let queue = path.queue;
+		path.queue = queue.filter(c => c.id != car.id);
+		car.crossControl = null;
+		this.lastGroupToPass = path.group;
+		console.log("exited from group = " + this.lastGroupToPass.id);
+	}
 
-        if (distance < distanceTillMaxSpeed) {
-            let s = distance;
-            let a = car.accel;
-            let v0 = car.speed;
+	controlCars() {
+		if (this.status != 'autonomous') {
+			this.cars.forEach((car)=>{
+				car.desiredSpeed = CAR_MAX_SPEED / 2;
+				car.passCurrentSemaphore = false;
+			});
+			return;
+		}
 
-            // s = v0 t + a t^2 / 2 -> 
-            // (a/2) * t^2 + v0 * t - s = 0;
-            let A = (a/2);
-            let B = v0;
-            let C = -s;
-            // D = B^2 - 4 * a * c
-            let D = B*B - 4 * A * C;
+		this.cars.forEach((car)=>{
+			this.autoControl(car);
+		});
 
-            let t1 = (-B - Math.sqrt(D)) / ( 2 * A )
-            let t2 = (-B + Math.sqrt(D)) / ( 2 * A )
+		if (!this.lastGroupToPass) {
+			this.lastGroupToPass = this.groups[0];
+		}
 
-            if (t1 > 0 && t1 <= t2) {
-                return t1;
-            }
+		let cars = [];
 
-            if (t2 > 0 && t2 <= t1) {
-                return t2;
-            }
+		this.groups.forEach((group) => {
+			group.firsts = [];
+			group.length = 0;
+			group.authorizedToPass = 0;
 
-            // ????
-        }
+			group.paths.forEach((path)=>{
+				group.length += path.queue.length;
+				if (path.queue.length > 0) {
+					path.queue.sort((carA,carB)=>{
+						return carA.distanceToPass - carB.distanceToPass;
+					});
+					group.firsts.push(path.queue[0]);
+				}
 
-        let distanceLeft = distance - distanceTillMaxSpeed;
+				path.queue.forEach((car) => {
+					if (car.passCurrentSemaphore) {
+						group.authorizedToPass++;
+					}
 
-        return timeTillMaxSpeed + (distanceLeft / maxSpeed);*/
-    }
+					cars.push(car);
+				});
+			});
 
-    onEnterControl(car) {
-        /*car.controlledBy = this;
-        car.color = color(128,128,255);
-        car.crossControl = {
-            path: car.road.crossPath,
-            group: car.road.group
-        }
-        car.crossControl.group.queue.push(car);
-        this.controlledCars.push(car);*/
-    }
+			group.firsts.sort((carA,carB) => {
+				return carA.minTimeToPass - carB.minTimeToPass;
+			});
+		});
 
-    onExitControl(car) {
-        /*let index = this.controlledCars.indexOf(car);
-        if (index > -1) {
-            this.controlledCars.splice(index, 1);
-        }
+		let other = null;
+		let toPass = null;
 
-        index = car.crossControl.group.queue.indexOf(car);
-        if (index > -1) {
-            car.crossControl.group.queue.splice(index, 1);
-        }
-        car.controlledBy = null;
-        car.color = null;
-        delete car.crossControl;
-        delete car.desiredSpeed;*/
-    }
+		this.groups.forEach((group) => {
+			let passNow  = this.lastGroupToPass != group;
+			if (group.length > 0) {
+				if (passNow) {
+					toPass = group;
+				} else {
+					other = group;
+				}
+			}
+		});
+
+		const BIAS = 100;
+
+		if (toPass) {
+			if (!other || !other.authorizedToPass) {
+				let first = toPass.firsts[0];
+				let second = toPass.firsts[1];
+				if (first) {
+					first.passCurrentSemaphore = 1;
+					if (second) {
+						let otherFirst = other?.firsts[0];
+						if (!otherFirst || (otherFirst?.minTimeToPass + BIAS > second.minTimeToPass)) {
+							second.passCurrentSemaphore = 1;
+						}
+					}
+				}
+			}
+		}
+
+		cars = cars.sort((carA,carB)=>{
+			return carA.distanceToPass - carB.distanceToPass;
+		})
+		
+
+		let maxSpeed = CAR_MAX_SPEED;
+		let minTimeToPass = 0;
+
+		cars.forEach((car) => {
+			let path = car.crossControl;
+
+			if (car.passCurrentSemaphore) {
+				car.desiredSpeed = CAR_MAX_SPEED;
+				minTimeToPass = Math.max(minTimeToPass, car.minTimeToPass);
+				return;
+			}
+
+			car.minTimeToPass = getMinTimeTillLocation(car, maxSpeed, path.end);
+
+			let minInterval = 0.900;//minDistance / Math.min(group.maxSpeed, maxSpeedAtCross);
+
+			while (car.minTimeToPass - minTimeToPass < minInterval && maxSpeed > kmh_dms(5)) {
+				maxSpeed -= 1;
+				car.minTimeToPass = getMinTimeTillLocation(car, maxSpeed, path.end);
+				//minInterval = minDistance / Math.min(group.maxSpeed, maxSpeedAtCross);
+			}
+
+			minTimeToPass = Math.max(minTimeToPass, car.minTimeToPass);
+			car.desiredSpeed = maxSpeed;
+		});
+
+	}
+
+	updateCars() {
+		this.cars.forEach((car)=>{
+			try {
+				car.sendMessage({
+					type: 'car_update',
+					status: this.status,
+					desiredSpeed: car.desiredSpeed,
+					passCurrentSemaphore: car.passCurrentSemaphore,
+					innerIndex: car.innerIndex,
+				});
+			} catch (e) {
+
+			}
+		});
+	}
+
+	updateCross() {
+		if (!this.cross || this.cross?.status != 'autonomous') {
+			this.status = 'loading';
+		}
+		
+		if (this.cross) {
+			let message = {
+				type: 'cross_update'
+			};
+
+			if (!this.cross.setup) {
+				message.status = 'waiting_setup';
+			} else if (this.cross.status == 'loading') {
+				message.status = 'autonomous';
+			} else if (this.cross.status == 'autonomous') {
+				this.status = 'autonomous';
+				message.status = 'autonomous';
+			} else {
+				message.status = this.status;
+			}
+
+			this.cross.sendMessage(message);
+		}
+	}
 
 }
 
@@ -357,12 +469,15 @@ class SocketHandler {
 				this.type = 'car';
 				this.position = null;
 				this.speed = null;
+				this.accel = CAR_ACCEL;
+				this.brakeAccel = CAR_BRAKE;
 				this.road = null;
 				this.desiredSpeed = 0;
+				this.passCurrentSemaphore = false;
 			} else if (msg == 'crossroad') {
 				this.type = 'crossroad';
 				this.setup = 0;
-				this.entranceGroups = null;
+				this.groups = null;
 				this.simulation.cross = this;
 			} else {
 				traffic_controller_log("wat? " + msg);
