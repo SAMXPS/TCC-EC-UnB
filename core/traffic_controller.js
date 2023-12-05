@@ -50,7 +50,8 @@ class SimulationHandler {
 						car.sendMessage({
 							type: 'car_update',
 							status: this.status,
-							desiredSpeed: car.desiredSpeed
+							desiredSpeed: car.desiredSpeed,
+							passCurrentSemaphore: false,
 						});
 					} catch (e) {
 
