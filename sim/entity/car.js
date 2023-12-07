@@ -61,8 +61,8 @@ function Car(roadStart, width, length, _id, startDiff = 0) {
         fill(color(255,255,255));
         rotate(-this.position.dir);
         text(dms_kmh(this.speed).toFixed(0) + "km/h", 0, 0);
-        text("" + this.innerIndex, 0, -10);
-        text(dms_kmh(this.desiredSpeed).toFixed(0) + "km/h", 0, -20);
+        //text("" + this.innerIndex, 0, -10);
+        //text(dms_kmh(this.desiredSpeed).toFixed(0) + "km/h", 0, -20);
         pop();
     }
     
