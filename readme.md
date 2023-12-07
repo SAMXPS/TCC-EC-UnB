@@ -1,7 +1,8 @@
-# Projeto Final de Engenharia de Computação - Universidade de Brasília
-## Uma Proposta de Aplicação Prática de Fog Computing e Internet das Coisas para Solucionar Problemas de Mobilidade Urbana em Cidades Inteligentes
+# Uma Proposta de Aplicação Prática de Fog Computing e Internet das Coisas para Solucionar Problemas de Mobilidade Urbana em Cidades Inteligentes
+## Projeto Final de Engenharia de Computação - Universidade de Brasília
 
 Autor: Samuel James de Lima Barroso
+
 Orientadora: Profa. Dra. Aletéia Patrícia Favacho de Araújo
 
 ## Sobre o projeto
