@@ -1,37 +1,35 @@
-function Car(roadStart, width, length, _id, startDiff = 0) {
-    this.type       = 'car';
-    this.id       = _id;
+class Car {
+
+    constructor(roadStart, width, length, _id, startDiff = 0) {
+        this.type       = 'car';
+        this.id         = _id;
+        
+        this.maxSpeed   = CAR_MAX_SPEED;
+        this.turnSpeed  = CAR_TURN_SPEED;
+        this.accel      = CAR_ACCEL;
+        this.brakeAccel = CAR_BRAKE;
     
-    this.maxSpeed   = CAR_MAX_SPEED;
-    this.turnSpeed  = CAR_TURN_SPEED;
-    this.accel      = CAR_ACCEL;
-    this.brakeAccel = CAR_BRAKE;
-    this.position = roadStart.getStart().copy().forward(startDiff);
-
-    this.road  = roadStart;
-
-    this.speed = 0;
-    this.length = length;
-    this.width = width;
-
-    this.brakeTime = 0;
-    this.brakeLight = 0;
-    this.currentSemaphore = 0;
-
-    this.gas = 0;
-
-    this.lastMove = getMillis();
-    this.lastManage = 0;
-    this.time = 0;
-    this.color = color(255,255,255);
-
-    this.autonomousMode = false;
-    this.server = null;
-    this.nextConnectTry = 0;
+        this.length     = length;
+        this.width      = width;
+        this.color      = color(255,255,255);
     
-    this.serverHook = new ServerHook(this);
+        this.position   = roadStart.getStart().copy().forward(startDiff);
+        this.road       = roadStart;
+        this.speed      = 0;
+        this.gas        = 0;
+        this.brakeTime  = 0;
+        this.brakeLight = 0;
+        this.currentSemaphore = 0;
+        this.autonomousMode = false;
+    
+        this.lastMove   = getMillis();
+        this.lastManage = 0;
+        this.time       = 0;
+    
+        this.serverHook = new ServerHook(this);
+    }
 
-    this.display = function() {
+    display() {
         this.move();
 
         push();
@@ -66,16 +64,16 @@ function Car(roadStart, width, length, _id, startDiff = 0) {
         pop();
     }
     
-    this.getRoadPosition = function() {
+    getRoadPosition() {
         let roadPosition = {
             position: null,
             distance: null,
             pathI: null,
         };
         
-        for(i = 0; i <= 1; i += 0.01) {
-            posI = this.road.path(i, true);
-            disI = posI.distance(this.position);
+        for(let i = 0; i <= 1; i += 0.01) {
+            let posI = this.road.path(i, true);
+            let disI = posI.distance(this.position);
             if (roadPosition.position == null || disI <= roadPosition.distance) {
                 roadPosition.position = posI;
                 roadPosition.distance = disI;
@@ -86,7 +84,7 @@ function Car(roadStart, width, length, _id, startDiff = 0) {
         return roadPosition;
     }
 
-    this.startThread = function() {
+    startThread() {
         this.thread = setTimeout(async ()=>{
             while (1) {
                 await this.manage();
@@ -96,7 +94,7 @@ function Car(roadStart, width, length, _id, startDiff = 0) {
         });
     }
 
-    this.manage = async function() {
+    async manage() {
         if (await this.serverHook.manage()) {
             this.autonomousOperation();
         } else {
@@ -104,7 +102,7 @@ function Car(roadStart, width, length, _id, startDiff = 0) {
         }
     }
 
-    this.legacyOperation = function() {
+    legacyOperation() {
         delete this.desiredSpeed;
         this.autonomousMode = false;
 
@@ -112,7 +110,7 @@ function Car(roadStart, width, length, _id, startDiff = 0) {
         this.run();
     }
 
-    this.autonomousOperation = function() {
+    autonomousOperation() {
 
         let delay = getMillis() - this.serverHook.last_update;
         let last_info = this.serverHook.last_info;
@@ -148,7 +146,7 @@ function Car(roadStart, width, length, _id, startDiff = 0) {
         this.serverHook.con.send(dataToSend);
     }
 
-    this.run = function() {
+    run() {
 
         let timePassed = this.time - this.lastManage;
 
@@ -284,7 +282,7 @@ function Car(roadStart, width, length, _id, startDiff = 0) {
         }
     }
 
-    this.move = function() {
+    move() {
         let timePassed = getMillis() - this.lastMove;
         this.lastMove = getMillis();
 
@@ -319,7 +317,7 @@ function Car(roadStart, width, length, _id, startDiff = 0) {
         this.position.y += this.speed * Math.sin(this.position.dir) * (timePassed/1000);
     }
 
-    this.getDistanceToBrake = function() {
+    getDistanceToBrake() {
         return calculateDistanceToBrake(this.speed, this.brakeAccel);
     }
 }
