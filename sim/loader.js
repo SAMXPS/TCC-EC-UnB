@@ -15,20 +15,18 @@ class Simulation {
 async function loadSimulation() {
 
     let simulation_id = await generateRandomId();
-
-    let baseLen = 500;
     let mcenter = new AllignedPosition(0, 0, 0);
 
     let streetEast1 = new Street(
         mcenter.copy(),
-        baseLen, STREET_WIDTH,
+        STREET_LENGTH, STREET_WIDTH,
         await generateSequentialId(),
     );
 
     let streetEast2 = new Street(
         streetEast1.getEnd().left(STREET_WIDTH * 1.5)
             .rotate(Math.PI),
-        baseLen, STREET_WIDTH,
+        STREET_LENGTH, STREET_WIDTH,
         await generateSequentialId(),
     );
 
@@ -36,14 +34,14 @@ async function loadSimulation() {
         streetEast2.getEnd().forward(STREET_WIDTH * 1.5)
             .rotate(Math.PI / 2)
             .forward(STREET_WIDTH * 1.5),
-        baseLen, STREET_WIDTH,
+        STREET_LENGTH, STREET_WIDTH,
         await generateSequentialId(),
     );
 
     let streetNorth2 = new Street(
         streetNorth1.getEnd().left(STREET_WIDTH * 1.5)
             .rotate(Math.PI),
-        baseLen, STREET_WIDTH,
+        STREET_LENGTH, STREET_WIDTH,
         await generateSequentialId(),
     );
 
@@ -51,14 +49,14 @@ async function loadSimulation() {
         streetNorth2.getEnd().forward(STREET_WIDTH * 1.5)
             .rotate(Math.PI / 2)
             .forward(STREET_WIDTH * 1.5),
-        baseLen, STREET_WIDTH,
+        STREET_LENGTH, STREET_WIDTH,
         await generateSequentialId(),
     );
 
     let streetWest2 = new Street(
         streetWest1.getEnd().left(STREET_WIDTH * 1.5)
             .rotate(Math.PI),
-        baseLen, STREET_WIDTH,
+        STREET_LENGTH, STREET_WIDTH,
         await generateSequentialId(),
     );
 
@@ -66,14 +64,14 @@ async function loadSimulation() {
         streetWest2.getEnd().forward(STREET_WIDTH * 1.5)
             .rotate(Math.PI / 2)
             .forward(STREET_WIDTH * 1.5),
-        baseLen, STREET_WIDTH,
+        STREET_LENGTH, STREET_WIDTH,
         await generateSequentialId(),
     );
 
     let streetSouth2 = new Street(
         streetSouth1.getEnd().left(STREET_WIDTH * 1.5)
             .rotate(Math.PI),
-        baseLen, STREET_WIDTH,
+        STREET_LENGTH, STREET_WIDTH,
         await generateSequentialId(),
     );
 
