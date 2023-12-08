@@ -17,7 +17,7 @@ class CrossRoad {
         this.nextSort = 0;
         this.thread = null;
         this.time   = 0;
-        this.autonomousMode = false;
+        this.colonyMode = false;
 
         this.serverHook = new ServerHook(this);
     }
@@ -81,7 +81,7 @@ class CrossRoad {
 
     async manage() {
         if (await this.serverHook.manage()) {
-            this.autonomousOperation();
+            this.colonyOperation();
         } else {
             this.legacyOperation();
         }
@@ -121,9 +121,9 @@ class CrossRoad {
     }
 
     legacyOperation() {
-        if (this.autonomousMode) {
+        if (this.colonyMode) {
             this.time = 0;
-            this.autonomousMode = 0;
+            this.colonyMode = 0;
         }
 
         this.entrances.forEach( (entrance) => {
@@ -162,11 +162,11 @@ class CrossRoad {
         });
     }
 
-    autonomousOperation() {
-        if (!this.autonomousMode) {
-            this.autonomousMode = true;
+    colonyOperation() {
+        if (!this.colonyMode) {
+            this.colonyMode = true;
             this.time = 0;
-            console.log("[CrossRoad] Iniciando operacao em modo autonomo.");
+            console.log("[CrossRoad] Iniciando operacao em modo colonia.");
         }
 
         let last_info = this.serverHook.last_info;
@@ -187,13 +187,13 @@ class CrossRoad {
             this.time = 0;
             console.log(last_info);
             console.log(sync_latency);
-            console.log("cross road autonomous mode error!");
+            console.log("cross road colony mode error!");
         } else {
             message.status = last_info?.status;
         }
 
         this.entrances.forEach( (entrance) => {
-            entrance.semaphore = message.status == 'autonomous' ? 'blue' : 'red';
+            entrance.semaphore = message.status == 'colony' ? 'blue' : 'red';
         });
 
         this.serverHook.sendMessage(message);
@@ -249,7 +249,7 @@ class CrossRoad {
 
             if (parseInt(getMillis() / 500) % 2 == 0) {
                 fill(0);
-            } else if (this.autonomousMode) {
+            } else if (this.colonyMode) {
                 fill(color(0,0,255));
             } else {
                 fill(color(255,255,0));

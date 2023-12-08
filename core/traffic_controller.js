@@ -271,7 +271,7 @@ class SimulationHandler {
 	}
 
 	controlCars() {
-		if (this.status != 'autonomous') {
+		if (this.status != 'colony') {
 			this.cars.forEach((car)=>{
 				car.desiredSpeed = CAR_MAX_SPEED / 2;
 				car.passCurrentSemaphore = false;
@@ -413,7 +413,7 @@ class SimulationHandler {
 	}
 
 	updateCross() {
-		if (!this.cross || this.cross?.status != 'autonomous') {
+		if (!this.cross || this.cross?.status != 'colony') {
 			this.status = 'loading';
 		}
 		
@@ -425,10 +425,10 @@ class SimulationHandler {
 			if (!this.cross.setup) {
 				message.status = 'waiting_setup';
 			} else if (this.cross.status == 'loading') {
-				message.status = 'autonomous';
-			} else if (this.cross.status == 'autonomous') {
-				this.status = 'autonomous';
-				message.status = 'autonomous';
+				message.status = 'colony';
+			} else if (this.cross.status == 'colony') {
+				this.status = 'colony';
+				message.status = 'colony';
 			} else {
 				message.status = this.status;
 			}

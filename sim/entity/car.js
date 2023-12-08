@@ -20,7 +20,7 @@ class Car {
         this.brakeTime  = 0;
         this.brakeLight = 0;
         this.currentSemaphore = 0;
-        this.autonomousMode = false;
+        this.colonyMode = false;
     
         this.lastMove   = getMillis();
         this.lastManage = 0;
@@ -96,7 +96,7 @@ class Car {
 
     async manage() {
         if (await this.serverHook.manage()) {
-            this.autonomousOperation();
+            this.colonyOperation();
         } else {
             this.legacyOperation();
         }
@@ -104,21 +104,21 @@ class Car {
 
     legacyOperation() {
         delete this.desiredSpeed;
-        this.autonomousMode = false;
+        this.colonyMode = false;
 
         this.color = color(255,255,255);
         this.run();
     }
 
-    autonomousOperation() {
+    colonyOperation() {
 
         let delay = getMillis() - this.serverHook.last_update;
         let last_info = this.serverHook.last_info;
 
-        if (last_info?.status == 'autonomous') {
-            if (!this.autonomousMode) {
-                this.autonomousMode = true;
-                console.log("[Car] Iniciando operacao em modo autonomo.");
+        if (last_info?.status == 'colony') {
+            if (!this.colonyMode) {
+                this.colonyMode = true;
+                console.log("[Car] Iniciando operacao em modo colonia.");
             }
             this.color = color(128,128,256);
 
@@ -176,7 +176,7 @@ class Car {
                 return;
             }
 
-            if (!this.autonomousMode || true) {
+            if (!this.colonyMode || true) {
                 let pos = this.position.copy();
                 for (let i = 0; i < 10 * (1 + (dms_kmh(this.speed)/10)); i++) {
                     pos = pos.forward(5);
@@ -241,7 +241,7 @@ class Car {
                 }
 
                 if (this.road.semaphore == 'blue') {
-                    if (!this.autonomousMode || !canBrakeBeforeCross ) {
+                    if (!this.colonyMode || !canBrakeBeforeCross ) {
                         this.currentSemaphore = 'stop';
                         // alerta que teve que parar no azul
                         this.alert = 'unauthorized_cross';

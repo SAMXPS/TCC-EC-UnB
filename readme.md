@@ -1,4 +1,4 @@
-# Uma Proposta de Aplicação Prática de Fog Computing e Internet das Coisas para Solucionar Problemas de Mobilidade Urbana em Cidades Inteligentes
+# Modo Colônia: Uma Proposta de Solução paraMobilidade Urbana em Cidades Inteligentes Utilizando Fog Computing e Internet das Coisas
 ## Projeto Final de Engenharia de Computação - Universidade de Brasília
 
 Autor: Samuel James de Lima Barroso
