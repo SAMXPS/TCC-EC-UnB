@@ -32,6 +32,7 @@ class SimulationHandler {
 		this.cross = null;
 		this.enabled = 1;
 		this.status = 'loading';
+		this.startTime = getMillis();
 
 		console.log("creating simulation with id = " + this.id);
 
@@ -49,102 +50,27 @@ class SimulationHandler {
 			}
 		});
 
-		
-        /*
+		setInterval(() => {
+			let timePassed = (getMillis() - this.startTime)/1000;
+			let byterate = SocketHandler.bandwidth / timePassed;
+			let bitrate = byterate * 8;
+			let messageRate = (SocketHandler.messageCount / timePassed).toFixed(0);
 
-        let lastTime = null;
-        let minInterval = 0; // um segundo
-        const minDistance = this.width * 4;
+			if (byterate > Math.pow(10, 6)) {
+				byterate = (byterate / Math.pow(10, 6)).toFixed(0) + " MBps";
+			} else if (byterate > Math.pow(10, 3)) {
+				byterate = (byterate / Math.pow(10, 3)).toFixed(0) + " KBps";
+			}
 
-        let lastCar = null;
+			if (bitrate > Math.pow(10, 6)) {
+				bitrate = (bitrate / Math.pow(10, 6)).toFixed(0) + " Mbps";
+			} else if (bitrate > Math.pow(10, 3)) {
+				bitrate = (bitrate / Math.pow(10, 3)).toFixed(0) + " Kbps";
+			}
 
-        let myCars = this.controlledCars;
-
-        myCars.forEach((car) => {
-            car.crossControl.minTimeTillCross = this.getMinTimeTillCross(car, car.maxSpeed);
-            car.crossControl.distanceTillCrossStart = car.crossControl.path.getStart().distance(car.position);
-            car.crossControl.distanceTillCrossEnd = car.crossControl.path.getEnd().distance(car.position);
-        })
-
-        if (this.time > this.nextSort) {
-
-            // TODO: later if we have time
-            // colocar junto carros que estao em pistas opostas pra cruzar juntos sempre que possivel
-            // maximizar fluxo de veículos no cruzamento
-
-            this.nextSort = this.time + 100;
-        }
-
-        this.entranceGroups.forEach((group)=>{
-            group.maxSpeed = kmh_dms(60);
-        });
-
-
-        let index = 0;
-        
-        myCars.forEach((car) => {
-            index++;
-
-            let group = car.crossControl.group;
-
-            car.crossControl.index = index-1;
-
-            if (!lastTime) {
-                car.desiredSpeed = car.maxSpeed;
-                lastTime = car.crossControl.minTimeTillCross;
-                car.crossControl.timeTillCross = lastTime;
-                group.maxSpeed = car.maxSpeed;
-                lastCar = car;
-                return;
-            }
-
-            if (car.maxSpeed < group.maxSpeed) {
-                group.maxSpeed = car.maxSpeed;
-            }
-            
-            let distanceTillCrossStart = car.crossControl.distanceTillCrossStart;
-
-            // equacao de torricelli
-            let maxSpeedAtCross = Math.sqrt( car.speed * car.speed + 2 * car.accel * distanceTillCrossStart );
-
-            let currentTime = this.getMinTimeTillCross(car, group.maxSpeed);
-
-            if (!car.road.cross) {
-                if (car.crossControl.group != lastCar.crossControl.group) {
-                    minInterval = minDistance / Math.min(group.maxSpeed, maxSpeedAtCross);
-        
-                    while (currentTime - lastTime < minInterval && group.maxSpeed > kmh_dms(5)) {
-                        group.maxSpeed -= 1;
-                        currentTime = this.getMinTimeTillCross(car, group.maxSpeed);
-                        minInterval = minDistance / Math.min(group.maxSpeed, maxSpeedAtCross);
-                    }
-                }
-            }
-
-            car.desiredSpeed = group.maxSpeed;
-
-            if (currentTime > lastTime) {
-                lastTime = currentTime;
-            }
-
-            car.crossControl.timeTillCross = lastTime;
-            lastCar = car;
-        });
-
-        // Detect cars entering the crossRoad
-        simulation.cars.forEach((car) => {
-            if (car.isNearCross(this)) {
-                if (car.controlledBy != this) {
-                    this.onEnterControl(car);
-                }
-            } else if (car.road.cross == this) {
-
-            } else if (car.controlledBy == this) {
-                this.onExitControl(car);
-            }
-        });
-        */
-
+			console.log("Average Bandwidth: " + byterate + " or " + bitrate);
+			console.log("Average Message Rate: " + messageRate + " mps");
+		}, 1000);
 	}
 
 	handleMessage(from, message) {
@@ -442,6 +368,8 @@ class SimulationHandler {
 class SocketHandler {
 	static sockets     = [];
 	static simulations = new Map();
+	static bandwidth = 0;
+	static messageCount = 0;
 
 	constructor(socket) {
 		this.simulation_id 	= null;
@@ -455,6 +383,8 @@ class SocketHandler {
 		SocketHandler.sockets.push(socket);
 
 		socket.on('message', function (msg) {
+			SocketHandler.bandwidth += msg.length;
+			SocketHandler.messageCount += 1;
 			try {
 				handler.handleMessage(msg);
 			} catch (e) {
