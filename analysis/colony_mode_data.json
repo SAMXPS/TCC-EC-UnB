@@ -1,0 +1,8582 @@
+[
+	{
+		"time": 1702175869424,
+		"averageOfSpeeds": "9.13 km/h",
+		"averageOdometer": 1.3149853125,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": false,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175869424,
+				"speed": "9.13 km/h",
+				"odometer": 1.3134275000000003,
+				"colonyMode": false
+			},
+			{
+				"id": 18,
+				"time": 1702175869424,
+				"speed": "9.13 km/h",
+				"odometer": 1.3134475,
+				"colonyMode": false
+			},
+			{
+				"id": 19,
+				"time": 1702175869424,
+				"speed": "9.13 km/h",
+				"odometer": 1.3133674999999999,
+				"colonyMode": false
+			},
+			{
+				"id": 20,
+				"time": 1702175869424,
+				"speed": "9.13 km/h",
+				"odometer": 1.315935,
+				"colonyMode": false
+			},
+			{
+				"id": 21,
+				"time": 1702175869424,
+				"speed": "9.13 km/h",
+				"odometer": 1.3158249999999999,
+				"colonyMode": false
+			},
+			{
+				"id": 22,
+				"time": 1702175869424,
+				"speed": "9.13 km/h",
+				"odometer": 1.3158949999999999,
+				"colonyMode": false
+			},
+			{
+				"id": 23,
+				"time": 1702175869424,
+				"speed": "9.13 km/h",
+				"odometer": 1.31599,
+				"colonyMode": false
+			},
+			{
+				"id": 24,
+				"time": 1702175869424,
+				"speed": "9.13 km/h",
+				"odometer": 1.3159950000000003,
+				"colonyMode": false
+			}
+		]
+	},
+	{
+		"time": 1702175870420,
+		"averageOfSpeeds": "18.15 km/h",
+		"averageOdometer": 5.137178124999999,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": false,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175870420,
+				"speed": "18.14 km/h",
+				"odometer": 5.136564999999999,
+				"colonyMode": false
+			},
+			{
+				"id": 18,
+				"time": 1702175870420,
+				"speed": "18.14 km/h",
+				"odometer": 5.13648,
+				"colonyMode": false
+			},
+			{
+				"id": 19,
+				"time": 1702175870420,
+				"speed": "18.13 km/h",
+				"odometer": 5.1314675,
+				"colonyMode": false
+			},
+			{
+				"id": 20,
+				"time": 1702175870420,
+				"speed": "18.14 km/h",
+				"odometer": 5.136467499999999,
+				"colonyMode": false
+			},
+			{
+				"id": 21,
+				"time": 1702175870420,
+				"speed": "18.14 km/h",
+				"odometer": 5.1363949999999989,
+				"colonyMode": false
+			},
+			{
+				"id": 22,
+				"time": 1702175870420,
+				"speed": "18.14 km/h",
+				"odometer": 5.136529999999999,
+				"colonyMode": false
+			},
+			{
+				"id": 23,
+				"time": 1702175870420,
+				"speed": "18.15 km/h",
+				"odometer": 5.1417375,
+				"colonyMode": false
+			},
+			{
+				"id": 24,
+				"time": 1702175870420,
+				"speed": "18.15 km/h",
+				"odometer": 5.1417825,
+				"colonyMode": false
+			}
+		]
+	},
+	{
+		"time": 1702175871418,
+		"averageOfSpeeds": "27.13 km/h",
+		"averageOdometer": 11.446023124999999,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": false,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175871418,
+				"speed": "27.13 km/h",
+				"odometer": 11.447014999999997,
+				"colonyMode": false
+			},
+			{
+				"id": 18,
+				"time": 1702175871418,
+				"speed": "27.14 km/h",
+				"odometer": 11.446932499999996,
+				"colonyMode": false
+			},
+			{
+				"id": 19,
+				"time": 1702175871418,
+				"speed": "27.13 km/h",
+				"odometer": 11.439427500000005,
+				"colonyMode": false
+			},
+			{
+				"id": 20,
+				"time": 1702175871418,
+				"speed": "27.14 km/h",
+				"odometer": 11.446924999999997,
+				"colonyMode": false
+			},
+			{
+				"id": 21,
+				"time": 1702175871418,
+				"speed": "27.13 km/h",
+				"odometer": 11.446852499999995,
+				"colonyMode": false
+			},
+			{
+				"id": 22,
+				"time": 1702175871418,
+				"speed": "27.13 km/h",
+				"odometer": 11.446952499999997,
+				"colonyMode": false
+			},
+			{
+				"id": 23,
+				"time": 1702175871418,
+				"speed": "27.13 km/h",
+				"odometer": 11.447085,
+				"colonyMode": false
+			},
+			{
+				"id": 24,
+				"time": 1702175871418,
+				"speed": "27.13 km/h",
+				"odometer": 11.446994999999998,
+				"colonyMode": false
+			}
+		]
+	},
+	{
+		"time": 1702175872412,
+		"averageOfSpeeds": "31.09 km/h",
+		"averageOdometer": 19.55771199999999,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": false,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175872412,
+				"speed": "29.47 km/h",
+				"odometer": 19.403460999999994,
+				"colonyMode": false
+			},
+			{
+				"id": 18,
+				"time": 1702175872412,
+				"speed": "29.54 km/h",
+				"odometer": 19.417350499999988,
+				"colonyMode": false
+			},
+			{
+				"id": 19,
+				"time": 1702175872412,
+				"speed": "29.50 km/h",
+				"odometer": 19.404251500000006,
+				"colonyMode": false
+			},
+			{
+				"id": 20,
+				"time": 1702175872412,
+				"speed": "29.51 km/h",
+				"odometer": 19.413836999999995,
+				"colonyMode": false
+			},
+			{
+				"id": 21,
+				"time": 1702175872412,
+				"speed": "35.90 km/h",
+				"odometer": 20.00119999999999,
+				"colonyMode": false
+			},
+			{
+				"id": 22,
+				"time": 1702175872412,
+				"speed": "29.44 km/h",
+				"odometer": 19.40708249999999,
+				"colonyMode": false
+			},
+			{
+				"id": 23,
+				"time": 1702175872412,
+				"speed": "35.90 km/h",
+				"odometer": 20.001424999999999,
+				"colonyMode": false
+			},
+			{
+				"id": 24,
+				"time": 1702175872412,
+				"speed": "29.47 km/h",
+				"odometer": 19.413088499999995,
+				"colonyMode": false
+			}
+		]
+	},
+	{
+		"time": 1702175873406,
+		"averageOfSpeeds": "30.20 km/h",
+		"averageOdometer": 28.228835874999996,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": false,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175873406,
+				"speed": "29.78 km/h",
+				"odometer": 27.673149499999995,
+				"colonyMode": false
+			},
+			{
+				"id": 18,
+				"time": 1702175873406,
+				"speed": "26.60 km/h",
+				"odometer": 27.584775499999997,
+				"colonyMode": false
+			},
+			{
+				"id": 19,
+				"time": 1702175873406,
+				"speed": "29.84 km/h",
+				"odometer": 27.684591500000005,
+				"colonyMode": false
+			},
+			{
+				"id": 20,
+				"time": 1702175873406,
+				"speed": "26.64 km/h",
+				"odometer": 27.573102,
+				"colonyMode": false
+			},
+			{
+				"id": 21,
+				"time": 1702175873406,
+				"speed": "29.82 km/h",
+				"odometer": 28.95564699999999,
+				"colonyMode": false
+			},
+			{
+				"id": 22,
+				"time": 1702175873406,
+				"speed": "26.98 km/h",
+				"odometer": 27.541424499999985,
+				"colonyMode": false
+			},
+			{
+				"id": 23,
+				"time": 1702175873406,
+				"speed": "44.90 km/h",
+				"odometer": 31.252039999999988,
+				"colonyMode": false
+			},
+			{
+				"id": 24,
+				"time": 1702175873406,
+				"speed": "27.05 km/h",
+				"odometer": 27.565956999999988,
+				"colonyMode": false
+			}
+		]
+	},
+	{
+		"time": 1702175874418,
+		"averageOfSpeeds": "25.27 km/h",
+		"averageOdometer": 36.162367687499997,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": false,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175874418,
+				"speed": "30.21 km/h",
+				"odometer": 36.094475999999989,
+				"colonyMode": false
+			},
+			{
+				"id": 18,
+				"time": 1702175874418,
+				"speed": "19.26 km/h",
+				"odometer": 33.998033,
+				"colonyMode": false
+			},
+			{
+				"id": 19,
+				"time": 1702175874418,
+				"speed": "29.86 km/h",
+				"odometer": 36.103944000000009,
+				"colonyMode": false
+			},
+			{
+				"id": 20,
+				"time": 1702175874418,
+				"speed": "19.44 km/h",
+				"odometer": 33.96715450000001,
+				"colonyMode": false
+			},
+			{
+				"id": 21,
+				"time": 1702175874418,
+				"speed": "29.87 km/h",
+				"odometer": 37.38426499999998,
+				"colonyMode": false
+			},
+			{
+				"id": 22,
+				"time": 1702175874418,
+				"speed": "19.20 km/h",
+				"odometer": 34.00481549999998,
+				"colonyMode": false
+			},
+			{
+				"id": 23,
+				"time": 1702175874418,
+				"speed": "35.24 km/h",
+				"odometer": 43.76201549999998,
+				"colonyMode": false
+			},
+			{
+				"id": 24,
+				"time": 1702175874418,
+				"speed": "19.10 km/h",
+				"odometer": 33.98423799999999,
+				"colonyMode": false
+			}
+		]
+	},
+	{
+		"time": 1702175875411,
+		"averageOfSpeeds": "22.78 km/h",
+		"averageOdometer": 42.568661812500007,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175875411,
+				"speed": "29.75 km/h",
+				"odometer": 44.3575015,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175875411,
+				"speed": "21.51 km/h",
+				"odometer": 39.09510150000001,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175875411,
+				"speed": "30.19 km/h",
+				"odometer": 44.37891550000002,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175875411,
+				"speed": "13.85 km/h",
+				"odometer": 38.30328450000002,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175875411,
+				"speed": "30.20 km/h",
+				"odometer": 45.659894999999988,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175875411,
+				"speed": "20.94 km/h",
+				"odometer": 39.040293999999978,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175875411,
+				"speed": "29.55 km/h",
+				"odometer": 52.085365,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175875411,
+				"speed": "6.24 km/h",
+				"odometer": 37.62893749999999,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175876411,
+		"averageOfSpeeds": "22.84 km/h",
+		"averageOdometer": 48.8860735625,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175876411,
+				"speed": "29.09 km/h",
+				"odometer": 52.43092599999998,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175876411,
+				"speed": "30.40 km/h",
+				"odometer": 46.24593500000004,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175876411,
+				"speed": "29.37 km/h",
+				"odometer": 52.43549800000001,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175876411,
+				"speed": "10.33 km/h",
+				"odometer": 41.52996400000002,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175876411,
+				"speed": "28.12 km/h",
+				"odometer": 53.71762249999999,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175876411,
+				"speed": "29.82 km/h",
+				"odometer": 46.025734999999979,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175876411,
+				"speed": "17.45 km/h",
+				"odometer": 59.28712749999998,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175876411,
+				"speed": "8.11 km/h",
+				"odometer": 39.4157805,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175877410,
+		"averageOfSpeeds": "18.44 km/h",
+		"averageOdometer": 54.85988718750001,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175877410,
+				"speed": "18.09 km/h",
+				"odometer": 59.819155999999967,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175877410,
+				"speed": "39.40 km/h",
+				"odometer": 55.96833500000006,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175877410,
+				"speed": "16.93 km/h",
+				"odometer": 59.647865000000027,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175877410,
+				"speed": "7.09 km/h",
+				"odometer": 43.872128000000028,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175877410,
+				"speed": "13.01 km/h",
+				"odometer": 60.297042999999998,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175877410,
+				"speed": "38.82 km/h",
+				"odometer": 55.58679499999998,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175877410,
+				"speed": "7.20 km/h",
+				"odometer": 61.96821449999999,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175877410,
+				"speed": "7.00 km/h",
+				"odometer": 41.719561000000009,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175878408,
+		"averageOfSpeeds": "24.09 km/h",
+		"averageOdometer": 60.511173000000017,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175878408,
+				"speed": "21.13 km/h",
+				"odometer": 64.69971499999994,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175878408,
+				"speed": "48.40 km/h",
+				"odometer": 68.19051500000009,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175878408,
+				"speed": "15.94 km/h",
+				"odometer": 63.875885000000028,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175878408,
+				"speed": "14.30 km/h",
+				"odometer": 46.66017600000003,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175878408,
+				"speed": "16.53 km/h",
+				"odometer": 63.76802550000001,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175878408,
+				"speed": "47.81 km/h",
+				"odometer": 67.63422950000002,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175878408,
+				"speed": "14.41 km/h",
+				"odometer": 64.78319999999997,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175878408,
+				"speed": "14.20 km/h",
+				"odometer": 44.477638000000037,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175879411,
+		"averageOfSpeeds": "30.87 km/h",
+		"averageOdometer": 68.17741868750002,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175879411,
+				"speed": "21.55 km/h",
+				"odometer": 70.61273399999995,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175879411,
+				"speed": "57.41 km/h",
+				"odometer": 82.92889700000009,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175879411,
+				"speed": "15.68 km/h",
+				"odometer": 68.29663000000002,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175879411,
+				"speed": "23.31 km/h",
+				"odometer": 51.91757900000001,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175879411,
+				"speed": "25.54 km/h",
+				"odometer": 69.65068400000004,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175879411,
+				"speed": "56.83 km/h",
+				"odometer": 82.22425050000001,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175879411,
+				"speed": "23.42 km/h",
+				"odometer": 70.07562549999997,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175879411,
+				"speed": "23.22 km/h",
+				"odometer": 49.71294950000004,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175880409,
+		"averageOfSpeeds": "35.70 km/h",
+		"averageOdometer": 77.5314536666667,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175880409,
+				"speed": "21.11 km/h",
+				"odometer": 76.54131399999997,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175880409,
+				"speed": "60.00 km/h",
+				"odometer": 99.49991950000015,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175880409,
+				"speed": "16.26 km/h",
+				"odometer": 72.71540400000002,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175880409,
+				"speed": "32.31 km/h",
+				"odometer": 59.67052650000001,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175880409,
+				"speed": "31.29 km/h",
+				"odometer": 77.80502000000006,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175880409,
+				"speed": "60.00 km/h",
+				"odometer": 98.72878683333339,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175880409,
+				"speed": "32.41 km/h",
+				"odometer": 77.8506965,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175880409,
+				"speed": "32.22 km/h",
+				"odometer": 57.43996200000005,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175881409,
+		"averageOfSpeeds": "33.36 km/h",
+		"averageOdometer": 87.2152467708334,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175881409,
+				"speed": "20.58 km/h",
+				"odometer": 82.46736949999999,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175881409,
+				"speed": "36.82 km/h",
+				"odometer": 113.13305916666688,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175881409,
+				"speed": "15.99 km/h",
+				"odometer": 77.15738250000004,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175881409,
+				"speed": "41.31 km/h",
+				"odometer": 69.92347150000004,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175881409,
+				"speed": "30.68 km/h",
+				"odometer": 86.38573700000009,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175881409,
+				"speed": "38.86 km/h",
+				"odometer": 112.8674455000001,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175881409,
+				"speed": "41.41 km/h",
+				"odometer": 88.13214399999998,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175881409,
+				"speed": "41.21 km/h",
+				"odometer": 67.65536500000005,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175882410,
+		"averageOfSpeeds": "33.36 km/h",
+		"averageOdometer": 96.61904895833341,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175882410,
+				"speed": "22.08 km/h",
+				"odometer": 88.53330449999999,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175882410,
+				"speed": "22.72 km/h",
+				"odometer": 121.44950216666693,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175882410,
+				"speed": "16.13 km/h",
+				"odometer": 81.74425000000007,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175882410,
+				"speed": "50.44 km/h",
+				"odometer": 82.87264350000005,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175882410,
+				"speed": "30.88 km/h",
+				"odometer": 95.1358255000001,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175882410,
+				"speed": "23.80 km/h",
+				"odometer": 121.5311205,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175882410,
+				"speed": "50.54 km/h",
+				"odometer": 101.11017499999997,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175882410,
+				"speed": "50.34 km/h",
+				"odometer": 80.57557050000006,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175883413,
+		"averageOfSpeeds": "30.75 km/h",
+		"averageOdometer": 105.3408636458334,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175883413,
+				"speed": "16.90 km/h",
+				"odometer": 94.09955599999998,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175883413,
+				"speed": "10.09 km/h",
+				"odometer": 125.1645881666669,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175883413,
+				"speed": "12.36 km/h",
+				"odometer": 85.90808150000008,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175883413,
+				"speed": "59.32 km/h",
+				"odometer": 97.94626200000008,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175883413,
+				"speed": "16.43 km/h",
+				"odometer": 101.76041150000009,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175883413,
+				"speed": "12.24 km/h",
+				"odometer": 126.01488250000009,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175883413,
+				"speed": "59.42 km/h",
+				"odometer": 116.21195049999999,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175883413,
+				"speed": "59.22 km/h",
+				"odometer": 95.62117700000005,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175884419,
+		"averageOfSpeeds": "31.25 km/h",
+		"averageOdometer": 114.17935035416675,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175884419,
+				"speed": "25.90 km/h",
+				"odometer": 100.07168099999999,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175884419,
+				"speed": "17.69 km/h",
+				"odometer": 129.22234683333358,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175884419,
+				"speed": "21.35 km/h",
+				"odometer": 90.6105820000001,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175884419,
+				"speed": "39.81 km/h",
+				"odometer": 112.32039233333345,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175884419,
+				"speed": "25.44 km/h",
+				"odometer": 107.60890900000016,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175884419,
+				"speed": "21.24 km/h",
+				"odometer": 130.69594033333346,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175884419,
+				"speed": "55.72 km/h",
+				"odometer": 132.27497283333339,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175884419,
+				"speed": "42.86 km/h",
+				"odometer": 110.62997850000002,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175885419,
+		"averageOfSpeeds": "31.49 km/h",
+		"averageOdometer": 122.7526211458334,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175885419,
+				"speed": "34.94 km/h",
+				"odometer": 108.58328049999992,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175885419,
+				"speed": "19.01 km/h",
+				"odometer": 134.2851788333336,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175885419,
+				"speed": "24.10 km/h",
+				"odometer": 97.20559650000011,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175885419,
+				"speed": "27.68 km/h",
+				"odometer": 121.0840306666668,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175885419,
+				"speed": "34.48 km/h",
+				"odometer": 115.99202150000005,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175885419,
+				"speed": "24.71 km/h",
+				"odometer": 137.30665633333343,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175885419,
+				"speed": "59.29 km/h",
+				"odometer": 147.76030033333343,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175885419,
+				"speed": "27.70 km/h",
+				"odometer": 119.80390449999996,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175886418,
+		"averageOfSpeeds": "33.81 km/h",
+		"averageOdometer": 131.99432441666679,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175886418,
+				"speed": "43.98 km/h",
+				"odometer": 119.624223,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175886418,
+				"speed": "28.05 km/h",
+				"odometer": 140.87765133333367,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175886418,
+				"speed": "23.20 km/h",
+				"odometer": 103.50763500000014,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175886418,
+				"speed": "27.33 km/h",
+				"odometer": 129.24979533333355,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175886418,
+				"speed": "43.53 km/h",
+				"odometer": 126.9164890000001,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175886418,
+				"speed": "33.76 km/h",
+				"odometer": 145.49307883333348,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175886418,
+				"speed": "49.06 km/h",
+				"odometer": 163.81502383333348,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175886418,
+				"speed": "21.59 km/h",
+				"odometer": 126.4706989999999,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175887413,
+		"averageOfSpeeds": "35.18 km/h",
+		"averageOdometer": 141.64361618750017,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175887413,
+				"speed": "53.04 km/h",
+				"odometer": 133.207831,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175887413,
+				"speed": "27.96 km/h",
+				"odometer": 148.92101033333365,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175887413,
+				"speed": "32.24 km/h",
+				"odometer": 111.26526050000018,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175887413,
+				"speed": "27.11 km/h",
+				"odometer": 136.8048248333335,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175887413,
+				"speed": "52.58 km/h",
+				"odometer": 140.35924150000018,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175887413,
+				"speed": "38.63 km/h",
+				"odometer": 155.99495633333354,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175887413,
+				"speed": "28.29 km/h",
+				"odometer": 174.15560033333348,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175887413,
+				"speed": "21.62 km/h",
+				"odometer": 132.4402046666666,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175888409,
+		"averageOfSpeeds": "41.22 km/h",
+		"averageOdometer": 152.1025613958335,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175888409,
+				"speed": "60.00 km/h",
+				"odometer": 149.0480386666666,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175888409,
+				"speed": "35.54 km/h",
+				"odometer": 157.5751955000004,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175888409,
+				"speed": "41.18 km/h",
+				"odometer": 121.42810600000023,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175888409,
+				"speed": "34.68 km/h",
+				"odometer": 145.21282083333356,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175888409,
+				"speed": "60.00 km/h",
+				"odometer": 156.08156900000012,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175888409,
+				"speed": "44.25 km/h",
+				"odometer": 167.1469808333336,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175888409,
+				"speed": "25.39 km/h",
+				"odometer": 181.14177883333347,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175888409,
+				"speed": "28.70 km/h",
+				"odometer": 139.18600149999998,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175889406,
+		"averageOfSpeeds": "42.47 km/h",
+		"averageOdometer": 163.8000690833335,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175889406,
+				"speed": "47.37 km/h",
+				"odometer": 164.60236733333336,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175889406,
+				"speed": "44.43 km/h",
+				"odometer": 168.57575516666709,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175889406,
+				"speed": "50.07 km/h",
+				"odometer": 133.9768245000002,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175889406,
+				"speed": "42.47 km/h",
+				"odometer": 155.95061000000013,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175889406,
+				"speed": "37.97 km/h",
+				"odometer": 169.53274016666678,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175889406,
+				"speed": "53.15 km/h",
+				"odometer": 180.55295866666698,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175889406,
+				"speed": "30.64 km/h",
+				"odometer": 189.25091333333337,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175889406,
+				"speed": "33.64 km/h",
+				"odometer": 147.95838350000003,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175890419,
+		"averageOfSpeeds": "39.30 km/h",
+		"averageOdometer": 175.0810857916668,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175890419,
+				"speed": "29.04 km/h",
+				"odometer": 174.63656450000003,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175890419,
+				"speed": "53.60 km/h",
+				"odometer": 182.47805000000043,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175890419,
+				"speed": "59.25 km/h",
+				"odometer": 149.49229700000027,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175890419,
+				"speed": "29.36 km/h",
+				"odometer": 165.16900600000015,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175890419,
+				"speed": "29.67 km/h",
+				"odometer": 178.13614766666673,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175890419,
+				"speed": "60.00 km/h",
+				"odometer": 196.83340100000027,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175890419,
+				"speed": "24.75 km/h",
+				"odometer": 197.371972,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175890419,
+				"speed": "28.71 km/h",
+				"odometer": 156.53124816666674,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175891407,
+		"averageOfSpeeds": "43.62 km/h",
+		"averageOdometer": 186.57949560416686,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175891407,
+				"speed": "33.93 km/h",
+				"odometer": 182.94320216666677,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175891407,
+				"speed": "60.00 km/h",
+				"odometer": 198.33267116666708,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175891407,
+				"speed": "46.92 km/h",
+				"odometer": 164.95341833333365,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175891407,
+				"speed": "38.25 km/h",
+				"odometer": 174.47235266666679,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175891407,
+				"speed": "38.57 km/h",
+				"odometer": 187.52716233333343,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175891407,
+				"speed": "60.00 km/h",
+				"odometer": 213.31673433333359,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175891407,
+				"speed": "33.66 km/h",
+				"odometer": 205.42214583333334,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175891407,
+				"speed": "37.61 km/h",
+				"odometer": 165.66827800000005,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175892421,
+		"averageOfSpeeds": "45.24 km/h",
+		"averageOdometer": 198.96370295833354,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175892421,
+				"speed": "42.94 km/h",
+				"odometer": 193.6582290000002,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175892421,
+				"speed": "60.00 km/h",
+				"odometer": 215.01600450000039,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175892421,
+				"speed": "29.05 km/h",
+				"odometer": 174.82341116666698,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175892421,
+				"speed": "47.26 km/h",
+				"odometer": 186.3873935000001,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175892421,
+				"speed": "47.57 km/h",
+				"odometer": 199.5309291666668,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175892421,
+				"speed": "45.86 km/h",
+				"odometer": 228.83833400000035,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175892421,
+				"speed": "42.66 km/h",
+				"odometer": 216.0486550000001,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175892421,
+				"speed": "46.62 km/h",
+				"odometer": 177.40666733333348,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175893416,
+		"averageOfSpeeds": "43.99 km/h",
+		"averageOdometer": 211.68988960416687,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175893416,
+				"speed": "38.50 km/h",
+				"odometer": 205.8655061666669,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175893416,
+				"speed": "43.49 km/h",
+				"odometer": 230.34756383333375,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175893416,
+				"speed": "34.51 km/h",
+				"odometer": 183.4415405000004,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175893416,
+				"speed": "56.36 km/h",
+				"odometer": 200.97938516666677,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175893416,
+				"speed": "41.63 km/h",
+				"odometer": 213.24682233333346,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175893416,
+				"speed": "29.94 km/h",
+				"odometer": 238.47099966666688,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175893416,
+				"speed": "51.76 km/h",
+				"odometer": 229.34730066666675,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175893416,
+				"speed": "55.73 km/h",
+				"odometer": 191.81999850000009,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175894419,
+		"averageOfSpeeds": "44.61 km/h",
+		"averageOdometer": 223.6303239166669,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175894419,
+				"speed": "37.45 km/h",
+				"odometer": 215.4883688333337,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175894419,
+				"speed": "28.31 km/h",
+				"odometer": 239.55277933333364,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175894419,
+				"speed": "37.52 km/h",
+				"odometer": 192.99120766666716,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175894419,
+				"speed": "60.00 km/h",
+				"odometer": 217.45329933333333,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175894419,
+				"speed": "39.69 km/h",
+				"odometer": 223.50203450000033,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175894419,
+				"speed": "33.91 km/h",
+				"odometer": 246.86064433333346,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175894419,
+				"speed": "60.00 km/h",
+				"odometer": 244.99245633333349,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175894419,
+				"speed": "60.00 km/h",
+				"odometer": 208.20180100000008,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175895407,
+		"averageOfSpeeds": "46.25 km/h",
+		"averageOdometer": 236.30994597916689,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175895407,
+				"speed": "46.33 km/h",
+				"odometer": 227.0004658333336,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175895407,
+				"speed": "36.72 km/h",
+				"odometer": 248.43689500000043,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175895407,
+				"speed": "46.40 km/h",
+				"odometer": 204.52311466666724,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175895407,
+				"speed": "40.52 km/h",
+				"odometer": 231.75272433333323,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175895407,
+				"speed": "48.57 km/h",
+				"odometer": 235.62866150000029,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175895407,
+				"speed": "42.79 km/h",
+				"odometer": 257.40203183333338,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175895407,
+				"speed": "54.63 km/h",
+				"odometer": 261.2839900000002,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175895407,
+				"speed": "54.00 km/h",
+				"odometer": 224.45168466666665,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175896417,
+		"averageOfSpeeds": "45.00 km/h",
+		"averageOdometer": 248.96129306250013,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175896417,
+				"speed": "55.46 km/h",
+				"odometer": 241.36373983333344,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175896417,
+				"speed": "45.84 km/h",
+				"odometer": 260.0923620000003,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175896417,
+				"speed": "55.53 km/h",
+				"odometer": 218.9066961666672,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175896417,
+				"speed": "28.10 km/h",
+				"odometer": 240.6485323333332,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175896417,
+				"speed": "57.70 km/h",
+				"odometer": 250.6232155000001,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175896417,
+				"speed": "51.20 km/h",
+				"odometer": 270.7523888333333,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175896417,
+				"speed": "37.28 km/h",
+				"odometer": 273.28240383333357,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175896417,
+				"speed": "28.92 km/h",
+				"odometer": 236.021006,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175897417,
+		"averageOfSpeeds": "42.16 km/h",
+		"averageOdometer": 261.32937897916687,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175897417,
+				"speed": "60.00 km/h",
+				"odometer": 257.74284516666668,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175897417,
+				"speed": "35.32 km/h",
+				"odometer": 271.88714716666706,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175897417,
+				"speed": "60.00 km/h",
+				"odometer": 235.27872883333385,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175897417,
+				"speed": "33.83 km/h",
+				"odometer": 249.59246466666643,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175897417,
+				"speed": "60.00 km/h",
+				"odometer": 267.23186983333349,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175897417,
+				"speed": "30.87 km/h",
+				"odometer": 281.8262891666667,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175897417,
+				"speed": "29.43 km/h",
+				"odometer": 283.07986566666696,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175897417,
+				"speed": "27.84 km/h",
+				"odometer": 243.99582133333326,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175898416,
+		"averageOfSpeeds": "45.30 km/h",
+		"averageOdometer": 273.60112570833356,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175898416,
+				"speed": "60.00 km/h",
+				"odometer": 274.3928451666669,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175898416,
+				"speed": "44.31 km/h",
+				"odometer": 282.9622986666671,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175898416,
+				"speed": "60.00 km/h",
+				"odometer": 251.94539550000065,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175898416,
+				"speed": "42.82 km/h",
+				"odometer": 260.25419016666657,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175898416,
+				"speed": "50.25 km/h",
+				"odometer": 283.3275258333332,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175898416,
+				"speed": "39.86 km/h",
+				"odometer": 291.6665746666667,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175898416,
+				"speed": "28.36 km/h",
+				"odometer": 291.253485166667,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175898416,
+				"speed": "36.84 km/h",
+				"odometer": 253.00669050000017,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175899419,
+		"averageOfSpeeds": "44.99 km/h",
+		"averageOdometer": 285.9924072916669,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175899419,
+				"speed": "39.81 km/h",
+				"odometer": 288.55180083333365,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175899419,
+				"speed": "53.20 km/h",
+				"odometer": 296.3694358333337,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175899419,
+				"speed": "60.00 km/h",
+				"odometer": 268.3953955000005,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175899419,
+				"speed": "51.70 km/h",
+				"odometer": 273.2378991666667,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175899419,
+				"speed": "27.60 km/h",
+				"odometer": 293.7539138333333,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175899419,
+				"speed": "48.75 km/h",
+				"odometer": 303.8519598333335,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175899419,
+				"speed": "33.15 km/h",
+				"odometer": 299.42749983333388,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175899419,
+				"speed": "45.72 km/h",
+				"odometer": 264.35135350000027,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175900417,
+		"averageOfSpeeds": "48.32 km/h",
+		"averageOdometer": 298.96085120833359,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175900417,
+				"speed": "31.07 km/h",
+				"odometer": 297.3752705000001,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175900417,
+				"speed": "60.00 km/h",
+				"odometer": 312.3434170000004,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175900417,
+				"speed": "47.93 km/h",
+				"odometer": 284.22205516666716,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175900417,
+				"speed": "60.00 km/h",
+				"odometer": 288.8668533333334,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175900417,
+				"speed": "32.94 km/h",
+				"odometer": 302.00848849999979,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175900417,
+				"speed": "57.74 km/h",
+				"odometer": 318.6546128333336,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175900417,
+				"speed": "42.14 km/h",
+				"odometer": 309.9019028333339,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175900417,
+				"speed": "54.71 km/h",
+				"odometer": 278.31420950000037,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175901421,
+		"averageOfSpeeds": "50.23 km/h",
+		"averageOdometer": 312.72292912500026,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175901421,
+				"speed": "40.10 km/h",
+				"odometer": 307.3268363333334,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175901421,
+				"speed": "60.00 km/h",
+				"odometer": 329.0767503333335,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175901421,
+				"speed": "28.58 km/h",
+				"odometer": 294.29868500000057,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175901421,
+				"speed": "60.00 km/h",
+				"odometer": 305.6168533333333,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175901421,
+				"speed": "41.98 km/h",
+				"odometer": 312.4943559999997,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175901421,
+				"speed": "60.00 km/h",
+				"odometer": 335.3326028333334,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175901421,
+				"speed": "51.20 km/h",
+				"odometer": 322.97134400000069,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175901421,
+				"speed": "60.00 km/h",
+				"odometer": 294.6660051666671,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175902416,
+		"averageOfSpeeds": "51.22 km/h",
+		"averageOdometer": 326.9390495000003,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175902416,
+				"speed": "49.08 km/h",
+				"odometer": 319.7164396666666,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175902416,
+				"speed": "52.57 km/h",
+				"odometer": 345.3832186666667,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175902416,
+				"speed": "34.38 km/h",
+				"odometer": 302.805941333334,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175902416,
+				"speed": "60.00 km/h",
+				"odometer": 322.2335200000003,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175902416,
+				"speed": "50.96 km/h",
+				"odometer": 325.39146366666639,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175902416,
+				"speed": "42.79 km/h",
+				"odometer": 350.2803431666668,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175902416,
+				"speed": "60.00 km/h",
+				"odometer": 338.4187976666674,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175902416,
+				"speed": "60.00 km/h",
+				"odometer": 311.2826718333339,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175903418,
+		"averageOfSpeeds": "49.80 km/h",
+		"averageOdometer": 341.0423803958337,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175903418,
+				"speed": "58.19 km/h",
+				"odometer": 334.8217913333334,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175903418,
+				"speed": "27.54 km/h",
+				"odometer": 356.55588933333356,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175903418,
+				"speed": "43.50 km/h",
+				"odometer": 313.7903926666671,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175903418,
+				"speed": "60.00 km/h",
+				"odometer": 339.11685333333358,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175903418,
+				"speed": "60.00 km/h",
+				"odometer": 341.0401119999998,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175903418,
+				"speed": "29.15 km/h",
+				"odometer": 359.54586833333357,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175903418,
+				"speed": "60.00 km/h",
+				"odometer": 355.30213100000096,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175903418,
+				"speed": "60.00 km/h",
+				"odometer": 328.16600516666747,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175904419,
+		"averageOfSpeeds": "48.08 km/h",
+		"averageOdometer": 354.7881998750003,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175904419,
+				"speed": "60.00 km/h",
+				"odometer": 351.4603496666666,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175904419,
+				"speed": "32.38 km/h",
+				"odometer": 364.71683866666685,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175904419,
+				"speed": "52.50 km/h",
+				"odometer": 327.1507893333338,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175904419,
+				"speed": "36.82 km/h",
+				"odometer": 352.7498670000003,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175904419,
+				"speed": "60.00 km/h",
+				"odometer": 357.7067786666663,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175904419,
+				"speed": "35.39 km/h",
+				"odometer": 368.18430616666697,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175904419,
+				"speed": "53.95 km/h",
+				"odometer": 371.7488436666675,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175904419,
+				"speed": "53.60 km/h",
+				"odometer": 344.5878258333341,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175905405,
+		"averageOfSpeeds": "46.10 km/h",
+		"averageOdometer": 367.48275947916707,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175905405,
+				"speed": "60.00 km/h",
+				"odometer": 367.8936830000001,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175905405,
+				"speed": "41.26 km/h",
+				"odometer": 374.83953866666698,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175905405,
+				"speed": "60.00 km/h",
+				"odometer": 342.75550633333389,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175905405,
+				"speed": "29.86 km/h",
+				"odometer": 361.0862575000003,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175905405,
+				"speed": "60.00 km/h",
+				"odometer": 374.1567786666666,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175905405,
+				"speed": "44.27 km/h",
+				"odometer": 379.12055400000028,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175905405,
+				"speed": "44.15 km/h",
+				"odometer": 384.1732395000009,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175905405,
+				"speed": "29.23 km/h",
+				"odometer": 355.8365181666675,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175906420,
+		"averageOfSpeeds": "50.72 km/h",
+		"averageOdometer": 381.1330118541671,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175906420,
+				"speed": "60.00 km/h",
+				"odometer": 384.81034966666666,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175906420,
+				"speed": "50.39 km/h",
+				"odometer": 387.7749986666671,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175906420,
+				"speed": "60.00 km/h",
+				"odometer": 359.65550633333398,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175906420,
+				"speed": "39.00 km/h",
+				"odometer": 370.82194666666705,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175906420,
+				"speed": "60.00 km/h",
+				"odometer": 391.0734453333333,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175906420,
+				"speed": "53.40 km/h",
+				"odometer": 392.9169406666671,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175906420,
+				"speed": "50.52 km/h",
+				"odometer": 397.8976971666676,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175906420,
+				"speed": "32.42 km/h",
+				"odometer": 364.11321033333408,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175907419,
+		"averageOfSpeeds": "49.43 km/h",
+		"averageOdometer": 395.1981857708338,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175907419,
+				"speed": "52.94 km/h",
+				"odometer": 401.1978069999999,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175907419,
+				"speed": "59.40 km/h",
+				"odometer": 403.0658095000004,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175907419,
+				"speed": "60.00 km/h",
+				"odometer": 376.33883966666749,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175907419,
+				"speed": "48.00 km/h",
+				"odometer": 382.93249583333377,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175907419,
+				"speed": "43.85 km/h",
+				"odometer": 406.25285000000016,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175907419,
+				"speed": "60.00 km/h",
+				"odometer": 408.93156233333385,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175907419,
+				"speed": "29.87 km/h",
+				"odometer": 408.47131983333426,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175907419,
+				"speed": "41.42 km/h",
+				"odometer": 374.3948020000009,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175908409,
+		"averageOfSpeeds": "46.64 km/h",
+		"averageOdometer": 408.26314520833389,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175908409,
+				"speed": "28.58 km/h",
+				"odometer": 412.27902349999996,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175908409,
+				"speed": "60.00 km/h",
+				"odometer": 419.51210450000067,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175908409,
+				"speed": "60.00 km/h",
+				"odometer": 392.80550633333419,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175908409,
+				"speed": "56.89 km/h",
+				"odometer": 397.3530870000003,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175908409,
+				"speed": "29.93 km/h",
+				"odometer": 415.37084816666688,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175908409,
+				"speed": "60.00 km/h",
+				"odometer": 425.3982290000005,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175908409,
+				"speed": "27.44 km/h",
+				"odometer": 416.37812450000106,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175908409,
+				"speed": "50.31 km/h",
+				"odometer": 387.00823866666766,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175909419,
+		"averageOfSpeeds": "47.94 km/h",
+		"averageOdometer": 421.6054265208339,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175909419,
+				"speed": "31.33 km/h",
+				"odometer": 420.5811546666665,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175909419,
+				"speed": "60.00 km/h",
+				"odometer": 436.37877116666706,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175909419,
+				"speed": "40.87 km/h",
+				"odometer": 407.58032833333416,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175909419,
+				"speed": "60.00 km/h",
+				"odometer": 414.0631490000002,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175909419,
+				"speed": "35.38 km/h",
+				"odometer": 424.11771433333356,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175909419,
+				"speed": "60.00 km/h",
+				"odometer": 442.2648956666673,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175909419,
+				"speed": "36.55 km/h",
+				"odometer": 425.3993086666681,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175909419,
+				"speed": "59.42 km/h",
+				"odometer": 402.4580903333343,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175910421,
+		"averageOfSpeeds": "48.12 km/h",
+		"averageOdometer": 434.93112439583379,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175910421,
+				"speed": "32.03 km/h",
+				"odometer": 429.40371149999967,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175910421,
+				"speed": "60.00 km/h",
+				"odometer": 453.0621044999999,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175910421,
+				"speed": "27.97 km/h",
+				"odometer": 416.44072333333409,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175910421,
+				"speed": "60.00 km/h",
+				"odometer": 430.76314900000019,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175910421,
+				"speed": "39.39 km/h",
+				"odometer": 434.8519621666668,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175910421,
+				"speed": "60.00 km/h",
+				"odometer": 458.9482290000007,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175910421,
+				"speed": "45.56 km/h",
+				"odometer": 436.8410695000015,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175910421,
+				"speed": "60.00 km/h",
+				"odometer": 419.13804616666757,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175911421,
+		"averageOfSpeeds": "45.24 km/h",
+		"averageOdometer": 448.03838120833378,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175911421,
+				"speed": "32.58 km/h",
+				"odometer": 438.2999261666663,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175911421,
+				"speed": "45.94 km/h",
+				"odometer": 468.59587716666649,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175911421,
+				"speed": "31.83 km/h",
+				"odometer": 424.966746833334,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175911421,
+				"speed": "60.00 km/h",
+				"odometer": 447.413149,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175911421,
+				"speed": "40.22 km/h",
+				"odometer": 445.87317283333399,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175911421,
+				"speed": "36.82 km/h",
+				"odometer": 472.58049366666787,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175911421,
+				"speed": "54.56 km/h",
+				"odometer": 450.7729711666681,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175911421,
+				"speed": "60.00 km/h",
+				"odometer": 435.80471283333386,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175912425,
+		"averageOfSpeeds": "41.36 km/h",
+		"averageOdometer": 460.06841106250047,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175912425,
+				"speed": "32.17 km/h",
+				"odometer": 447.26851933333287,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175912425,
+				"speed": "29.83 km/h",
+				"odometer": 478.2652388333332,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175912425,
+				"speed": "32.25 km/h",
+				"odometer": 433.7574876666673,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175912425,
+				"speed": "54.58 km/h",
+				"odometer": 463.96703033333326,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175912425,
+				"speed": "32.21 km/h",
+				"odometer": 456.6510420000006,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175912425,
+				"speed": "29.85 km/h",
+				"odometer": 481.01749800000126,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175912425,
+				"speed": "60.00 km/h",
+				"odometer": 467.0657595000015,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175912425,
+				"speed": "60.00 km/h",
+				"odometer": 452.55471283333358,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175913412,
+		"averageOfSpeeds": "35.13 km/h",
+		"averageOdometer": 470.01335279166718,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175913412,
+				"speed": "28.83 km/h",
+				"odometer": 454.5892559999999,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175913412,
+				"speed": "27.85 km/h",
+				"odometer": 485.29539899999977,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175913412,
+				"speed": "28.93 km/h",
+				"odometer": 441.0975001666673,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175913412,
+				"speed": "30.67 km/h",
+				"odometer": 475.5017743333332,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175913412,
+				"speed": "28.39 km/h",
+				"odometer": 463.8494196666672,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175913412,
+				"speed": "28.48 km/h",
+				"odometer": 488.21320250000135,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175913412,
+				"speed": "60.00 km/h",
+				"odometer": 483.4657595000016,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175913412,
+				"speed": "47.90 km/h",
+				"odometer": 468.0945111666668,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175914408,
+		"averageOfSpeeds": "36.82 km/h",
+		"averageOdometer": 479.82032868750056,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175914408,
+				"speed": "37.72 km/h",
+				"odometer": 463.7474241666666,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175914408,
+				"speed": "29.01 km/h",
+				"odometer": 493.2827146666661,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175914408,
+				"speed": "37.82 km/h",
+				"odometer": 450.28400133333437,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175914408,
+				"speed": "26.37 km/h",
+				"odometer": 483.1031390000004,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175914408,
+				"speed": "37.27 km/h",
+				"odometer": 472.8778461666669,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175914408,
+				"speed": "37.36 km/h",
+				"odometer": 497.2651620000014,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175914408,
+				"speed": "60.00 km/h",
+				"odometer": 499.91575950000137,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175914408,
+				"speed": "29.02 km/h",
+				"odometer": 478.08658266666699,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175915410,
+		"averageOfSpeeds": "36.08 km/h",
+		"averageOdometer": 490.31949512500048,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175915410,
+				"speed": "46.83 km/h",
+				"odometer": 475.65925433333316,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175915410,
+				"speed": "26.57 km/h",
+				"odometer": 501.65288099999898,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175915410,
+				"speed": "28.44 km/h",
+				"odometer": 459.7365681666679,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175915410,
+				"speed": "25.22 km/h",
+				"odometer": 490.7521848333339,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175915410,
+				"speed": "46.39 km/h",
+				"odometer": 484.67765550000027,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175915410,
+				"speed": "34.58 km/h",
+				"odometer": 508.21418733333499,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175915410,
+				"speed": "60.00 km/h",
+				"odometer": 516.7990928333345,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175915410,
+				"speed": "20.66 km/h",
+				"odometer": 485.06413700000015,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175916413,
+		"averageOfSpeeds": "36.70 km/h",
+		"averageOdometer": 500.4473528333339,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175916413,
+				"speed": "55.83 km/h",
+				"odometer": 489.9598031666668,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175916413,
+				"speed": "26.54 km/h",
+				"odometer": 509.2577051666658,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175916413,
+				"speed": "37.44 km/h",
+				"odometer": 468.9129773333346,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175916413,
+				"speed": "25.71 km/h",
+				"odometer": 497.77363100000067,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175916413,
+				"speed": "55.39 km/h",
+				"odometer": 498.8415471666673,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175916413,
+				"speed": "36.02 km/h",
+				"odometer": 518.0466345000016,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175916413,
+				"speed": "35.86 km/h",
+				"odometer": 529.9183335000013,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175916413,
+				"speed": "20.84 km/h",
+				"odometer": 490.86819083333367,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175917410,
+		"averageOfSpeeds": "39.08 km/h",
+		"averageOdometer": 510.8490956666675,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175917410,
+				"speed": "60.00 km/h",
+				"odometer": 506.3714623333338,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175917410,
+				"speed": "33.70 km/h",
+				"odometer": 517.5557633333325,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175917410,
+				"speed": "46.44 km/h",
+				"odometer": 480.5893815000015,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175917410,
+				"speed": "30.77 km/h",
+				"odometer": 505.40896216666746,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175917410,
+				"speed": "60.00 km/h",
+				"odometer": 515.1944948333338,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175917410,
+				"speed": "33.12 km/h",
+				"odometer": 526.6746431666685,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175917410,
+				"speed": "22.46 km/h",
+				"odometer": 537.838444666668,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175917410,
+				"speed": "26.17 km/h",
+				"odometer": 497.15961333333407,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175918411,
+		"averageOfSpeeds": "41.82 km/h",
+		"averageOdometer": 522.2361655625008,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175918411,
+				"speed": "50.58 km/h",
+				"odometer": 522.5365016666669,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175918411,
+				"speed": "42.71 km/h",
+				"odometer": 528.205595166666,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175918411,
+				"speed": "55.44 km/h",
+				"odometer": 494.7811818333349,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175918411,
+				"speed": "39.78 km/h",
+				"odometer": 515.245909500001,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175918411,
+				"speed": "37.26 km/h",
+				"odometer": 528.8454866666673,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175918411,
+				"speed": "42.13 km/h",
+				"odometer": 537.1745446666685,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175918411,
+				"speed": "31.48 km/h",
+				"odometer": 545.3724036666683,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175918411,
+				"speed": "35.19 km/h",
+				"odometer": 505.72770133333418,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175919418,
+		"averageOfSpeeds": "39.20 km/h",
+		"averageOdometer": 533.2871101041676,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175919418,
+				"speed": "28.59 km/h",
+				"odometer": 533.112640833334,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175919418,
+				"speed": "51.71 km/h",
+				"odometer": 541.3459543333324,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175919418,
+				"speed": "60.00 km/h",
+				"odometer": 511.1583016666681,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175919418,
+				"speed": "29.57 km/h",
+				"odometer": 524.3241618333341,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175919418,
+				"speed": "29.44 km/h",
+				"odometer": 537.199875500001,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175919418,
+				"speed": "51.13 km/h",
+				"odometer": 550.1559638333353,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175919418,
+				"speed": "31.31 km/h",
+				"odometer": 554.1795963333352,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175919418,
+				"speed": "31.85 km/h",
+				"odometer": 514.8203865000007,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175920410,
+		"averageOfSpeeds": "44.46 km/h",
+		"averageOdometer": 544.9956537708341,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175920410,
+				"speed": "34.00 km/h",
+				"odometer": 541.5372345000006,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175920410,
+				"speed": "60.00 km/h",
+				"odometer": 556.976358499999,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175920410,
+				"speed": "43.54 km/h",
+				"odometer": 526.2655576666679,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175920410,
+				"speed": "38.56 km/h",
+				"odometer": 533.8052718333339,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175920410,
+				"speed": "38.43 km/h",
+				"odometer": 546.6454785000008,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175920410,
+				"speed": "60.00 km/h",
+				"odometer": 565.6366080000018,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175920410,
+				"speed": "40.31 km/h",
+				"odometer": 564.1547155000019,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175920410,
+				"speed": "40.85 km/h",
+				"odometer": 524.9440056666674,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175921412,
+		"averageOfSpeeds": "47.81 km/h",
+		"averageOdometer": 557.7801502083344,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175921412,
+				"speed": "43.00 km/h",
+				"odometer": 552.2592536666673,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175921412,
+				"speed": "60.00 km/h",
+				"odometer": 573.6430251666662,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175921412,
+				"speed": "28.37 km/h",
+				"odometer": 535.4905643333343,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175921412,
+				"speed": "47.56 km/h",
+				"odometer": 545.7944760000006,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175921412,
+				"speed": "47.44 km/h",
+				"odometer": 558.6124963333344,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175921412,
+				"speed": "56.98 km/h",
+				"odometer": 582.2435366666684,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175921412,
+				"speed": "49.31 km/h",
+				"odometer": 576.6300296666684,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175921412,
+				"speed": "49.85 km/h",
+				"odometer": 537.5678198333339,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175922414,
+		"averageOfSpeeds": "49.58 km/h",
+		"averageOdometer": 571.3953751458342,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175922414,
+				"speed": "52.01 km/h",
+				"odometer": 565.4954545000007,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175922414,
+				"speed": "44.88 km/h",
+				"odometer": 589.0205434999996,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175922414,
+				"speed": "36.45 km/h",
+				"odometer": 544.4007911666674,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175922414,
+				"speed": "56.56 km/h",
+				"odometer": 560.2835126666673,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175922414,
+				"speed": "56.44 km/h",
+				"odometer": 573.0686305000012,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175922414,
+				"speed": "33.14 km/h",
+				"odometer": 594.5809848333352,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175922414,
+				"speed": "58.31 km/h",
+				"odometer": 591.6052288333351,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175922414,
+				"speed": "58.86 km/h",
+				"odometer": 552.7078551666672,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175923414,
+		"averageOfSpeeds": "50.79 km/h",
+		"averageOdometer": 585.2637428541674,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175923414,
+				"speed": "60.00 km/h",
+				"odometer": 581.2008886666671,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175923414,
+				"speed": "30.15 km/h",
+				"odometer": 598.433271666666,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175923414,
+				"speed": "45.46 km/h",
+				"odometer": 555.8161805000011,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175923414,
+				"speed": "60.00 km/h",
+				"odometer": 576.7949560000004,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175923414,
+				"speed": "60.00 km/h",
+				"odometer": 589.5676803333342,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175923414,
+				"speed": "30.70 km/h",
+				"odometer": 602.6893946666683,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175923414,
+				"speed": "60.00 km/h",
+				"odometer": 608.2499391666685,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175923414,
+				"speed": "60.00 km/h",
+				"odometer": 569.3576318333338,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175924410,
+		"averageOfSpeeds": "49.38 km/h",
+		"averageOdometer": 599.3692379583342,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175924410,
+				"speed": "60.00 km/h",
+				"odometer": 597.8675553333338,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175924410,
+				"speed": "35.49 km/h",
+				"odometer": 607.1108783333327,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175924410,
+				"speed": "54.45 km/h",
+				"odometer": 569.7066495000014,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175924410,
+				"speed": "40.85 km/h",
+				"odometer": 591.3637440000005,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175924410,
+				"speed": "60.00 km/h",
+				"odometer": 606.2176803333346,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175924410,
+				"speed": "39.69 km/h",
+				"odometer": 612.482947166668,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175924410,
+				"speed": "52.62 km/h",
+				"odometer": 624.5774071666685,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175924410,
+				"speed": "51.96 km/h",
+				"odometer": 585.6270418333342,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175925412,
+		"averageOfSpeeds": "46.06 km/h",
+		"averageOdometer": 612.4478046458341,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175925412,
+				"speed": "60.00 km/h",
+				"odometer": 614.5175553333336,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175925412,
+				"speed": "44.49 km/h",
+				"odometer": 618.2462549999993,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175925412,
+				"speed": "60.00 km/h",
+				"odometer": 585.9154686666684,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175925412,
+				"speed": "27.49 km/h",
+				"odometer": 600.2592003333343,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175925412,
+				"speed": "60.00 km/h",
+				"odometer": 622.9010136666677,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175925412,
+				"speed": "48.70 km/h",
+				"odometer": 624.7986355000014,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175925412,
+				"speed": "39.70 km/h",
+				"odometer": 636.2756175000018,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175925412,
+				"speed": "28.10 km/h",
+				"odometer": 596.6686911666677,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175926416,
+		"averageOfSpeeds": "48.68 km/h",
+		"averageOdometer": 625.5602802916676,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175926416,
+				"speed": "60.00 km/h",
+				"odometer": 631.1842220000006,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175926416,
+				"speed": "53.49 km/h",
+				"odometer": 631.8810266666664,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175926416,
+				"speed": "60.00 km/h",
+				"odometer": 602.5821353333353,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175926416,
+				"speed": "36.48 km/h",
+				"odometer": 609.1624133333345,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175926416,
+				"speed": "55.99 km/h",
+				"odometer": 639.4672303333337,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175926416,
+				"speed": "57.70 km/h",
+				"odometer": 639.6025746666682,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175926416,
+				"speed": "30.03 km/h",
+				"odometer": 645.2262966666682,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175926416,
+				"speed": "35.74 km/h",
+				"odometer": 605.3763433333342,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175927414,
+		"averageOfSpeeds": "46.74 km/h",
+		"averageOdometer": 638.9551117083344,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175927414,
+				"speed": "42.89 km/h",
+				"odometer": 646.2023183333339,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175927414,
+				"speed": "60.00 km/h",
+				"odometer": 647.9294529999997,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175927414,
+				"speed": "60.00 km/h",
+				"odometer": 619.2654686666685,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175927414,
+				"speed": "45.49 km/h",
+				"odometer": 620.5865886666679,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175927414,
+				"speed": "31.72 km/h",
+				"odometer": 651.5152270000006,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175927414,
+				"speed": "60.00 km/h",
+				"odometer": 656.1943538333347,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175927414,
+				"speed": "29.05 km/h",
+				"odometer": 653.3543675000012,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175927414,
+				"speed": "44.75 km/h",
+				"odometer": 616.5931166666676,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175928414,
+		"averageOfSpeeds": "47.80 km/h",
+		"averageOdometer": 651.8837934791676,
+		"averageSpeedOnLastMinute": null,
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175928414,
+				"speed": "28.15 km/h",
+				"odometer": 655.294193500001,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175928414,
+				"speed": "60.00 km/h",
+				"odometer": 664.6127863333328,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175928414,
+				"speed": "60.00 km/h",
+				"odometer": 635.9488020000019,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175928414,
+				"speed": "54.50 km/h",
+				"odometer": 634.515741500001,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175928414,
+				"speed": "31.59 km/h",
+				"odometer": 659.6705673333337,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175928414,
+				"speed": "60.00 km/h",
+				"odometer": 672.8776871666679,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175928414,
+				"speed": "34.39 km/h",
+				"odometer": 661.8505591666678,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175928414,
+				"speed": "53.75 km/h",
+				"odometer": 630.3000108333343,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175929416,
+		"averageOfSpeeds": "49.33 km/h",
+		"averageOdometer": 665.4981915000008,
+		"averageSpeedOnLastMinute": "39.85 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175929416,
+				"speed": "33.92 km/h",
+				"odometer": 664.0865985000012,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175929416,
+				"speed": "60.00 km/h",
+				"odometer": 681.2961196666659,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175929416,
+				"speed": "36.67 km/h",
+				"odometer": 649.3453633333354,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175929416,
+				"speed": "60.00 km/h",
+				"odometer": 650.7657235000008,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175929416,
+				"speed": "40.61 km/h",
+				"odometer": 669.7471188333336,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175929416,
+				"speed": "60.00 km/h",
+				"odometer": 689.594353833334,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175929416,
+				"speed": "43.42 km/h",
+				"odometer": 672.7182068333343,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175929416,
+				"speed": "60.00 km/h",
+				"odometer": 646.432047500001,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175930415,
+		"averageOfSpeeds": "48.80 km/h",
+		"averageOdometer": 679.1044238958339,
+		"averageSpeedOnLastMinute": "40.44 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175930415,
+				"speed": "34.81 km/h",
+				"odometer": 673.670216500001,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175930415,
+				"speed": "60.00 km/h",
+				"odometer": 697.9461196666653,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175930415,
+				"speed": "30.62 km/h",
+				"odometer": 657.7115278333351,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175930415,
+				"speed": "60.00 km/h",
+				"odometer": 667.3990568333343,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175930415,
+				"speed": "41.98 km/h",
+				"odometer": 681.3224598333335,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175930415,
+				"speed": "50.58 km/h",
+				"odometer": 705.7096451666671,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175930415,
+				"speed": "52.40 km/h",
+				"odometer": 686.0276511666677,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175930415,
+				"speed": "60.00 km/h",
+				"odometer": 663.0487141666672,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175931408,
+		"averageOfSpeeds": "44.75 km/h",
+		"averageOdometer": 692.0358471458338,
+		"averageSpeedOnLastMinute": "40.84 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175931408,
+				"speed": "34.99 km/h",
+				"odometer": 683.1823693333345,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175931408,
+				"speed": "39.11 km/h",
+				"odometer": 711.9592789999985,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175931408,
+				"speed": "34.69 km/h",
+				"odometer": 666.9871071666685,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175931408,
+				"speed": "60.00 km/h",
+				"odometer": 683.8823901666674,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175931408,
+				"speed": "40.78 km/h",
+				"odometer": 692.8045950000002,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175931408,
+				"speed": "28.41 km/h",
+				"odometer": 716.2789253333338,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175931408,
+				"speed": "60.00 km/h",
+				"odometer": 701.6433970000009,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175931408,
+				"speed": "60.00 km/h",
+				"odometer": 679.548714166667,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175932417,
+		"averageOfSpeeds": "40.28 km/h",
+		"averageOdometer": 703.5085161250005,
+		"averageSpeedOnLastMinute": "41.04 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175932417,
+				"speed": "28.51 km/h",
+				"odometer": 691.6549101666681,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175932417,
+				"speed": "28.50 km/h",
+				"odometer": 720.5364349999985,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175932417,
+				"speed": "29.87 km/h",
+				"odometer": 675.6834981666685,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175932417,
+				"speed": "59.65 km/h",
+				"odometer": 700.5310181666673,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175932417,
+				"speed": "26.99 km/h",
+				"odometer": 701.1121135,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175932417,
+				"speed": "28.75 km/h",
+				"odometer": 724.108042833334,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175932417,
+				"speed": "60.00 km/h",
+				"odometer": 718.276730333334,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175932417,
+				"speed": "60.00 km/h",
+				"odometer": 696.1653808333338,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175933405,
+		"averageOfSpeeds": "39.46 km/h",
+		"averageOdometer": 714.6915274583339,
+		"averageSpeedOnLastMinute": "41.19 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175933405,
+				"speed": "37.56 km/h",
+				"odometer": 700.9051751666685,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175933405,
+				"speed": "37.54 km/h",
+				"odometer": 729.7735998333316,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175933405,
+				"speed": "38.90 km/h",
+				"odometer": 685.301159000002,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175933405,
+				"speed": "34.86 km/h",
+				"odometer": 713.5796000000007,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175933405,
+				"speed": "36.03 km/h",
+				"odometer": 709.9281228333337,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175933405,
+				"speed": "37.80 km/h",
+				"odometer": 733.425102833334,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175933405,
+				"speed": "52.28 km/h",
+				"odometer": 733.8290408333339,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175933405,
+				"speed": "40.72 km/h",
+				"odometer": 710.7904191666669,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175934417,
+		"averageOfSpeeds": "39.66 km/h",
+		"averageOdometer": 725.668483520834,
+		"averageSpeedOnLastMinute": "41.37 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175934417,
+				"speed": "46.54 km/h",
+				"odometer": 712.5891015000021,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175934417,
+				"speed": "33.09 km/h",
+				"odometer": 739.7380238333316,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175934417,
+				"speed": "32.78 km/h",
+				"odometer": 696.3984660000018,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175934417,
+				"speed": "30.82 km/h",
+				"odometer": 721.8028390000009,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175934417,
+				"speed": "45.03 km/h",
+				"odometer": 721.2132645000004,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175934417,
+				"speed": "44.05 km/h",
+				"odometer": 745.149893333334,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175934417,
+				"speed": "58.60 km/h",
+				"odometer": 748.8920693333341,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175934417,
+				"speed": "26.35 km/h",
+				"odometer": 719.5642106666671,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175935418,
+		"averageOfSpeeds": "40.32 km/h",
+		"averageOdometer": 736.7042882500008,
+		"averageSpeedOnLastMinute": "41.65 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175935418,
+				"speed": "55.53 km/h",
+				"odometer": 726.7789255000023,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175935418,
+				"speed": "30.68 km/h",
+				"odometer": 748.2429346666647,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175935418,
+				"speed": "40.46 km/h",
+				"odometer": 706.4008013333354,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175935418,
+				"speed": "30.44 km/h",
+				"odometer": 730.2494335000009,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175935418,
+				"speed": "54.01 km/h",
+				"odometer": 734.9690048333335,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175935418,
+				"speed": "39.52 km/h",
+				"odometer": 756.141994000001,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175935418,
+				"speed": "46.92 km/h",
+				"odometer": 764.5165016666674,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175935418,
+				"speed": "24.97 km/h",
+				"odometer": 726.3347105000005,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175936419,
+		"averageOfSpeeds": "39.47 km/h",
+		"averageOdometer": 747.5379123541674,
+		"averageSpeedOnLastMinute": "41.92 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175936419,
+				"speed": "60.00 km/h",
+				"odometer": 743.1508006666689,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175936419,
+				"speed": "30.96 km/h",
+				"odometer": 756.4698513333316,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175936419,
+				"speed": "49.46 km/h",
+				"odometer": 718.917603000002,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175936419,
+				"speed": "30.72 km/h",
+				"odometer": 738.4483631666676,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175936419,
+				"speed": "60.00 km/h",
+				"odometer": 751.1004360000001,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175936419,
+				"speed": "31.21 km/h",
+				"odometer": 764.9496231666677,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175936419,
+				"speed": "28.60 km/h",
+				"odometer": 774.3727818333339,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175936419,
+				"speed": "24.81 km/h",
+				"odometer": 732.893839666667,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175937418,
+		"averageOfSpeeds": "42.61 km/h",
+		"averageOdometer": 759.2154140416676,
+		"averageSpeedOnLastMinute": "42.26 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175937418,
+				"speed": "54.61 km/h",
+				"odometer": 759.891032333336,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175937418,
+				"speed": "40.10 km/h",
+				"odometer": 766.5153829999982,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175937418,
+				"speed": "58.59 km/h",
+				"odometer": 734.1624480000021,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175937418,
+				"speed": "39.85 km/h",
+				"odometer": 748.4143316666678,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175937418,
+				"speed": "42.49 km/h",
+				"odometer": 766.256162,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175937418,
+				"speed": "40.34 km/h",
+				"odometer": 775.0538676666678,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175937418,
+				"speed": "30.95 km/h",
+				"odometer": 782.226048833334,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175937418,
+				"speed": "33.94 km/h",
+				"odometer": 741.2040388333339,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175938404,
+		"averageOfSpeeds": "41.56 km/h",
+		"averageOdometer": 770.7804652708342,
+		"averageSpeedOnLastMinute": "42.62 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175938404,
+				"speed": "30.23 km/h",
+				"odometer": 771.3997755000024,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175938404,
+				"speed": "48.97 km/h",
+				"odometer": 778.7401353333316,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175938404,
+				"speed": "60.00 km/h",
+				"odometer": 750.5692588333352,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175938404,
+				"speed": "39.11 km/h",
+				"odometer": 759.669063000001,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175938404,
+				"speed": "28.65 km/h",
+				"odometer": 775.2514463333334,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175938404,
+				"speed": "49.22 km/h",
+				"odometer": 787.3580236666678,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175938404,
+				"speed": "38.02 km/h",
+				"odometer": 791.8447388333339,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175938404,
+				"speed": "38.27 km/h",
+				"odometer": 751.4112806666674,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175939416,
+		"averageOfSpeeds": "46.43 km/h",
+		"averageOdometer": 783.193728458334,
+		"averageSpeedOnLastMinute": "42.90 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175939416,
+				"speed": "32.45 km/h",
+				"odometer": 779.7378500000025,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175939416,
+				"speed": "58.09 km/h",
+				"odometer": 793.8308281666648,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175939416,
+				"speed": "43.54 km/h",
+				"odometer": 765.9095681666684,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175939416,
+				"speed": "48.23 km/h",
+				"odometer": 771.9845348333341,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175939416,
+				"speed": "36.31 km/h",
+				"odometer": 784.2245478333335,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175939416,
+				"speed": "58.34 km/h",
+				"odometer": 802.5185960000015,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175939416,
+				"speed": "47.14 km/h",
+				"odometer": 803.8537331666669,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175939416,
+				"speed": "47.39 km/h",
+				"odometer": 763.4901695000006,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175940419,
+		"averageOfSpeeds": "50.60 km/h",
+		"averageOdometer": 796.6494195625006,
+		"averageSpeedOnLastMinute": "43.15 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175940419,
+				"speed": "41.45 km/h",
+				"odometer": 790.028529166669,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175940419,
+				"speed": "60.00 km/h",
+				"odometer": 810.4634489999983,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175940419,
+				"speed": "28.31 km/h",
+				"odometer": 775.1396470000019,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175940419,
+				"speed": "57.24 km/h",
+				"odometer": 786.6741076666677,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175940419,
+				"speed": "45.31 km/h",
+				"odometer": 795.5870620000004,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175940419,
+				"speed": "60.00 km/h",
+				"odometer": 819.1476306666679,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175940419,
+				"speed": "56.14 km/h",
+				"odometer": 818.2247623333335,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175940419,
+				"speed": "56.39 km/h",
+				"odometer": 777.9301686666671,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175941418,
+		"averageOfSpeeds": "50.94 km/h",
+		"averageOdometer": 810.960398145834,
+		"averageSpeedOnLastMinute": "43.42 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175941418,
+				"speed": "50.46 km/h",
+				"odometer": 802.8330415000023,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175941418,
+				"speed": "49.59 km/h",
+				"odometer": 826.5018656666649,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175941418,
+				"speed": "36.42 km/h",
+				"odometer": 784.0327036666685,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175941418,
+				"speed": "60.00 km/h",
+				"odometer": 803.2312663333344,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175941418,
+				"speed": "54.31 km/h",
+				"odometer": 809.4498661666672,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175941418,
+				"speed": "36.78 km/h",
+				"odometer": 832.5385543333343,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175941418,
+				"speed": "60.00 km/h",
+				"odometer": 834.6730329999997,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175941418,
+				"speed": "60.00 km/h",
+				"odometer": 794.4228545000002,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175942420,
+		"averageOfSpeeds": "50.52 km/h",
+		"averageOdometer": 824.9210631041674,
+		"averageSpeedOnLastMinute": "43.70 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175942420,
+				"speed": "59.46 km/h",
+				"odometer": 818.1264056666691,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175942420,
+				"speed": "28.98 km/h",
+				"odometer": 836.8519508333317,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175942420,
+				"speed": "45.43 km/h",
+				"odometer": 795.4385885000017,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175942420,
+				"speed": "60.00 km/h",
+				"odometer": 819.9145996666675,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175942420,
+				"speed": "60.00 km/h",
+				"odometer": 825.6505115000006,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175942420,
+				"speed": "30.27 km/h",
+				"odometer": 840.9072278333348,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175942420,
+				"speed": "60.00 km/h",
+				"odometer": 851.3730329999996,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175942420,
+				"speed": "60.00 km/h",
+				"odometer": 811.1061878333337,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175943419,
+		"averageOfSpeeds": "47.54 km/h",
+		"averageOdometer": 838.7073963125007,
+		"averageSpeedOnLastMinute": "44.00 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175943419,
+				"speed": "60.00 km/h",
+				"odometer": 834.8068055000027,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175943419,
+				"speed": "33.91 km/h",
+				"odometer": 845.2491456666654,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175943419,
+				"speed": "54.43 km/h",
+				"odometer": 809.3345376666684,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175943419,
+				"speed": "35.21 km/h",
+				"odometer": 833.013492333334,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175943419,
+				"speed": "60.00 km/h",
+				"odometer": 842.3171781666664,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175943419,
+				"speed": "39.27 km/h",
+				"odometer": 850.5940220000018,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175943419,
+				"speed": "48.91 km/h",
+				"odometer": 867.3276666666665,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175943419,
+				"speed": "48.56 km/h",
+				"odometer": 827.0163225000006,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175944421,
+		"averageOfSpeeds": "45.44 km/h",
+		"averageOdometer": 851.4545156875012,
+		"averageSpeedOnLastMinute": "44.24 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175944421,
+				"speed": "60.00 km/h",
+				"odometer": 851.490138833337,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175944421,
+				"speed": "42.93 km/h",
+				"odometer": 855.9715236666656,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175944421,
+				"speed": "60.00 km/h",
+				"odometer": 825.5721981666684,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175944421,
+				"speed": "30.17 km/h",
+				"odometer": 841.2374318333341,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175944421,
+				"speed": "60.00 km/h",
+				"odometer": 859.0338448333338,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175944421,
+				"speed": "48.29 km/h",
+				"odometer": 862.8075870000018,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175944421,
+				"speed": "33.24 km/h",
+				"odometer": 878.326441666667,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175944421,
+				"speed": "28.88 km/h",
+				"odometer": 837.1969595000007,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175945409,
+		"averageOfSpeeds": "48.96 km/h",
+		"averageOdometer": 864.2931790208344,
+		"averageSpeedOnLastMinute": "44.49 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175945409,
+				"speed": "60.00 km/h",
+				"odometer": 867.9234721666696,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175945409,
+				"speed": "51.80 km/h",
+				"odometer": 868.9585128333326,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175945409,
+				"speed": "60.00 km/h",
+				"odometer": 841.9888648333345,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175945409,
+				"speed": "39.04 km/h",
+				"odometer": 850.7325710000007,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175945409,
+				"speed": "60.00 km/h",
+				"odometer": 875.4338448333349,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175945409,
+				"speed": "57.15 km/h",
+				"odometer": 877.2442320000018,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175945409,
+				"speed": "29.57 km/h",
+				"odometer": 886.5249950000001,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175945409,
+				"speed": "34.11 km/h",
+				"odometer": 845.5389395000008,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175946424,
+		"averageOfSpeeds": "48.22 km/h",
+		"averageOdometer": 878.1445963750011,
+		"averageSpeedOnLastMinute": "44.77 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175946424,
+				"speed": "47.88 km/h",
+				"odometer": 883.9937128333362,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175946424,
+				"speed": "60.00 km/h",
+				"odometer": 884.8614829999995,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175946424,
+				"speed": "60.00 km/h",
+				"odometer": 858.9055315000026,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175946424,
+				"speed": "48.17 km/h",
+				"odometer": 863.0542951666678,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175946424,
+				"speed": "36.71 km/h",
+				"odometer": 889.0654540000016,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175946424,
+				"speed": "60.00 km/h",
+				"odometer": 894.0605303333354,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175946424,
+				"speed": "29.73 km/h",
+				"odometer": 894.7067294999999,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175946424,
+				"speed": "43.28 km/h",
+				"odometer": 856.5090346666679,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175947419,
+		"averageOfSpeeds": "47.81 km/h",
+		"averageOdometer": 891.2483976250014,
+		"averageSpeedOnLastMinute": "44.98 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175947419,
+				"speed": "28.11 km/h",
+				"odometer": 894.0280043333362,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175947419,
+				"speed": "60.00 km/h",
+				"odometer": 901.5281496666664,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175947419,
+				"speed": "60.00 km/h",
+				"odometer": 875.5721981666693,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175947419,
+				"speed": "57.17 km/h",
+				"odometer": 877.7131343333349,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175947419,
+				"speed": "29.80 km/h",
+				"odometer": 897.3808186666684,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175947419,
+				"speed": "60.00 km/h",
+				"odometer": 910.710530333335,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175947419,
+				"speed": "35.12 km/h",
+				"odometer": 903.3048488333328,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175947419,
+				"speed": "52.24 km/h",
+				"odometer": 869.7494966666689,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175948407,
+		"averageOfSpeeds": "49.59 km/h",
+		"averageOdometer": 904.6647421458348,
+		"averageSpeedOnLastMinute": "45.15 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175948407,
+				"speed": "36.99 km/h",
+				"odometer": 902.9794363333361,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175948407,
+				"speed": "60.00 km/h",
+				"odometer": 917.9781496666661,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175948407,
+				"speed": "37.02 km/h",
+				"odometer": 888.826167166669,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175948407,
+				"speed": "60.00 km/h",
+				"odometer": 894.0483988333348,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175948407,
+				"speed": "38.70 km/h",
+				"odometer": 906.8078338333353,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175948407,
+				"speed": "60.00 km/h",
+				"odometer": 927.1771970000015,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175948407,
+				"speed": "44.01 km/h",
+				"odometer": 914.1900194999995,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175948407,
+				"speed": "60.00 km/h",
+				"odometer": 885.3107348333354,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175949419,
+		"averageOfSpeeds": "50.23 km/h",
+		"averageOdometer": 918.5214961250016,
+		"averageSpeedOnLastMinute": "45.28 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175949419,
+				"speed": "37.22 km/h",
+				"odometer": 913.4528893333361,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175949419,
+				"speed": "60.00 km/h",
+				"odometer": 934.6614829999999,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175949419,
+				"speed": "30.03 km/h",
+				"odometer": 897.183324000002,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175949419,
+				"speed": "60.00 km/h",
+				"odometer": 910.7317321666687,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175949419,
+				"speed": "47.70 km/h",
+				"odometer": 918.834038000002,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175949419,
+				"speed": "53.93 km/h",
+				"odometer": 943.6220756666683,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175949419,
+				"speed": "53.01 km/h",
+				"odometer": 927.6923586666662,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175949419,
+				"speed": "60.00 km/h",
+				"odometer": 901.9940681666694,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175950410,
+		"averageOfSpeeds": "46.45 km/h",
+		"averageOdometer": 932.1743107291685,
+		"averageSpeedOnLastMinute": "45.43 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175950410,
+				"speed": "39.01 km/h",
+				"odometer": 924.0117156666696,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175950410,
+				"speed": "42.84 km/h",
+				"odometer": 949.6688833333332,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175950410,
+				"speed": "39.04 km/h",
+				"odometer": 906.8130693333362,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175950410,
+				"speed": "60.00 km/h",
+				"odometer": 927.4150655000024,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175950410,
+				"speed": "41.59 km/h",
+				"odometer": 932.0752583333353,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175950410,
+				"speed": "29.15 km/h",
+				"odometer": 955.0737025000013,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175950410,
+				"speed": "60.00 km/h",
+				"odometer": 943.6593896666661,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175950410,
+				"speed": "60.00 km/h",
+				"odometer": 918.6774015000035,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175951413,
+		"averageOfSpeeds": "40.86 km/h",
+		"averageOdometer": 943.8238026875022,
+		"averageSpeedOnLastMinute": "45.43 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175951413,
+				"speed": "30.76 km/h",
+				"odometer": 932.7210830000037,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175951413,
+				"speed": "29.08 km/h",
+				"odometer": 958.831208166667,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175951413,
+				"speed": "30.76 km/h",
+				"odometer": 915.5339793333366,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175951413,
+				"speed": "53.95 km/h",
+				"odometer": 943.8448805000023,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175951413,
+				"speed": "31.43 km/h",
+				"odometer": 941.0071053333352,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175951413,
+				"speed": "30.95 km/h",
+				"odometer": 963.0487073333355,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175951413,
+				"speed": "60.00 km/h",
+				"odometer": 960.2927229999992,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175951413,
+				"speed": "60.00 km/h",
+				"odometer": 935.3107348333375,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175952409,
+		"averageOfSpeeds": "39.43 km/h",
+		"averageOdometer": 955.0269318125022,
+		"averageSpeedOnLastMinute": "45.36 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175952409,
+				"speed": "39.78 km/h",
+				"odometer": 942.5641895000041,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175952409,
+				"speed": "35.80 km/h",
+				"odometer": 967.5830236666674,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175952409,
+				"speed": "39.77 km/h",
+				"odometer": 925.3660721666702,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175952409,
+				"speed": "29.58 km/h",
+				"odometer": 955.3478038333353,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175952409,
+				"speed": "40.44 km/h",
+				"odometer": 951.0253516666686,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175952409,
+				"speed": "39.96 km/h",
+				"odometer": 972.9444263333356,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175952409,
+				"speed": "48.68 km/h",
+				"odometer": 975.325879499999,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175952409,
+				"speed": "41.45 km/h",
+				"odometer": 950.0587078333376,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175953408,
+		"averageOfSpeeds": "43.25 km/h",
+		"averageOdometer": 966.2280655208355,
+		"averageSpeedOnLastMinute": "45.27 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175953408,
+				"speed": "48.66 km/h",
+				"odometer": 954.7166835000041,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175953408,
+				"speed": "41.77 km/h",
+				"odometer": 978.5427380000014,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175953408,
+				"speed": "43.14 km/h",
+				"odometer": 936.8308361666705,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175953408,
+				"speed": "32.38 km/h",
+				"odometer": 963.4547148333353,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175953408,
+				"speed": "49.32 km/h",
+				"odometer": 963.3589826666681,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175953408,
+				"speed": "48.84 km/h",
+				"odometer": 985.1351216666692,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175953408,
+				"speed": "53.73 km/h",
+				"odometer": 988.916011499999,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175953408,
+				"speed": "28.17 km/h",
+				"odometer": 958.8694358333372,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175954415,
+		"averageOfSpeeds": "43.29 km/h",
+		"averageOdometer": 979.019170604169,
+		"averageSpeedOnLastMinute": "45.32 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175954415,
+				"speed": "57.78 km/h",
+				"odometer": 969.7192578333372,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175954415,
+				"speed": "34.88 km/h",
+				"odometer": 990.2074098333344,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175954415,
+				"speed": "52.26 km/h",
+				"odometer": 950.281472000003,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175954415,
+				"speed": "35.07 km/h",
+				"odometer": 973.6909428333358,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175954415,
+				"speed": "58.44 km/h",
+				"odometer": 978.5637721666683,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175954415,
+				"speed": "36.04 km/h",
+				"odometer": 998.1850136666695,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175954415,
+				"speed": "43.66 km/h",
+				"odometer": 1003.7921383333323,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175954415,
+				"speed": "28.19 km/h",
+				"odometer": 967.7133581666709,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175955402,
+		"averageOfSpeeds": "44.47 km/h",
+		"averageOdometer": 990.7048225000026,
+		"averageSpeedOnLastMinute": "45.26 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175955402,
+				"speed": "60.00 km/h",
+				"odometer": 986.0829086666718,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175955402,
+				"speed": "37.40 km/h",
+				"odometer": 999.4058966666677,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175955402,
+				"speed": "60.00 km/h",
+				"odometer": 965.8139128333365,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175955402,
+				"speed": "38.51 km/h",
+				"odometer": 983.153528166669,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175955402,
+				"speed": "60.00 km/h",
+				"odometer": 994.9645150000017,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175955402,
+				"speed": "39.48 km/h",
+				"odometer": 1007.9130530000035,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175955402,
+				"speed": "28.32 km/h",
+				"odometer": 1012.9038536666656,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175955402,
+				"speed": "32.04 km/h",
+				"odometer": 975.4009120000044,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175956413,
+		"averageOfSpeeds": "45.36 km/h",
+		"averageOdometer": 1003.3750316250025,
+		"averageSpeedOnLastMinute": "45.26 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175956413,
+				"speed": "50.27 km/h",
+				"odometer": 1002.2313296666722,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175956413,
+				"speed": "46.42 km/h",
+				"odometer": 1011.109833833334,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175956413,
+				"speed": "60.00 km/h",
+				"odometer": 982.5139128333367,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175956413,
+				"speed": "43.43 km/h",
+				"odometer": 995.0871718333359,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175956413,
+				"speed": "37.63 km/h",
+				"odometer": 1008.6385966666676,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175956413,
+				"speed": "48.51 km/h",
+				"odometer": 1020.2107643333366,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175956413,
+				"speed": "35.51 km/h",
+				"odometer": 1021.5842669999989,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175956413,
+				"speed": "41.08 km/h",
+				"odometer": 985.6243768333376,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175957409,
+		"averageOfSpeeds": "43.29 km/h",
+		"averageOdometer": 1015.4521135625024,
+		"averageSpeedOnLastMinute": "45.25 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175957409,
+				"speed": "28.46 km/h",
+				"odometer": 1012.8762348333385,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175957409,
+				"speed": "55.53 km/h",
+				"odometer": 1025.468522500001,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175957409,
+				"speed": "54.96 km/h",
+				"odometer": 999.2247595000033,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175957409,
+				"speed": "39.74 km/h",
+				"odometer": 1005.6220908333362,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175957409,
+				"speed": "30.76 km/h",
+				"odometer": 1017.2119676666669,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175957409,
+				"speed": "57.60 km/h",
+				"odometer": 1035.1253226666696,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175957409,
+				"speed": "39.51 km/h",
+				"odometer": 1031.854085333332,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175957409,
+				"speed": "39.74 km/h",
+				"odometer": 996.2339251666714,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175958414,
+		"averageOfSpeeds": "46.28 km/h",
+		"averageOdometer": 1027.9399732500027,
+		"averageSpeedOnLastMinute": "45.26 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175958414,
+				"speed": "33.85 km/h",
+				"odometer": 1021.3069181666718,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175958414,
+				"speed": "60.00 km/h",
+				"odometer": 1041.840585666669,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175958414,
+				"speed": "30.65 km/h",
+				"odometer": 1010.9931421666709,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175958414,
+				"speed": "48.74 km/h",
+				"odometer": 1017.938790000002,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175958414,
+				"speed": "39.77 km/h",
+				"odometer": 1027.0443329999999,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175958414,
+				"speed": "60.00 km/h",
+				"odometer": 1051.7275430000039,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175958414,
+				"speed": "48.51 km/h",
+				"odometer": 1044.105774499999,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175958414,
+				"speed": "48.74 km/h",
+				"odometer": 1008.5626995000046,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175959412,
+		"averageOfSpeeds": "50.55 km/h",
+		"averageOdometer": 1041.4641896875028,
+		"averageSpeedOnLastMinute": "45.33 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175959412,
+				"speed": "42.87 km/h",
+				"odometer": 1032.0106866666718,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175959412,
+				"speed": "60.00 km/h",
+				"odometer": 1058.5405856666687,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175959412,
+				"speed": "32.79 km/h",
+				"odometer": 1019.2782861666719,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175959412,
+				"speed": "57.76 km/h",
+				"odometer": 1032.7879250000022,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175959412,
+				"speed": "48.78 km/h",
+				"odometer": 1039.381745833333,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175959412,
+				"speed": "46.92 km/h",
+				"odometer": 1067.4278313333376,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175959412,
+				"speed": "57.52 km/h",
+				"odometer": 1058.8737103333324,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175959412,
+				"speed": "57.76 km/h",
+				"odometer": 1023.4127465000044,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175960414,
+		"averageOfSpeeds": "49.79 km/h",
+		"averageOdometer": 1055.4005889166693,
+		"averageSpeedOnLastMinute": "45.39 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175960414,
+				"speed": "51.86 km/h",
+				"odometer": 1045.1809536666715,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175960414,
+				"speed": "37.87 km/h",
+				"odometer": 1072.078108166668,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175960414,
+				"speed": "41.78 km/h",
+				"odometer": 1029.6533261666723,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175960414,
+				"speed": "60.00 km/h",
+				"odometer": 1049.3671675000019,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175960414,
+				"speed": "57.77 km/h",
+				"odometer": 1054.1916563333335,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175960414,
+				"speed": "29.07 km/h",
+				"odometer": 1077.2886210000043,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175960414,
+				"speed": "60.00 km/h",
+				"odometer": 1075.4527069999986,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175960414,
+				"speed": "60.00 km/h",
+				"odometer": 1039.9921715000042,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175961411,
+		"averageOfSpeeds": "50.77 km/h",
+		"averageOdometer": 1069.354049708336,
+		"averageSpeedOnLastMinute": "45.40 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175961411,
+				"speed": "60.00 km/h",
+				"odometer": 1060.8491053333378,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175961411,
+				"speed": "29.97 km/h",
+				"odometer": 1080.5266793333354,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175961411,
+				"speed": "50.78 km/h",
+				"odometer": 1042.537627833339,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175961411,
+				"speed": "50.95 km/h",
+				"odometer": 1065.5549571666687,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175961411,
+				"speed": "60.00 km/h",
+				"odometer": 1070.7880725,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175961411,
+				"speed": "34.45 km/h",
+				"odometer": 1085.797743666671,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175961411,
+				"speed": "60.00 km/h",
+				"odometer": 1092.1193736666656,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175961411,
+				"speed": "60.00 km/h",
+				"odometer": 1056.658838166671,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175962416,
+		"averageOfSpeeds": "46.41 km/h",
+		"averageOdometer": 1082.9915428750026,
+		"averageSpeedOnLastMinute": "45.36 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175962416,
+				"speed": "60.00 km/h",
+				"odometer": 1077.5491053333367,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175962416,
+				"speed": "38.99 km/h",
+				"odometer": 1090.1513988333352,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175962416,
+				"speed": "59.81 km/h",
+				"odometer": 1057.971987000006,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175962416,
+				"speed": "28.48 km/h",
+				"odometer": 1076.291725333335,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175962416,
+				"speed": "60.00 km/h",
+				"odometer": 1087.5047391666665,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175962416,
+				"speed": "43.47 km/h",
+				"odometer": 1096.668926166671,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175962416,
+				"speed": "40.77 km/h",
+				"odometer": 1106.7385463333326,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175962416,
+				"speed": "39.76 km/h",
+				"odometer": 1071.0559148333373,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175963411,
+		"averageOfSpeeds": "47.84 km/h",
+		"averageOdometer": 1095.9302983125029,
+		"averageSpeedOnLastMinute": "45.29 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175963411,
+				"speed": "60.00 km/h",
+				"odometer": 1094.1824386666704,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175963411,
+				"speed": "47.98 km/h",
+				"odometer": 1102.2455303333357,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175963411,
+				"speed": "60.00 km/h",
+				"odometer": 1074.60532033334,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175963411,
+				"speed": "34.22 km/h",
+				"odometer": 1084.7589261666688,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175963411,
+				"speed": "60.00 km/h",
+				"odometer": 1104.1380724999997,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175963411,
+				"speed": "52.45 km/h",
+				"odometer": 1109.9912520000046,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175963411,
+				"speed": "38.94 km/h",
+				"odometer": 1117.7773834999994,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175963411,
+				"speed": "29.14 km/h",
+				"odometer": 1079.7434630000044,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175964413,
+		"averageOfSpeeds": "50.10 km/h",
+		"averageOdometer": 1109.552604812503,
+		"averageSpeedOnLastMinute": "45.29 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175964413,
+				"speed": "60.00 km/h",
+				"odometer": 1110.865772000005,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175964413,
+				"speed": "56.98 km/h",
+				"odometer": 1116.8506145000025,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175964413,
+				"speed": "60.00 km/h",
+				"odometer": 1091.271987000007,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175964413,
+				"speed": "43.22 km/h",
+				"odometer": 1095.5408678333348,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175964413,
+				"speed": "52.62 km/h",
+				"odometer": 1120.4821931666657,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175964413,
+				"speed": "60.00 km/h",
+				"odometer": 1125.8013936666715,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175964413,
+				"speed": "29.81 km/h",
+				"odometer": 1126.4922181666667,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175964413,
+				"speed": "38.14 km/h",
+				"odometer": 1089.1157921666714,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175965419,
+		"averageOfSpeeds": "47.65 km/h",
+		"averageOdometer": 1123.2377014583363,
+		"averageSpeedOnLastMinute": "45.35 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175965419,
+				"speed": "42.84 km/h",
+				"odometer": 1125.8731723333386,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175965419,
+				"speed": "60.00 km/h",
+				"odometer": 1133.4024578333352,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175965419,
+				"speed": "60.00 km/h",
+				"odometer": 1107.9719870000068,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175965419,
+				"speed": "52.23 km/h",
+				"odometer": 1108.8518628333343,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175965419,
+				"speed": "28.69 km/h",
+				"odometer": 1131.6690949999996,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175965419,
+				"speed": "60.00 km/h",
+				"odometer": 1142.5180603333377,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175965419,
+				"speed": "30.22 km/h",
+				"odometer": 1134.574288833333,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175965419,
+				"speed": "47.18 km/h",
+				"odometer": 1101.0406875000054,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175966416,
+		"averageOfSpeeds": "47.45 km/h",
+		"averageOdometer": 1136.4013199166696,
+		"averageSpeedOnLastMinute": "45.32 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175966416,
+				"speed": "28.11 km/h",
+				"odometer": 1135.0169361666718,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175966416,
+				"speed": "60.00 km/h",
+				"odometer": 1150.1024578333348,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175966416,
+				"speed": "46.52 km/h",
+				"odometer": 1123.61215233334,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175966416,
+				"speed": "60.00 km/h",
+				"odometer": 1124.6282261666675,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175966416,
+				"speed": "33.19 km/h",
+				"odometer": 1139.9773103333324,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175966416,
+				"speed": "60.00 km/h",
+				"odometer": 1159.1847270000044,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175966416,
+				"speed": "35.60 km/h",
+				"odometer": 1143.2813524999997,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175966416,
+				"speed": "56.17 km/h",
+				"odometer": 1115.4073970000059,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175967414,
+		"averageOfSpeeds": "49.01 km/h",
+		"averageOdometer": 1149.7528812291697,
+		"averageSpeedOnLastMinute": "45.27 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175967414,
+				"speed": "35.77 km/h",
+				"odometer": 1144.0571691666719,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175967414,
+				"speed": "60.00 km/h",
+				"odometer": 1166.719124500001,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175967414,
+				"speed": "29.58 km/h",
+				"odometer": 1133.3961231666736,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175967414,
+				"speed": "60.00 km/h",
+				"odometer": 1141.2782261666676,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175967414,
+				"speed": "42.18 km/h",
+				"odometer": 1150.4613313333323,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175967414,
+				"speed": "60.00 km/h",
+				"odometer": 1175.8347270000039,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175967414,
+				"speed": "44.59 km/h",
+				"odometer": 1154.4341590000004,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175967414,
+				"speed": "60.00 km/h",
+				"odometer": 1131.8421895000052,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175968414,
+		"averageOfSpeeds": "47.58 km/h",
+		"averageOdometer": 1163.286889833336,
+		"averageSpeedOnLastMinute": "45.30 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175968414,
+				"speed": "35.61 km/h",
+				"odometer": 1154.0385590000054,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175968414,
+				"speed": "54.30 km/h",
+				"odometer": 1183.2056878333356,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175968414,
+				"speed": "34.48 km/h",
+				"odometer": 1141.876102500007,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175968414,
+				"speed": "60.00 km/h",
+				"odometer": 1157.9448928333353,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175968414,
+				"speed": "42.49 km/h",
+				"odometer": 1162.351732499999,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175968414,
+				"speed": "40.17 km/h",
+				"odometer": 1190.2722646666703,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175968414,
+				"speed": "53.59 km/h",
+				"odometer": 1168.0970231666664,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175968414,
+				"speed": "60.00 km/h",
+				"odometer": 1148.5088561666719,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175969420,
+		"averageOfSpeeds": "43.46 km/h",
+		"averageOdometer": 1175.9565884166696,
+		"averageSpeedOnLastMinute": "45.26 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175969420,
+				"speed": "37.14 km/h",
+				"odometer": 1164.1007245000058,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175969420,
+				"speed": "30.09 km/h",
+				"odometer": 1194.839071500002,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175969420,
+				"speed": "35.03 km/h",
+				"odometer": 1151.4252716666743,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175969420,
+				"speed": "60.00 km/h",
+				"odometer": 1174.678226166669,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175969420,
+				"speed": "36.72 km/h",
+				"odometer": 1174.1092858333325,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175969420,
+				"speed": "28.72 km/h",
+				"odometer": 1199.025650000004,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175969420,
+				"speed": "60.00 km/h",
+				"odometer": 1184.215621499999,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175969420,
+				"speed": "60.00 km/h",
+				"odometer": 1165.2588561666717,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175970416,
+		"averageOfSpeeds": "39.41 km/h",
+		"averageOdometer": 1187.102710187503,
+		"averageSpeedOnLastMinute": "45.13 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175970416,
+				"speed": "32.45 km/h",
+				"odometer": 1172.8510720000064,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175970416,
+				"speed": "31.92 km/h",
+				"odometer": 1202.9510313333354,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175970416,
+				"speed": "31.18 km/h",
+				"odometer": 1159.6965580000074,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175970416,
+				"speed": "42.84 km/h",
+				"odometer": 1189.6356895000022,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175970416,
+				"speed": "30.75 km/h",
+				"odometer": 1182.2787301666652,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175970416,
+				"speed": "29.56 km/h",
+				"odometer": 1206.7579448333375,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175970416,
+				"speed": "60.00 km/h",
+				"odometer": 1200.8489548333326,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175970416,
+				"speed": "56.60 km/h",
+				"odometer": 1181.801700833338,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175971419,
+		"averageOfSpeeds": "38.60 km/h",
+		"averageOdometer": 1197.8154735416698,
+		"averageSpeedOnLastMinute": "44.99 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175971419,
+				"speed": "41.44 km/h",
+				"odometer": 1183.131619000006,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175971419,
+				"speed": "31.79 km/h",
+				"odometer": 1211.9528720000013,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175971419,
+				"speed": "40.18 km/h",
+				"odometer": 1169.6362146666746,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175971419,
+				"speed": "28.16 km/h",
+				"odometer": 1198.7692345000028,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175971419,
+				"speed": "39.74 km/h",
+				"odometer": 1192.0876466666649,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175971419,
+				"speed": "38.56 km/h",
+				"odometer": 1216.2465465000046,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175971419,
+				"speed": "57.13 km/h",
+				"odometer": 1216.7265819999996,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175971419,
+				"speed": "31.77 km/h",
+				"odometer": 1193.9730730000043,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175972419,
+		"averageOfSpeeds": "37.62 km/h",
+		"averageOdometer": 1208.6990547708363,
+		"averageSpeedOnLastMinute": "44.92 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175972419,
+				"speed": "50.45 km/h",
+				"odometer": 1195.9354503333396,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175972419,
+				"speed": "27.57 km/h",
+				"odometer": 1220.8065390000016,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175972419,
+				"speed": "29.06 km/h",
+				"odometer": 1178.9768366666745,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175972419,
+				"speed": "27.23 km/h",
+				"odometer": 1207.1532955000028,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175972419,
+				"speed": "48.76 km/h",
+				"odometer": 1204.4325411666646,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175972419,
+				"speed": "35.26 km/h",
+				"odometer": 1227.4762698333378,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175972419,
+				"speed": "60.00 km/h",
+				"odometer": 1233.291794833332,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175972419,
+				"speed": "22.59 km/h",
+				"odometer": 1201.5197108333376,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175973418,
+		"averageOfSpeeds": "38.32 km/h",
+		"averageOdometer": 1219.1946987083366,
+		"averageSpeedOnLastMinute": "44.95 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175973418,
+				"speed": "59.34 km/h",
+				"odometer": 1211.0131388333398,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175973418,
+				"speed": "27.55 km/h",
+				"odometer": 1228.4261711666682,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175973418,
+				"speed": "37.92 km/h",
+				"odometer": 1188.1673683333414,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175973418,
+				"speed": "27.66 km/h",
+				"odometer": 1214.729708333336,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175973418,
+				"speed": "57.64 km/h",
+				"odometer": 1219.0306029999984,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175973418,
+				"speed": "34.93 km/h",
+				"odometer": 1237.1557016666712,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175973418,
+				"speed": "39.16 km/h",
+				"odometer": 1247.2672531666654,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175973418,
+				"speed": "22.33 km/h",
+				"odometer": 1207.7676451666712,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175974416,
+		"averageOfSpeeds": "40.83 km/h",
+		"averageOdometer": 1230.0289356666695,
+		"averageSpeedOnLastMinute": "45.01 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175974416,
+				"speed": "60.00 km/h",
+				"odometer": 1227.70838983334,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175974416,
+				"speed": "34.24 km/h",
+				"odometer": 1236.884816166668,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175974416,
+				"speed": "46.94 km/h",
+				"odometer": 1200.005120833341,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175974416,
+				"speed": "33.89 km/h",
+				"odometer": 1223.0882596666693,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175974416,
+				"speed": "60.00 km/h",
+				"odometer": 1235.6351213333315,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175974416,
+				"speed": "34.82 km/h",
+				"odometer": 1246.131910666671,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175974416,
+				"speed": "26.73 km/h",
+				"odometer": 1255.8437316666655,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175974416,
+				"speed": "29.98 km/h",
+				"odometer": 1214.9341351666708,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175975419,
+		"averageOfSpeeds": "43.12 km/h",
+		"averageOdometer": 1241.9501153333363,
+		"averageSpeedOnLastMinute": "45.10 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175975419,
+				"speed": "47.27 km/h",
+				"odometer": 1243.6430065000068,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175975419,
+				"speed": "43.35 km/h",
+				"odometer": 1247.8185518333353,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175975419,
+				"speed": "56.05 km/h",
+				"odometer": 1214.5091300000079,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175975419,
+				"speed": "43.00 km/h",
+				"odometer": 1233.924750833336,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175975419,
+				"speed": "36.40 km/h",
+				"odometer": 1249.1394439999972,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175975419,
+				"speed": "43.93 km/h",
+				"odometer": 1257.2279873333378,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175975419,
+				"speed": "35.84 km/h",
+				"odometer": 1264.667379833332,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175975419,
+				"speed": "39.09 km/h",
+				"odometer": 1224.6706723333383,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175976406,
+		"averageOfSpeeds": "40.07 km/h",
+		"averageOdometer": 1253.0465117083364,
+		"averageSpeedOnLastMinute": "45.16 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175976406,
+				"speed": "29.65 km/h",
+				"odometer": 1253.407962000007,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175976406,
+				"speed": "52.23 km/h",
+				"odometer": 1260.9476633333352,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175976406,
+				"speed": "60.00 km/h",
+				"odometer": 1230.7462966666745,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175976406,
+				"speed": "32.67 km/h",
+				"odometer": 1243.4290415000033,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175976406,
+				"speed": "30.11 km/h",
+				"odometer": 1257.342901166664,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175976406,
+				"speed": "52.81 km/h",
+				"odometer": 1270.5153523333377,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175976406,
+				"speed": "29.71 km/h",
+				"odometer": 1273.766331333332,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175976406,
+				"speed": "33.33 km/h",
+				"odometer": 1234.2165453333387,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175977419,
+		"averageOfSpeeds": "44.91 km/h",
+		"averageOdometer": 1264.9695181458365,
+		"averageSpeedOnLastMinute": "45.25 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175977419,
+				"speed": "34.57 km/h",
+				"odometer": 1261.902968000007,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175977419,
+				"speed": "60.00 km/h",
+				"odometer": 1276.7401353333356,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175977419,
+				"speed": "42.84 km/h",
+				"odometer": 1245.7532490000077,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175977419,
+				"speed": "41.69 km/h",
+				"odometer": 1253.8061280000034,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175977419,
+				"speed": "39.13 km/h",
+				"odometer": 1267.006728666664,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175977419,
+				"speed": "60.00 km/h",
+				"odometer": 1286.4395973333379,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175977419,
+				"speed": "38.74 km/h",
+				"odometer": 1283.3297349999985,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175977419,
+				"speed": "42.35 km/h",
+				"odometer": 1244.7776038333394,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175978407,
+		"averageOfSpeeds": "48.26 km/h",
+		"averageOdometer": 1277.8554106875034,
+		"averageSpeedOnLastMinute": "45.34 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175978407,
+				"speed": "43.56 km/h",
+				"odometer": 1272.7700655000068,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175978407,
+				"speed": "60.00 km/h",
+				"odometer": 1293.3901353333363,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175978407,
+				"speed": "30.01 km/h",
+				"odometer": 1254.9148475000084,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175978407,
+				"speed": "50.67 km/h",
+				"odometer": 1266.6368023333365,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175978407,
+				"speed": "48.11 km/h",
+				"odometer": 1279.1266894999972,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175978407,
+				"speed": "54.66 km/h",
+				"odometer": 1302.8995966666713,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175978407,
+				"speed": "47.71 km/h",
+				"odometer": 1295.3281621666652,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175978407,
+				"speed": "51.33 km/h",
+				"odometer": 1257.7769865000069,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175979420,
+		"averageOfSpeeds": "49.86 km/h",
+		"averageOdometer": 1291.621739958337,
+		"averageSpeedOnLastMinute": "45.50 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175979420,
+				"speed": "52.57 km/h",
+				"odometer": 1286.1614563333413,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175979420,
+				"speed": "43.87 km/h",
+				"odometer": 1308.607038333336,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175979420,
+				"speed": "39.03 km/h",
+				"odometer": 1264.550411500008,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175979420,
+				"speed": "59.69 km/h",
+				"odometer": 1282.0238063333366,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175979420,
+				"speed": "57.13 km/h",
+				"odometer": 1293.8003344999968,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175979420,
+				"speed": "29.89 km/h",
+				"odometer": 1314.565560666671,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175979420,
+				"speed": "56.74 km/h",
+				"odometer": 1309.906225833332,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175979420,
+				"speed": "60.00 km/h",
+				"odometer": 1273.3590861666735,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175980407,
+		"averageOfSpeeds": "51.28 km/h",
+		"averageOdometer": 1305.5803763333368,
+		"averageSpeedOnLastMinute": "45.64 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175980407,
+				"speed": "60.00 km/h",
+				"odometer": 1301.9818238333406,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175980407,
+				"speed": "30.11 km/h",
+				"odometer": 1317.92919866667,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175980407,
+				"speed": "48.02 km/h",
+				"odometer": 1276.6558445000079,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175980407,
+				"speed": "60.00 km/h",
+				"odometer": 1298.6732733333373,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175980407,
+				"speed": "60.00 km/h",
+				"odometer": 1310.332094499997,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175980407,
+				"speed": "32.11 km/h",
+				"odometer": 1322.6929611666706,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175980407,
+				"speed": "60.00 km/h",
+				"odometer": 1326.385395166665,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175980407,
+				"speed": "60.00 km/h",
+				"odometer": 1289.9924195000072,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175981418,
+		"averageOfSpeeds": "48.78 km/h",
+		"averageOdometer": 1319.64544766667,
+		"averageSpeedOnLastMinute": "45.71 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175981418,
+				"speed": "60.00 km/h",
+				"odometer": 1318.665157166674,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175981418,
+				"speed": "35.39 km/h",
+				"odometer": 1326.5895905000032,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175981418,
+				"speed": "57.02 km/h",
+				"odometer": 1291.2723261666748,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175981418,
+				"speed": "38.22 km/h",
+				"odometer": 1312.3334850000045,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175981418,
+				"speed": "60.00 km/h",
+				"odometer": 1326.998761166663,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175981418,
+				"speed": "41.11 km/h",
+				"odometer": 1332.9003360000039,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175981418,
+				"speed": "49.62 km/h",
+				"odometer": 1342.4431804999984,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175981418,
+				"speed": "48.89 km/h",
+				"odometer": 1305.96074483334,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175982410,
+		"averageOfSpeeds": "46.86 km/h",
+		"averageOdometer": 1332.5996511875035,
+		"averageSpeedOnLastMinute": "45.67 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175982410,
+				"speed": "60.00 km/h",
+				"odometer": 1335.3318238333409,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175982410,
+				"speed": "44.39 km/h",
+				"odometer": 1337.6985771666696,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175982410,
+				"speed": "60.00 km/h",
+				"odometer": 1307.8110248333408,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175982410,
+				"speed": "32.18 km/h",
+				"odometer": 1320.9290918333382,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175982410,
+				"speed": "60.00 km/h",
+				"odometer": 1343.6820944999968,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175982410,
+				"speed": "50.11 km/h",
+				"odometer": 1345.59871766667,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175982410,
+				"speed": "39.50 km/h",
+				"odometer": 1353.6180916666652,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175982410,
+				"speed": "28.71 km/h",
+				"odometer": 1316.1277880000064,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175983405,
+		"averageOfSpeeds": "48.83 km/h",
+		"averageOdometer": 1345.9269850208366,
+		"averageSpeedOnLastMinute": "45.64 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175983405,
+				"speed": "60.00 km/h",
+				"odometer": 1352.0151571666739,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175983405,
+				"speed": "53.40 km/h",
+				"odometer": 1351.3223025000025,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175983405,
+				"speed": "60.00 km/h",
+				"odometer": 1324.4943581666742,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175983405,
+				"speed": "41.18 km/h",
+				"odometer": 1331.1451360000047,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175983405,
+				"speed": "52.97 km/h",
+				"odometer": 1360.0550341666645,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175983405,
+				"speed": "59.11 km/h",
+				"odometer": 1360.796851833337,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175983405,
+				"speed": "29.86 km/h",
+				"odometer": 1363.019168333332,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175983405,
+				"speed": "34.08 km/h",
+				"odometer": 1324.567872000006,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175984412,
+		"averageOfSpeeds": "46.13 km/h",
+		"averageOdometer": 1359.2729705625039,
+		"averageSpeedOnLastMinute": "45.59 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175984412,
+				"speed": "40.50 km/h",
+				"odometer": 1366.5263278333403,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175984412,
+				"speed": "60.00 km/h",
+				"odometer": 1367.3535183333364,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175984412,
+				"speed": "60.00 km/h",
+				"odometer": 1341.177691500009,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175984412,
+				"speed": "50.19 km/h",
+				"odometer": 1343.875018833338,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175984412,
+				"speed": "28.22 km/h",
+				"odometer": 1371.2496114999975,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175984412,
+				"speed": "60.00 km/h",
+				"odometer": 1377.470685166671,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175984412,
+				"speed": "27.01 km/h",
+				"odometer": 1371.194924333332,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175984412,
+				"speed": "43.10 km/h",
+				"odometer": 1335.3359870000068,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175985419,
+		"averageOfSpeeds": "47.70 km/h",
+		"averageOdometer": 1372.2043307708376,
+		"averageSpeedOnLastMinute": "45.59 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175985419,
+				"speed": "28.11 km/h",
+				"odometer": 1375.2332863333402,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175985419,
+				"speed": "60.00 km/h",
+				"odometer": 1384.0035183333365,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175985419,
+				"speed": "56.67 km/h",
+				"odometer": 1357.7569635000096,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175985419,
+				"speed": "59.18 km/h",
+				"odometer": 1359.0771768333385,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175985419,
+				"speed": "32.73 km/h",
+				"odometer": 1379.4753714999973,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175985419,
+				"speed": "60.00 km/h",
+				"odometer": 1394.1206851666717,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175985419,
+				"speed": "32.81 km/h",
+				"odometer": 1379.4114066666662,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175985419,
+				"speed": "52.08 km/h",
+				"odometer": 1348.55623783334,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175986408,
+		"averageOfSpeeds": "47.94 km/h",
+		"averageOdometer": 1385.6126866250043,
+		"averageSpeedOnLastMinute": "45.60 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175986408,
+				"speed": "31.16 km/h",
+				"odometer": 1383.8632745000073,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175986408,
+				"speed": "60.00 km/h",
+				"odometer": 1400.6868516666698,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175986408,
+				"speed": "31.96 km/h",
+				"odometer": 1369.967672833343,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175986408,
+				"speed": "60.00 km/h",
+				"odometer": 1375.7524826666718,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175986408,
+				"speed": "38.60 km/h",
+				"odometer": 1389.6880498333306,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175986408,
+				"speed": "60.00 km/h",
+				"odometer": 1410.804018500005,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175986408,
+				"speed": "41.83 km/h",
+				"odometer": 1389.8267526666664,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175986408,
+				"speed": "60.00 km/h",
+				"odometer": 1364.3123903333408,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175987409,
+		"averageOfSpeeds": "47.53 km/h",
+		"averageOdometer": 1398.9095233958374,
+		"averageSpeedOnLastMinute": "45.60 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175987409,
+				"speed": "32.44 km/h",
+				"odometer": 1392.7415143333406,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175987409,
+				"speed": "60.00 km/h",
+				"odometer": 1417.3535183333375,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175987409,
+				"speed": "31.39 km/h",
+				"odometer": 1378.0800010000094,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175987409,
+				"speed": "60.00 km/h",
+				"odometer": 1392.4191493333379,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175987409,
+				"speed": "37.99 km/h",
+				"odometer": 1400.4277084999963,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175987409,
+				"speed": "47.58 km/h",
+				"odometer": 1426.5820281666718,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175987409,
+				"speed": "50.82 km/h",
+				"odometer": 1402.7098771666659,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175987409,
+				"speed": "60.00 km/h",
+				"odometer": 1380.962390333341,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175988410,
+		"averageOfSpeeds": "43.75 km/h",
+		"averageOdometer": 1411.565442187504,
+		"averageSpeedOnLastMinute": "45.58 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175988410,
+				"speed": "32.52 km/h",
+				"odometer": 1401.7131936666736,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175988410,
+				"speed": "37.80 km/h",
+				"odometer": 1431.25219566667,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175988410,
+				"speed": "31.74 km/h",
+				"odometer": 1386.995000333343,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175988410,
+				"speed": "60.00 km/h",
+				"odometer": 1409.1024826666704,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175988410,
+				"speed": "38.41 km/h",
+				"odometer": 1411.15175133333,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175988410,
+				"speed": "29.70 km/h",
+				"odometer": 1436.5254420000054,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175988410,
+				"speed": "59.84 km/h",
+				"odometer": 1418.137748166666,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175988410,
+				"speed": "60.00 km/h",
+				"odometer": 1397.6457236666745,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175989410,
+		"averageOfSpeeds": "37.44 km/h",
+		"averageOdometer": 1422.8562716041705,
+		"averageSpeedOnLastMinute": "45.44 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175989410,
+				"speed": "24.60 km/h",
+				"odometer": 1409.8331235000065,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175989410,
+				"speed": "29.91 km/h",
+				"odometer": 1439.786719000003,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175989410,
+				"speed": "25.81 km/h",
+				"odometer": 1395.1960466666763,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175989410,
+				"speed": "50.58 km/h",
+				"odometer": 1425.267704000003,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175989410,
+				"speed": "24.03 km/h",
+				"odometer": 1419.5023491666635,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175989410,
+				"speed": "24.63 km/h",
+				"odometer": 1444.1140920000055,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175989410,
+				"speed": "60.00 km/h",
+				"odometer": 1434.8210814999994,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175989410,
+				"speed": "60.00 km/h",
+				"odometer": 1414.3290570000075,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175990411,
+		"averageOfSpeeds": "36.23 km/h",
+		"averageOdometer": 1433.031709708337,
+		"averageSpeedOnLastMinute": "45.24 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175990411,
+				"speed": "33.48 km/h",
+				"odometer": 1417.8137268333404,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175990411,
+				"speed": "30.96 km/h",
+				"odometer": 1448.2024633333363,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175990411,
+				"speed": "34.68 km/h",
+				"odometer": 1403.5059940000088,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175990411,
+				"speed": "27.81 km/h",
+				"odometer": 1435.7195243333363,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175990411,
+				"speed": "32.91 km/h",
+				"odometer": 1427.3345191666629,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175990411,
+				"speed": "33.51 km/h",
+				"odometer": 1452.1025783333394,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175990411,
+				"speed": "53.67 km/h",
+				"odometer": 1450.486944333332,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175990411,
+				"speed": "42.84 km/h",
+				"odometer": 1429.0879273333413,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175991416,
+		"averageOfSpeeds": "38.79 km/h",
+		"averageOdometer": 1443.439691875004,
+		"averageSpeedOnLastMinute": "45.08 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175991416,
+				"speed": "42.48 km/h",
+				"odometer": 1428.390671000007,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175991416,
+				"speed": "31.89 km/h",
+				"odometer": 1456.84576216667,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175991416,
+				"speed": "35.41 km/h",
+				"odometer": 1414.028630333342,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175991416,
+				"speed": "31.76 km/h",
+				"odometer": 1443.9934056666696,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175991416,
+				"speed": "41.91 km/h",
+				"odometer": 1437.7539933333299,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175991416,
+				"speed": "40.74 km/h",
+				"odometer": 1462.6081586666729,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175991416,
+				"speed": "58.13 km/h",
+				"odometer": 1465.682265666665,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175991416,
+				"speed": "28.01 km/h",
+				"odometer": 1438.2146481666744,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175992405,
+		"averageOfSpeeds": "36.85 km/h",
+		"averageOdometer": 1453.802636000004,
+		"averageSpeedOnLastMinute": "45.02 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175992405,
+				"speed": "51.49 km/h",
+				"odometer": 1441.4818843333408,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175992405,
+				"speed": "26.32 km/h",
+				"odometer": 1464.7558093333365,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175992405,
+				"speed": "33.91 km/h",
+				"odometer": 1422.6416140000093,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175992405,
+				"speed": "26.23 km/h",
+				"odometer": 1451.6839033333359,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175992405,
+				"speed": "50.91 km/h",
+				"odometer": 1450.6732149999965,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175992405,
+				"speed": "33.59 km/h",
+				"odometer": 1472.7049533333398,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175992405,
+				"speed": "49.89 km/h",
+				"odometer": 1481.7070168333317,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175992405,
+				"speed": "22.44 km/h",
+				"odometer": 1444.7726918333413,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175993414,
+		"averageOfSpeeds": "37.42 km/h",
+		"averageOdometer": 1464.1348875416705,
+		"averageSpeedOnLastMinute": "44.97 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175993414,
+				"speed": "60.00 km/h",
+				"odometer": 1457.0556785000077,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175993414,
+				"speed": "29.13 km/h",
+				"odometer": 1472.4143960000038,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175993414,
+				"speed": "42.91 km/h",
+				"odometer": 1433.338890666676,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175993414,
+				"speed": "27.20 km/h",
+				"odometer": 1459.061097166669,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175993414,
+				"speed": "59.92 km/h",
+				"odometer": 1466.10861833333,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175993414,
+				"speed": "28.06 km/h",
+				"odometer": 1481.7429860000064,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175993414,
+				"speed": "27.88 km/h",
+				"odometer": 1492.2187824999988,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175993414,
+				"speed": "24.27 km/h",
+				"odometer": 1451.138651166674,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175994414,
+		"averageOfSpeeds": "42.09 km/h",
+		"averageOdometer": 1475.2680373541705,
+		"averageSpeedOnLastMinute": "44.98 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175994414,
+				"speed": "60.00 km/h",
+				"odometer": 1473.7390118333406,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175994414,
+				"speed": "38.14 km/h",
+				"odometer": 1481.7953828333376,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175994414,
+				"speed": "51.92 km/h",
+				"odometer": 1446.551115000009,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175994414,
+				"speed": "36.20 km/h",
+				"odometer": 1467.893708833336,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175994414,
+				"speed": "49.57 km/h",
+				"odometer": 1482.143947999997,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175994414,
+				"speed": "37.06 km/h",
+				"odometer": 1490.8145451666727,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175994414,
+				"speed": "30.52 km/h",
+				"odometer": 1500.049366833332,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175994414,
+				"speed": "33.27 km/h",
+				"odometer": 1459.1572203333404,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175995417,
+		"averageOfSpeeds": "40.24 km/h",
+		"averageOdometer": 1487.2070819791707,
+		"averageSpeedOnLastMinute": "45.03 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175995417,
+				"speed": "38.37 km/h",
+				"odometer": 1487.7903080000074,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175995417,
+				"speed": "47.29 km/h",
+				"odometer": 1493.878304666671,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175995417,
+				"speed": "60.00 km/h",
+				"odometer": 1462.518791500009,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175995417,
+				"speed": "33.45 km/h",
+				"odometer": 1478.8301863333359,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175995417,
+				"speed": "28.25 km/h",
+				"odometer": 1492.5961084999972,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175995417,
+				"speed": "46.21 km/h",
+				"odometer": 1502.604500166673,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175995417,
+				"speed": "33.76 km/h",
+				"odometer": 1509.833981333332,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175995417,
+				"speed": "34.59 km/h",
+				"odometer": 1469.60447533334,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175996410,
+		"averageOfSpeeds": "42.80 km/h",
+		"averageOdometer": 1498.279150979171,
+		"averageSpeedOnLastMinute": "45.04 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175996410,
+				"speed": "28.53 km/h",
+				"odometer": 1496.091986666674,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175996410,
+				"speed": "56.13 km/h",
+				"odometer": 1508.0247835000044,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175996410,
+				"speed": "54.96 km/h",
+				"odometer": 1478.7465848333428,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175996410,
+				"speed": "37.85 km/h",
+				"odometer": 1488.0523111666694,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175996410,
+				"speed": "33.91 km/h",
+				"odometer": 1500.8938598333296,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175996410,
+				"speed": "55.05 km/h",
+				"odometer": 1516.4423168333393,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175996410,
+				"speed": "37.57 km/h",
+				"odometer": 1518.9922389999984,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175996410,
+				"speed": "38.40 km/h",
+				"odometer": 1478.9891260000073,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175997414,
+		"averageOfSpeeds": "45.99 km/h",
+		"averageOdometer": 1510.7729248333372,
+		"averageSpeedOnLastMinute": "45.09 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175997414,
+				"speed": "37.54 km/h",
+				"odometer": 1505.3043525000076,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175997414,
+				"speed": "60.00 km/h",
+				"odometer": 1524.489371333338,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175997414,
+				"speed": "30.66 km/h",
+				"odometer": 1490.5261476666759,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175997414,
+				"speed": "46.86 km/h",
+				"odometer": 1499.8573145000024,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175997414,
+				"speed": "42.93 km/h",
+				"odometer": 1511.6160528333292,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175997414,
+				"speed": "60.00 km/h",
+				"odometer": 1532.77930683334,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175997414,
+				"speed": "42.48 km/h",
+				"odometer": 1530.6510569999983,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175997414,
+				"speed": "47.42 km/h",
+				"odometer": 1490.9597960000074,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175998409,
+		"averageOfSpeeds": "49.29 km/h",
+		"averageOdometer": 1524.0615680416707,
+		"averageSpeedOnLastMinute": "45.20 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175998409,
+				"speed": "46.52 km/h",
+				"odometer": 1516.9827533333406,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175998409,
+				"speed": "57.00 km/h",
+				"odometer": 1541.080732333339,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175998409,
+				"speed": "31.93 km/h",
+				"odometer": 1498.6729373333424,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175998409,
+				"speed": "55.86 km/h",
+				"odometer": 1514.1513836666689,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175998409,
+				"speed": "51.92 km/h",
+				"odometer": 1524.804661333329,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175998409,
+				"speed": "44.55 km/h",
+				"odometer": 1548.0676108333408,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175998409,
+				"speed": "50.11 km/h",
+				"odometer": 1543.3391394999983,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175998409,
+				"speed": "56.41 km/h",
+				"odometer": 1505.3933260000072,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702175999416,
+		"averageOfSpeeds": "49.62 km/h",
+		"averageOdometer": 1538.008157479171,
+		"averageSpeedOnLastMinute": "45.29 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702175999416,
+				"speed": "55.66 km/h",
+				"odometer": 1531.4295266666737,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702175999416,
+				"speed": "31.81 km/h",
+				"odometer": 1553.5055516666724,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702175999416,
+				"speed": "41.07 km/h",
+				"odometer": 1509.0021306666759,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702175999416,
+				"speed": "60.00 km/h",
+				"odometer": 1530.8328470000025,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702175999416,
+				"speed": "60.00 km/h",
+				"odometer": 1540.755808166662,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702175999416,
+				"speed": "29.14 km/h",
+				"odometer": 1557.5687561666744,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702175999416,
+				"speed": "59.26 km/h",
+				"odometer": 1558.815228499999,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702175999416,
+				"speed": "60.00 km/h",
+				"odometer": 1522.1554110000075,
+				"colonyMode": true
+			}
+		]
+	},
+	{
+		"time": 1702176000412,
+		"averageOfSpeeds": "50.65 km/h",
+		"averageOdometer": 1551.9547679166713,
+		"averageSpeedOnLastMinute": "45.32 km/h",
+		"colonyMode": true,
+		"carData": [
+			{
+				"id": 17,
+				"time": 1702176000412,
+				"speed": "60.00 km/h",
+				"odometer": 1547.8023241666745,
+				"colonyMode": true
+			},
+			{
+				"id": 18,
+				"time": 1702176000412,
+				"speed": "31.77 km/h",
+				"odometer": 1561.6878741666727,
+				"colonyMode": true
+			},
+			{
+				"id": 19,
+				"time": 1702176000412,
+				"speed": "50.06 km/h",
+				"odometer": 1521.6609290000093,
+				"colonyMode": true
+			},
+			{
+				"id": 20,
+				"time": 1702176000412,
+				"speed": "47.90 km/h",
+				"odometer": 1546.6395150000022,
+				"colonyMode": true
+			},
+			{
+				"id": 21,
+				"time": 1702176000412,
+				"speed": "60.00 km/h",
+				"odometer": 1557.4058081666622,
+				"colonyMode": true
+			},
+			{
+				"id": 22,
+				"time": 1702176000412,
+				"speed": "35.46 km/h",
+				"odometer": 1566.2106801666749,
+				"colonyMode": true
+			},
+			{
+				"id": 23,
+				"time": 1702176000412,
+				"speed": "60.00 km/h",
+				"odometer": 1575.4422683333326,
+				"colonyMode": true
+			},
+			{
+				"id": 24,
+				"time": 1702176000412,
+				"speed": "60.00 km/h",
+				"odometer": 1538.7887443333414,
+				"colonyMode": true
+			}
+		]
+	}
+]

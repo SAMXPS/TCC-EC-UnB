@@ -5,10 +5,77 @@ class Simulation {
         this.streets = streets;
         this.cross = cross;
         this.elements = [].concat(this.cross).concat(this.streets).concat(this.cars);
+        this.dataCollector = new DataCollector(this);
+        this.dataCollector.start();
     }
 
     getElements() {
         return this.elements;
+    }
+}
+
+class DataCollector {
+
+    constructor(simulation) {
+        this.simulation = simulation;
+    }
+
+    start(simulation) {
+        this.thread = setInterval(async ()=>{
+            this.collect();
+        }, 1000);
+
+        this.dataLog = [];
+    }
+
+    collect() {
+        let collectedCount = this.dataLog.length;
+        let time = getMillis();
+        let carCount = 0;
+        let averageOfSpeeds = 0;   // dm/s
+        let averageOdometer = 0;  // meters
+        let colonyMode = false;
+        let carData = [];
+
+        this.simulation.cars.forEach( (car) => {
+            averageOfSpeeds += car.speed;
+            averageOdometer += dm_m(car.odometer);
+            carCount++;
+
+            if (car.colonyMode) {
+                colonyMode = true;
+            }
+
+            carData.push({
+                id: car.id,
+                time: time,
+                speed: dms_kmh(car.speed).toFixed(2) + " km/h",
+                odometer: dm_m(car.odometer),
+                colonyMode: car.colonyMode,
+            });
+        } );
+
+        averageOfSpeeds /= carCount;
+        averageOdometer /= carCount;
+
+        let averageSpeedOnLastMinute = null;
+
+        if (collectedCount >= 60) {
+            let lastMinuteInfo = this.dataLog[collectedCount-60];
+            averageSpeedOnLastMinute = ms_kmh((averageOdometer - lastMinuteInfo.averageOdometer) / 60).toFixed(2) + " km/h"; 
+        }
+
+        let collectedData = {
+            time: time,
+            averageOfSpeeds: dms_kmh(averageOfSpeeds).toFixed(2) + " km/h",
+            averageOdometer: averageOdometer,
+            averageSpeedOnLastMinute: averageSpeedOnLastMinute,
+            colonyMode: colonyMode,
+            carData: carData
+        };
+
+        console.log(collectedData);
+        this.dataLog.push(collectedData);
     }
 }
 

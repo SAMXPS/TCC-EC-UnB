@@ -144,6 +144,14 @@ function dms_kmh(dms) {
     return dms * 0.36;
 }
 
+function ms_kmh(ms) {
+    return ms * 3.6;
+}
+
+function dm_m(dm) {
+    return dm/10;
+}
+
 async function sha1_hash(message) {
     const encoder = new TextEncoder();
     const data = encoder.encode(message);

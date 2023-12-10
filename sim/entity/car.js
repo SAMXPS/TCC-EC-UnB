@@ -25,6 +25,7 @@ class Car {
         this.lastMove   = getMillis();
         this.lastManage = 0;
         this.time       = 0;
+        this.odometer   = 0;
     
         this.serverHook = new ServerHook(this);
     }
@@ -315,6 +316,7 @@ class Car {
 
         this.position.x += this.speed * Math.cos(this.position.dir) * (timePassed/1000);
         this.position.y += this.speed * Math.sin(this.position.dir) * (timePassed/1000);
+        this.odometer += this.speed * (timePassed/1000);
     }
 
     getDistanceToBrake() {
